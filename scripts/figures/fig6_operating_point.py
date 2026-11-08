@@ -43,8 +43,11 @@ def main():
                             label=LEARNER_LABELS[learner])
         axes[0, c].set_title(TASK_LABELS[task])
         axes[0, c].axhline(50, color='#999999', lw=.6, ls='--')
-        axes[1, c].set_xscale('log')
-        axes[1, c].set_xticks([2, 5, 10, 20], ['2', '5', '10', '20'])
+        for ax in axes[:, c]:
+            ax.set_xscale('log')
+            ax.set_xlim(1.6, 25)
+            ax.minorticks_off()
+            ax.set_xticks([2, 5, 10, 20], ['2', '5', '10', '20'])
         axes[1, c].set_xlabel('baseline (% of fitted ceiling)')
         panel_label(axes[0, c], 'abc'[c])
         panel_label(axes[1, c], 'def'[c])

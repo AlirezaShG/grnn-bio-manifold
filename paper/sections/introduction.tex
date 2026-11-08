@@ -34,12 +34,23 @@ wiring matters for learning, once confounds are removed.
 
 The third question carries a trap that we found in our own earlier analyses. Shuffling parameters
 across cells moves each cell away from the operating point it was calibrated to. In our networks
-this roughly doubled firing rates and multiplied saturation, so an apparent cost of
-``destroying biological identity'' was in fact a change of operating point. We therefore
+this roughly doubled firing rates and multiplied saturation, so an apparent effect of
+``destroying biological identity'' could not be separated from a change of operating point. We therefore
 recalibrate every manipulated bank with the same label-free procedure before comparing. We also
 split cells by donor animal, compare learners at learning rates tuned on a separate development
 cohort, treat the network as the unit of inference \citep{aarts2014}, fit every population-analysis
 axis on trials independent of those it is evaluated on \citep{kriegeskorte2009}, and test all
 hypotheses in a protocol locked before the held-out confirmation cohort was touched.
 
-SUMMARY OF FINDINGS PLACEHOLDER.
+Four things came out of the held-out confirmation (1,680 networks).
+\begin{itemize}
+\item The local rule needs each cell's fitted spike-history term. Without it, accuracy at unseen
+delays dropped by 7--17\pp, to about the level of a frozen reservoir. With it, the local
+estimate stayed aligned with the exact gradient, and the gain grew with each cell's adaptation
+strength.
+\item The local rule still trails BPTT on tasks that combine memory with a later cue. The gap
+comes from ignoring paths through other cells, not from random feedback.
+\item Cell identity and type-level wiring had no detectable effect once operating points were
+matched. Heterogeneity helped BPTT strongly but not the local rule.
+\item The operating point shaped local learning in a task-dependent way.
+\end{itemize}

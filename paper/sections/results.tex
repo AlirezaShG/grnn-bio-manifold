@@ -1,2 +1,147 @@
 \section{Results}
-RESULTS PLACEHOLDER (filled from the confirmation cohort).
+
+\subsection{Networks of fitted cells, three working-memory tasks, a locked protocol}
+Every network contains 100 GFR cells drawn from the confirmation cohort (80 Pyr, 10 PV, 5 SST,
+5 VIP; Fig.~\ref{fig:tasks}). Each cell keeps its fitted input filters, spike-history filters and
+nonlinearity, with time constants from $\sim$0 to 2\,s. Nearly every cell's history filter is
+net negative, i.e.\ adapting. Adaptation is strongest in pyramidal cells and weakest in PV cells
+(Fig.~\ref{fig:tasks}d,e). Networks learned three tasks. In the context-dependent decision
+(T1-early) the cue arrives with the stimulus. In T1-late it arrives only after the delay. In
+delayed match-to-sample (T2-dms) no input before the post-delay probe carries information about
+the choice. After 3000 updates every learner was near ceiling on in-distribution trials
+(Supplementary Fig.~\ref{fig:s2}), so all comparisons below use the preregistered primary endpoint:
+accuracy on conflict trials at unseen, longer delays (400--600\,ms). All results come from 1,680
+runs on the held-out donor cohort (16 paired networks per condition), analysed exactly as locked
+before those runs (Supplementary Section~\ref{sec:protocol}).
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figures/fig1_tasks_cells.pdf}
+\caption{\textbf{Tasks and data-fitted cells.} (a--c) One conflict trial per task. Shading marks
+the delay (grey) and the response window (orange). (d) Median spike-history kernel by type,
+$\tfrac1K\sum_k\beta_{ik}(1-d_k)^{\ell-1}$. (e) Steady-state history gain $\bar\beta_i$ per cell;
+negative values mean adaptation. (f) Isolated baseline rate after calibration, set to 5\% of each
+cell's fitted ceiling; the type hierarchy follows from the ceilings. Development cohort.}
+\label{fig:tasks}
+\end{figure}
+
+\subsection{The local rule needs the cells' own spike-history term}
+Removing only the spike-history term $\beta$ from the eligibility trace (Eq.~\ref{eq:elig}) lowered
+unseen-delay conflict accuracy in all six task-by-optimizer comparisons, by 7--17\pp
+(Table~\ref{tab:familyA}, Fig.~\ref{fig:rules}). The difference was significant after Holm
+correction in five of them. With Adam, accuracy fell from 81.6\% to 70.6\% (T1-early), from 75.7\%
+to 66.5\% (T1-late) and from 80.5\% to 68.1\% (T2-dms). Without $\beta$, the rule's accuracy was close to
+or below that of a frozen reservoir that learns only its readout (descriptive). The one comparison that did not survive
+correction was T2-dms with RMS normalization ($+7.1$\pp, 95\% CI [1.9, 11.9], Holm $p=0.10$).
+
+The local rule with $\beta$ beat the frozen reservoir in all six comparisons. The gain was
+significant in three: T1-late with RMS and T2-dms with either optimizer (+10.6 to +11.9\pp). It
+was not significant on T1-early, where the reservoir already reached 76--77\%, nor on T1-late with
+Adam (+6.1\pp).
+BPTT stayed clearly better than the local rule on the two tasks that require combining stored
+information with a later cue: +16.2 and +11.5\pp on T1-late, +14.9 and +22.3\pp on T2-dms (Adam,
+RMS). On T1-early the two did not differ.
+
+\input{generated/familyA_table}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figures/fig2_learning_rules.pdf}
+\caption{\textbf{Learning rules (Family A).} Unseen-delay conflict accuracy for each of 16 paired
+networks (dots; grey lines join the same network), with the mean (bar). Brackets: Holm-adjusted
+tests A3 (BPTT vs local), A1 (local with vs without $\beta$) and A2 (local vs frozen reservoir);
+n.s.\ = not significant.}\label{fig:rules}
+\end{figure}
+
+\subsection{Why: \texorpdfstring{$\beta$}{beta} aligns the local estimate with the true gradient}
+The local estimate differs from the exact gradient in two ways. It ignores paths through other
+cells, and it uses a random rather than the true feedback vector. Running the same rule with
+symmetric feedback isolates the first error. In networks trained with the local rule, the
+symmetric-feedback estimate with $\beta$ kept a cosine of 0.76--0.94 with the exact recurrent
+gradient at the end of training. Without $\beta$ the cosine was 0.54--0.66 (Fig.~\ref{fig:mech}a--c).
+Random feedback lowered both curves, and $\beta$ still helped (Fig.~\ref{fig:mech}e). Per
+postsynaptic pyramidal cell, the cosine with symmetric feedback was 0.74 with $\beta$ and 0.54
+without. The improvement from $\beta$ grew with the cell's adaptation loop gain
+$|\langle g'\rangle\bar\beta|$. The per-network correlation was $r=0.16$ [0.09, 0.23] (T1-early),
+0.23 [0.16, 0.30] (T1-late) and 0.18 [0.11, 0.24] (T2-dms), across 16 networks each
+(Fig.~\ref{fig:mech}d).
+
+Behaviour followed the same split. With symmetric feedback, removing $\beta$ still cost 8.4--12.7\pp
+(Family C). Replacing random by symmetric feedback gained only 3.8--4.4\pp (not significant). With
+symmetric feedback and $\beta$, the local rule matched BPTT on T1-early ($-0.4$\pp). On T1-late and
+T2-dms it still trailed by 12.4 and 11.0\pp. In this setting, therefore, most of the cost of
+ignoring a cell's adaptation lies in the eligibility trace itself, while the residual gap to BPTT on
+the harder tasks comes from cutting paths through other cells, not from random feedback.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figures/fig3_mechanism.pdf}
+\caption{\textbf{Mechanism.} (a--c) Cosine between local estimates and the exact recurrent gradient
+over training, in networks trained with the local rule (Adam; mean $\pm$ s.e.m.\ over 16 networks).
+Solid: symmetric feedback; dashed: random feedback. Blue: with $\beta$; orange: without.
+(d) Per pyramidal cell: alignment gain from $\beta$ (symmetric feedback) against the cell's
+adaptation loop gain, at the selected checkpoint. Title: per-network correlations, mean and 95\% CI.
+(e) Mean row cosine by postsynaptic type with random feedback. Interneuron inputs receive no direct
+readout signal, so they align poorly either way.}\label{fig:mech}
+\end{figure}
+
+\subsection{Memory sits in the cells; learning shapes the response}
+Held-out decoders read the sign of \emph{both} input streams from the delay-period population at
+$\ge$98\% accuracy, for every learner including the frozen reservoir (Fig.~\ref{fig:repr}). This held
+in T2-dms, where the second stream is a distractor. As designed, the choice could not be decoded in
+the T2-dms delay (49--50\%). Learners differed in the response phase, where stored information must be
+combined with the cue. In T2-dms, response-phase choice decoding was 99.8\% (BPTT), 98.9\% (local),
+92.5\% (no $\beta$) and 83.3\% (reservoir). The slow fitted filters are necessary for the memory:
+setting all time constants to $\le$20\,ms (with the static response preserved) dropped every task to
+chance (49--50\%; $-26$ to $-32$\pp; Family C).
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figures/fig5_representation.pdf}
+\caption{\textbf{Population codes (Adam).} Held-out decoding accuracy of each stream's sign and of
+the choice in the delay, and of the choice in the response phase. Decoders were fit on independent
+trials. Dots: networks.}\label{fig:repr}
+\end{figure}
+
+\subsection{Cell identity and wiring do not matter once the operating point is matched}
+In the preregistered factorial, keeping each cell's own parameter combination rather than shuffling
+it within type changed the primary endpoint by +1.1 to +4.5\pp (Table~\ref{tab:familyB},
+Fig.~\ref{fig:bio}). No effect was significant. Four of six effects were practically negligible (90\% CI
+within $\pm5$\pp), and two were inconclusive (T1-late and T2-dms with RMS). The type-prior wiring
+versus degree-preserving rewiring was practically negligible in all six comparisons. No identity
+$\times$ learner or wiring $\times$ learner interaction was significant.
+
+The operating point is what made earlier versions of this comparison misleading. With the intact
+cells' calibration kept (``reference''), shuffled networks fired at 24\,Hz instead of 11--12\,Hz, and
+7\% instead of 0.3--0.5\% of their samples were near a cell's ceiling (Fig.~\ref{fig:bio}d--f). At the
+tuned budget this did not change accuracy significantly ($+1.8$ to $+3.3$\pp versus matched shuffles).
+It does, however, change the regime being compared. Permuting whole parameter sets across types,
+with recalibration, cost 1.6--8.1\pp; only T2-dms reached nominal significance ($p=0.003$,
+descriptive).
+
+\paragraph{Heterogeneity helps the exact gradient but not the local rule.}
+Replacing every cell by its type mean (recalibrated) lowered BPTT accuracy on T1-late by 12.6\pp with
+Adam (Holm $p\le0.001$) and on T2-dms by 20.1 and 24.9\pp. Under the local rule, the same manipulation
+had no significant effect in any comparison ($-6.0$ to $+1.7$\pp). On T1-early neither learner gained
+from heterogeneity. Type-mean networks also fired more slowly (7--8\,Hz).
+
+\input{generated/familyB_table}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figures/fig4_biology.pdf}
+\caption{\textbf{Biological specificity (Families B, C).} (a--c) Preregistered effects with 95\% CIs
+(black: Adam; blue: RMS). Grey band: $\pm$5\,pp; stars: Holm $p<.05$. (d--f) Mean rate and accuracy for
+the local learner under each manipulation (mean $\pm$ s.e.m.). The reference-calibrated shuffle doubles
+the rate and raises saturation about 15-fold, without a significant change in accuracy.}\label{fig:bio}
+\end{figure}
+
+\subsection{The operating point shapes local learning, task by task}
+Moving every cell's calibrated baseline from 2\% to 20\% of its ceiling raised mean rates from about
+7\,Hz to 31--35\,Hz (Fig.~\ref{fig:op}). BPTT was insensitive: no slope differed from zero. The local
+rule was not. Its accuracy fell with higher baselines on T1-early ($-4.6$\pp per doubling, 95\% CI
+[$-5.9$, $-3.3$], $p<0.001$), rose on T1-late ($+3.5$\pp, [1.6, 5.6], $p=0.004$) and tended to rise on
+T2-dms ($+1.8$\pp, [0.0, 3.5], $p=0.08$). No single operating point was best for local learning
+across tasks.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{figures/fig6_operating_point.pdf}
+\caption{\textbf{Operating point (Family D, descriptive).} Unseen-delay conflict accuracy (a--c) and
+mean rate (d--f) as the calibrated baseline varies from 2\% to 20\% of each cell's fitted ceiling.
+Adam; mean $\pm$ s.e.m.\ over 16 networks.}\label{fig:op}
+\end{figure}

@@ -1,2 +1,52 @@
 \section{Discussion}
-DISCUSSION PLACEHOLDER.
+
+We trained recurrent networks made entirely of data-fitted neuron models with a cell-local,
+forward-in-time learning rule, and tested every comparison in a protocol locked before the
+held-out cohort was used. Four results stand out.
+
+\paragraph{The eligibility trace must contain the fitted adaptation.}
+Almost every fitted cell adapts. A local rule whose eligibility trace ignores the cell's own
+spike-history filter lost 7--17\pp of out-of-distribution accuracy and fell to the level of a
+frozen reservoir. The reason is credit assignment: with $\beta$, the local estimate stays
+closely aligned with the exact gradient (cosine up to 0.94 with symmetric feedback), and the
+benefit is larger at cells with stronger adaptation loop gain. This extends a point made for
+single-threshold adaptive spiking neurons
+\citep{bellec2020eprop,bellec2018lsnn,salaj2021sfa}: it holds for heterogeneous, multi-timescale
+history filters fitted to real cells. For a synapse, the requirement is concrete. Its trace
+must decay with the postsynaptic cell's own adaptation kinetics, not only with membrane or
+synaptic time constants.
+
+\paragraph{Where local learning falls short.}
+On the two tasks that require combining stored information with a later cue, the local rule
+trailed BPTT by 11--22\pp. Symmetric feedback did not close that gap, which points to the paths
+through other cells that the rule ignores, rather than to random feedback. The frozen reservoir
+was a strong baseline. Population codes show why: the slow fitted filters keep both input
+streams decodable through the delay in every network, so learning matters mainly in the response
+phase. A frozen reservoir is therefore the right control for claims about recurrent plasticity in
+networks of slow cells; in our data, local plasticity beat it significantly in half of the
+comparisons.
+
+\paragraph{Biological specificity: a negative result with one exception.}
+Once each manipulated bank was recalibrated to the same operating point, the natural pairing of
+each cell's parameters and the type-level wiring had no detectable effect. Most such effects
+were bounded within $\pm$5\pp. Without recalibration, shuffled networks ran at twice the rate
+with about 15 times more saturation. That is a different regime, and earlier versions of this
+project had read differences between such networks as effects of cell identity. Heterogeneity
+was the exception. Replacing cells by their type means cost BPTT up to 25\pp on the harder tasks,
+in line with reports that heterogeneity aids learning \citep{pereznieves2021}, but it did not
+affect the local rule. One possible reading is that the diversity of timescales is only useful
+to a learner that can assign credit through the network. A local rule that cannot do so does not
+benefit from it. Type-mean networks also fired more slowly, so part of this effect may be an
+operating-point difference that our calibration did not remove.
+
+\paragraph{Operating point.}
+The calibrated baseline rate, a choice that every data-constrained rate model makes, mattered
+for the local rule in a task-dependent way and not for BPTT. It should be reported and
+varied, not fixed silently.
+
+\input{sections/limitations}
+
+\paragraph{Outlook.}
+The same pipeline can test spiking versions of the fitted cells, measured connectivity once it
+is available in tabular form, reward-modulated rather than supervised signals, and larger
+networks. The protocol, code and all run outputs are available for reuse.

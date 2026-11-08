@@ -1,0 +1,142 @@
+         family  task optimizer                                       contrast  diff_pp  ci95_low  ci95_high  p_value  p_holm  wins_a        equivalence_5pp
+              A early      adam                             A1 local - no_beta  10.9375    5.2246    16.8213   0.0030  0.0239    13.0                    NaN
+              A early      adam                             A2 local - readout   4.7119   -1.0016    10.9619   0.1591  0.3182     9.0                    NaN
+              A early      adam                                A3 bptt - local   4.0039   -1.7334     9.0088   0.1821  0.3182    10.0                    NaN
+              A early       rms                             A1 local - no_beta  16.7969   11.0840    22.5830   0.0002  0.0020    15.0                    NaN
+              A early       rms                             A2 local - readout   7.9346    2.6367    13.3789   0.0134  0.0806    13.0                    NaN
+              A early       rms                                A3 bptt - local  -5.2979  -10.3271    -0.3906   0.0580  0.2318     5.0                    NaN
+              A  late      adam                             A1 local - no_beta   9.2285    5.2490    13.1836   0.0010  0.0104    14.0                    NaN
+              A  late      adam                             A2 local - readout   6.0547    0.4150    12.0361   0.0628  0.2318    13.0                    NaN
+              A  late      adam                                A3 bptt - local  16.1621    9.6924    21.0205   0.0005  0.0050    15.0                    NaN
+              A  late       rms                             A1 local - no_beta  10.5713    7.2266    14.1113   0.0001  0.0017    15.0                    NaN
+              A  late       rms                             A2 local - readout  11.9385    7.1777    17.1149   0.0004  0.0044    14.0                    NaN
+              A  late       rms                                A3 bptt - local  11.4746    4.6143    16.7480   0.0042  0.0291    15.0                    NaN
+              A   dms      adam                             A1 local - no_beta  12.4512    8.9600    15.9912   0.0001  0.0009    15.0                    NaN
+              A   dms      adam                             A2 local - readout  10.6445    5.5908    15.2832   0.0015  0.0135    13.0                    NaN
+              A   dms      adam                                A3 bptt - local  14.8682   11.4008    18.0176   0.0000  0.0005    16.0                    NaN
+              A   dms       rms                             A1 local - no_beta   7.0557    1.9287    11.8896   0.0200  0.0998    12.0                    NaN
+              A   dms       rms                             A2 local - readout  10.6689    6.9574    14.4537   0.0000  0.0005    16.0                    NaN
+              A   dms       rms                                A3 bptt - local  22.2900   17.5043    27.1973   0.0000  0.0005    16.0                    NaN
+   B/early/adam early      adam                          B factorial: identity   2.3499   -0.9705     5.4504   0.1817  1.0000     NaN practically_negligible
+   B/early/adam early      adam                          B factorial: topology   1.1169   -0.5676     2.8503   0.2453  1.0000     NaN practically_negligible
+   B/early/adam early      adam                           B factorial: learner  -2.0203   -4.7852     0.6287   0.1708  1.0000     NaN practically_negligible
+   B/early/adam early      adam               B factorial: identity x topology  -1.6968   -5.8231     2.5879   0.4526  1.0000     NaN           inconclusive
+   B/early/adam early      adam                B factorial: identity x learner   0.1343   -6.7383     7.2876   0.9734  1.0000     NaN           inconclusive
+   B/early/adam early      adam                B factorial: topology x learner  -0.9644   -4.6390     3.3447   0.6627  1.0000     NaN practically_negligible
+   B/early/adam early      adam     B factorial: identity x topology x learner  -6.2744  -14.2822     1.0010   0.1514  1.0000     NaN           inconclusive
+   B/early/adam early      adam           B homogeneity (bptt): intact - homog  -0.2686   -4.8096     4.0771   0.9180  1.0000     8.0 practically_negligible
+   B/early/adam early      adam          B homogeneity (local): intact - homog  -3.0273   -7.5439     1.6602   0.2313  1.0000     7.0           inconclusive
+    descriptive early      adam           simple: identity (local, type prior)   0.0000   -6.5680     7.1051   1.0000     NaN     6.0                    NaN
+    descriptive early      adam            simple: identity (bptt, type prior)   3.0029   -2.6367     8.5938   0.3293     NaN    10.0                    NaN
+    descriptive early      adam               simple: topology (local, intact)  -1.7822   -4.6387     1.2695   0.2759     NaN     6.0                    NaN
+    descriptive early      adam                simple: topology (bptt, intact)   2.3193   -2.3438     6.8604   0.3625     NaN     8.0                    NaN
+    B/early/rms early       rms                          B factorial: identity   1.0681   -2.2888     4.3336   0.5444  1.0000     NaN practically_negligible
+    B/early/rms early       rms                          B factorial: topology  -0.3601   -2.5941     1.7273   0.7611  1.0000     NaN practically_negligible
+    B/early/rms early       rms                           B factorial: learner   3.9612    0.4027     7.4158   0.0501  0.4006     NaN           inconclusive
+    B/early/rms early       rms               B factorial: identity x topology  -2.2827   -6.8481     2.2464   0.3616  1.0000     NaN           inconclusive
+    B/early/rms early       rms                B factorial: identity x learner   0.4517   -4.7974     5.7986   0.8766  1.0000     NaN practically_negligible
+    B/early/rms early       rms                B factorial: topology x learner   3.7476    0.9277     6.7993   0.0294  0.2642     NaN           inconclusive
+    B/early/rms early       rms     B factorial: identity x topology x learner  -3.0518  -11.6699     4.3457   0.5100  1.0000     NaN           inconclusive
+    B/early/rms early       rms           B homogeneity (bptt): intact - homog  -7.1533  -13.9160    -0.9033   0.0562  0.4006     5.0           inconclusive
+    B/early/rms early       rms          B homogeneity (local): intact - homog  -0.2686   -3.9795     3.2715   0.8981  1.0000     9.0 practically_negligible
+    descriptive early       rms           simple: identity (local, type prior)  -0.6104   -5.4688     4.2725   0.8201     NaN     8.0                    NaN
+    descriptive early       rms            simple: identity (bptt, type prior)   0.4639   -5.2246     6.2012   0.8841     NaN     7.0                    NaN
+    descriptive early       rms               simple: topology (local, intact)  -0.3906   -5.0055     3.9069   0.8789     NaN    10.0                    NaN
+    descriptive early       rms                simple: topology (bptt, intact)  -2.6123   -6.1768     1.0742   0.1920     NaN     6.0                    NaN
+    B/late/adam  late      adam                          B factorial: identity   1.9104   -1.1047     4.9257   0.2512  1.0000     NaN practically_negligible
+    B/late/adam  late      adam                          B factorial: topology  -0.2136   -2.8442     2.4538   0.8831  1.0000     NaN practically_negligible
+    B/late/adam  late      adam                           B factorial: learner -17.2180  -20.0256   -14.0015   0.0000  0.0003     NaN              different
+    B/late/adam  late      adam               B factorial: identity x topology   0.2563   -4.6875     4.7119   0.9270  1.0000     NaN practically_negligible
+    B/late/adam  late      adam                B factorial: identity x learner   2.2827   -2.6733     7.2876   0.3894  1.0000     NaN           inconclusive
+    B/late/adam  late      adam                B factorial: topology x learner  -1.9653   -6.4209     2.3560   0.4140  1.0000     NaN           inconclusive
+    B/late/adam  late      adam     B factorial: identity x topology x learner   3.5889   -5.5176    12.9639   0.4765  1.0000     NaN           inconclusive
+    B/late/adam  late      adam           B homogeneity (bptt): intact - homog  12.5977    8.5449    16.3818   0.0001  0.0010    15.0              different
+    B/late/adam  late      adam          B homogeneity (local): intact - homog  -6.0059  -10.0348    -0.9521   0.0271  0.1899     2.0           inconclusive
+    descriptive  late      adam           simple: identity (local, type prior)   4.0771   -1.8311     9.8145   0.2040     NaN     9.0                    NaN
+    descriptive  late      adam            simple: identity (bptt, type prior)   0.0000   -4.4434     4.0527   1.0000     NaN     6.0                    NaN
+    descriptive  late      adam               simple: topology (local, intact)  -0.1709   -5.7129     5.2496   0.9612     NaN     7.0                    NaN
+    descriptive  late      adam                simple: topology (bptt, intact)   0.0000   -2.9297     2.9541   1.0000     NaN     7.0                    NaN
+     B/late/rms  late       rms                          B factorial: identity   4.5105    1.8797     7.1960   0.0067  0.0532     NaN           inconclusive
+     B/late/rms  late       rms                          B factorial: topology  -0.4211   -2.8505     1.9226   0.7439  1.0000     NaN practically_negligible
+     B/late/rms  late       rms                           B factorial: learner -11.1023  -14.2151    -7.8185   0.0001  0.0011     NaN              different
+     B/late/rms  late       rms               B factorial: identity x topology  -3.5278   -8.1790     0.6470   0.1603  0.8015     NaN           inconclusive
+     B/late/rms  late       rms                B factorial: identity x learner  -1.9409   -9.1309     6.0919   0.6465  1.0000     NaN           inconclusive
+     B/late/rms  late       rms                B factorial: topology x learner  -2.2827   -5.7739     1.4893   0.2626  1.0000     NaN           inconclusive
+     B/late/rms  late       rms     B factorial: identity x topology x learner   6.9580   -1.0260    15.1855   0.1253  0.7518     NaN           inconclusive
+     B/late/rms  late       rms           B homogeneity (bptt): intact - homog   7.8857    2.8070    12.6709   0.0097  0.0679    11.0           inconclusive
+     B/late/rms  late       rms          B homogeneity (local): intact - homog  -2.2949   -6.6406     2.1973   0.3365  1.0000     6.0           inconclusive
+    descriptive  late       rms           simple: identity (local, type prior)   3.5156   -1.0986     8.9355   0.2119     NaN    10.0                    NaN
+    descriptive  late       rms            simple: identity (bptt, type prior)   1.9775   -4.4189     7.9346   0.5535     NaN    11.0                    NaN
+    descriptive  late       rms               simple: topology (local, intact)  -1.5869   -4.9316     2.2705   0.4227     NaN     7.0                    NaN
+    descriptive  late       rms                simple: topology (bptt, intact)  -2.7832   -6.6650     1.0260   0.1952     NaN     4.0                    NaN
+     B/dms/adam   dms      adam                          B factorial: identity   1.3428   -2.3438     4.7424   0.4834  1.0000     NaN practically_negligible
+     B/dms/adam   dms      adam                          B factorial: topology   0.2441   -1.8433     2.5085   0.8371  1.0000     NaN practically_negligible
+     B/dms/adam   dms      adam                           B factorial: learner -14.2944  -16.8518   -11.7737   0.0000  0.0003     NaN              different
+     B/dms/adam   dms      adam               B factorial: identity x topology   1.7822   -2.5513     6.2866   0.4634  1.0000     NaN           inconclusive
+     B/dms/adam   dms      adam                B factorial: identity x learner  -0.8789   -4.4312     2.6245   0.6429  1.0000     NaN practically_negligible
+     B/dms/adam   dms      adam                B factorial: topology x learner  -1.2207   -3.8452     1.2817   0.3927  1.0000     NaN practically_negligible
+     B/dms/adam   dms      adam     B factorial: identity x topology x learner   1.9043   -4.4678     8.7402   0.6013  1.0000     NaN           inconclusive
+     B/dms/adam   dms      adam           B homogeneity (bptt): intact - homog  20.1172   15.3314    25.0488   0.0000  0.0003    16.0              different
+     B/dms/adam   dms      adam          B homogeneity (local): intact - homog   1.7334   -2.3438     5.5908   0.4227  1.0000     9.0           inconclusive
+    descriptive   dms      adam           simple: identity (local, type prior)   2.2705   -2.8076     6.8848   0.3988     NaN    11.0                    NaN
+    descriptive   dms      adam            simple: identity (bptt, type prior)   2.1973   -1.0986     5.2246   0.2122     NaN    10.0                    NaN
+    descriptive   dms      adam               simple: topology (local, intact)   1.0010   -2.5146     4.9078   0.6248     NaN     7.0                    NaN
+    descriptive   dms      adam                simple: topology (bptt, intact)   1.2695   -2.1490     4.8340   0.5110     NaN     7.0                    NaN
+      B/dms/rms   dms       rms                          B factorial: identity   3.2715   -0.6290     7.3914   0.1464  0.7320     NaN           inconclusive
+      B/dms/rms   dms       rms                          B factorial: topology   1.3184   -1.1292     3.8576   0.3297  1.0000     NaN practically_negligible
+      B/dms/rms   dms       rms                           B factorial: learner -19.7144  -23.5535   -15.8508   0.0000  0.0003     NaN              different
+      B/dms/rms   dms       rms               B factorial: identity x topology  -0.5615   -4.8462     3.7231   0.8105  1.0000     NaN practically_negligible
+      B/dms/rms   dms       rms                B factorial: identity x learner  -1.3672   -7.1658     4.6878   0.6674  1.0000     NaN           inconclusive
+      B/dms/rms   dms       rms                B factorial: topology x learner   1.1230   -4.7974     6.7505   0.7128  1.0000     NaN           inconclusive
+      B/dms/rms   dms       rms     B factorial: identity x topology x learner  -9.8145  -17.8467    -1.5619   0.0387  0.2711     NaN           inconclusive
+      B/dms/rms   dms       rms           B homogeneity (bptt): intact - homog  24.8535   17.7484    32.5195   0.0000  0.0003    16.0              different
+      B/dms/rms   dms       rms          B homogeneity (local): intact - homog  -5.7129  -11.3525    -0.1465   0.0747  0.4482     6.0           inconclusive
+    descriptive   dms       rms           simple: identity (local, type prior)  -0.1465   -6.9830     6.3721   0.9724     NaN     7.0                    NaN
+    descriptive   dms       rms            simple: identity (bptt, type prior)   6.1279    1.2939    11.2793   0.0288     NaN    13.0                    NaN
+    descriptive   dms       rms               simple: topology (local, intact)  -0.8545   -5.0049     3.3936   0.7073     NaN     7.0                    NaN
+    descriptive   dms       rms                simple: topology (bptt, intact)   2.9297   -1.2207     7.8613   0.2880     NaN     8.0                    NaN
+C (descriptive) early      adam C operating point: shuffle reference - matched   1.8066   -5.0787     8.4961   0.6195     NaN     8.0                    NaN
+C (descriptive) early      adam                   C shuffle reference - intact   1.8066   -3.3936     7.2516   0.5320     NaN     7.0                    NaN
+C (descriptive) early      adam                          C fast decay - intact -32.4707  -36.2305   -28.6377   0.0000     NaN     0.0                    NaN
+C (descriptive) early      adam                          C cross-type - intact  -3.1738   -9.4482     2.8809   0.3391     NaN     6.0                    NaN
+C (descriptive) early      adam          C symmetric - random feedback (local)   4.4189   -0.9277     9.8633   0.1420     NaN    12.0                    NaN
+C (descriptive) early      adam                   C symmetric: local - no_beta  12.6709    6.8604    19.3610   0.0004     NaN    14.0                    NaN
+C (descriptive) early      adam                       C bptt - symmetric local  -0.4150   -4.7607     3.9062   0.8654     NaN     8.0                    NaN
+C (descriptive)  late      adam C operating point: shuffle reference - matched   2.9053   -2.2217     8.2520   0.3127     NaN    10.0                    NaN
+C (descriptive)  late      adam                   C shuffle reference - intact  -1.1719   -6.5430     4.4928   0.6986     NaN     8.0                    NaN
+C (descriptive)  late      adam                          C fast decay - intact -25.7568  -29.5172   -22.2412   0.0000     NaN     0.0                    NaN
+C (descriptive)  late      adam                          C cross-type - intact  -1.5869   -7.1289     3.4180   0.5896     NaN     7.0                    NaN
+C (descriptive)  late      adam          C symmetric - random feedback (local)   3.7842   -2.5146     8.3984   0.2223     NaN    13.0                    NaN
+C (descriptive)  late      adam                   C symmetric: local - no_beta   8.4473    2.5635    14.1357   0.0165     NaN    13.0                    NaN
+C (descriptive)  late      adam                       C bptt - symmetric local  12.3779    9.6436    15.1855   0.0000     NaN    16.0                    NaN
+C (descriptive)   dms      adam C operating point: shuffle reference - matched   3.3447   -2.3193     8.8623   0.2798     NaN    12.0                    NaN
+C (descriptive)   dms      adam                   C shuffle reference - intact   1.0742   -5.1758     7.6172   0.7557     NaN     7.0                    NaN
+C (descriptive)   dms      adam                          C fast decay - intact -30.5908  -33.6914   -27.5146   0.0000     NaN     0.0                    NaN
+C (descriptive)   dms      adam                          C cross-type - intact  -8.1055  -12.1338    -3.9795   0.0028     NaN     2.0                    NaN
+C (descriptive)   dms      adam          C symmetric - random feedback (local)   3.8818   -1.1725     7.7148   0.1245     NaN    13.0                    NaN
+C (descriptive)   dms      adam                   C symmetric: local - no_beta  11.9629    6.4941    17.4072   0.0017     NaN    13.0                    NaN
+C (descriptive)   dms      adam                       C bptt - symmetric local  10.9863    7.3236    14.9658   0.0001     NaN    15.0                    NaN
+D (descriptive) early      adam        D slope per doubling of baseline (bptt)  -2.0682   -4.6177     0.3456   0.1296     NaN     7.0                    NaN
+D (descriptive) early      adam                  D baseline 0.02 - 0.05 (bptt)   4.1260    1.0010     7.5690   0.0282     NaN    10.0                    NaN
+D (descriptive) early      adam                   D baseline 0.1 - 0.05 (bptt)  -3.6377   -8.8379     1.5631   0.2093     NaN     7.0                    NaN
+D (descriptive) early      adam                   D baseline 0.2 - 0.05 (bptt)  -2.0264  -10.1318     5.9088   0.6460     NaN     8.0                    NaN
+D (descriptive) early      adam       D slope per doubling of baseline (local)  -4.5588   -5.8801    -3.3062   0.0000     NaN     0.0                    NaN
+D (descriptive) early      adam                 D baseline 0.02 - 0.05 (local)   6.3232    2.2461    10.4492   0.0108     NaN    12.0                    NaN
+D (descriptive) early      adam                  D baseline 0.1 - 0.05 (local)  -5.4932  -10.4736    -0.6348   0.0520     NaN     4.0                    NaN
+D (descriptive) early      adam                  D baseline 0.2 - 0.05 (local)  -8.4473  -13.3057    -3.7109   0.0052     NaN     3.0                    NaN
+D (descriptive)  late      adam        D slope per doubling of baseline (bptt)   0.2794   -0.7068     1.3152   0.6014     NaN     8.0                    NaN
+D (descriptive)  late      adam                  D baseline 0.02 - 0.05 (bptt)   1.5381   -2.5397     5.9326   0.5210     NaN     9.0                    NaN
+D (descriptive)  late      adam                   D baseline 0.1 - 0.05 (bptt)   3.0029   -1.2457     7.7148   0.2365     NaN    11.0                    NaN
+D (descriptive)  late      adam                   D baseline 0.2 - 0.05 (bptt)   1.6602   -0.4395     3.7109   0.1552     NaN    10.0                    NaN
+D (descriptive)  late      adam       D slope per doubling of baseline (local)   3.5291    1.5671     5.6159   0.0043     NaN    12.0                    NaN
+D (descriptive)  late      adam                 D baseline 0.02 - 0.05 (local)  -4.6631  -10.3027     1.6119   0.1637     NaN     3.0                    NaN
+D (descriptive)  late      adam                  D baseline 0.1 - 0.05 (local)   7.3975    1.7578    13.2812   0.0284     NaN    11.0                    NaN
+D (descriptive)  late      adam                  D baseline 0.2 - 0.05 (local)   5.6396    0.0977    10.9131   0.0674     NaN    12.0                    NaN
+D (descriptive)   dms      adam        D slope per doubling of baseline (bptt)  -1.0230   -3.2865     0.7533   0.4362     NaN     9.0                    NaN
+D (descriptive)   dms      adam                  D baseline 0.02 - 0.05 (bptt)   0.0732   -4.1260     3.8330   0.9811     NaN    10.0                    NaN
+D (descriptive)   dms      adam                   D baseline 0.1 - 0.05 (bptt)  -0.6592   -3.6865     2.3438   0.6916     NaN     7.0                    NaN
+D (descriptive)   dms      adam                   D baseline 0.2 - 0.05 (bptt)  -3.5889  -10.9619     1.8066   0.3692     NaN     6.0                    NaN
+D (descriptive)   dms      adam       D slope per doubling of baseline (local)   1.7967   -0.0073     3.5055   0.0789     NaN    12.0                    NaN
+D (descriptive)   dms      adam                 D baseline 0.02 - 0.05 (local)  -3.9307   -6.6895    -0.9766   0.0215     NaN     4.0                    NaN
+D (descriptive)   dms      adam                  D baseline 0.1 - 0.05 (local)   1.9287   -2.0514     5.9576   0.3753     NaN     8.0                    NaN
+D (descriptive)   dms      adam                  D baseline 0.2 - 0.05 (local)   1.8311   -3.6133     6.8115   0.5130     NaN     9.0                    NaN

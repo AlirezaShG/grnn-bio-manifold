@@ -56,3 +56,37 @@ Problems found in v7's design (not bugs in its code):
   traceable) and the ALM composite score.
 - Windows note: never read run files while workers write them. `write_json` now retries
   `os.replace`.
+- 2026-11-08 → 09:
+  - Two-stage LR search. With Adam, the reservoir and no-β rule needed lr_out up to 3.
+  - Rehearsal (dev cohort, 4 seeds) of families A–D.
+  - Family D (operating point) was added before locking.
+  - Protocol locked 23:53 (local time).
+  - Confirmation: 1,680 runs, no failures, 145 min.
+
+## Confirmation results (held-out donor cohort, 16 paired networks)
+
+Primary endpoint: unseen-delay conflict accuracy.
+
+- **A1 (β in the trace):** +7 to +17 pp in 6/6 settings; Holm-significant in 5/6 (not DMS/RMS,
+  Holm p = 0.10). Without β, accuracy is close to or below the frozen reservoir.
+- **A2 (local vs frozen reservoir):** positive in 6/6, significant in 3/6 (late/RMS, DMS ×2).
+- **A3 (BPTT vs local):** +11 to +22 pp on late and DMS (significant); none on early.
+- **Mechanism:** with symmetric feedback, the local estimate has cosine 0.76–0.94 with β vs
+  0.54–0.66 without. The per-Pyr-cell gain correlates with adaptation loop gain
+  (r = 0.16–0.23, CIs > 0). β still adds 8–13 pp with symmetric feedback. Symmetric vs random
+  feedback adds only about 4 pp (n.s.). The remaining BPTT gap comes from cut network paths.
+- **Representation:** both streams are decodable at ≥98% in the delay for every learner, the
+  reservoir included. Learners differ only in the response phase. Fast decay drops every task to
+  chance.
+- **Family B:**
+  - identity is practically negligible in 4/6 cases and inconclusive in 2/6;
+  - wiring is negligible in 6/6;
+  - heterogeneity helps BPTT strongly (+12.6, +20.1, +24.9 pp; Holm p ≤ 0.001), but not the local
+    rule.
+- **Family C:** the reference-calibrated shuffle runs at 24 Hz with 7% of samples near ceiling,
+  yet its accuracy does not differ significantly at the tuned budget.
+- **Family D:** BPTT is insensitive to the operating point. The local rule's slope depends on the
+  task: −4.6 pp per doubling (early), +3.5 (late), +1.8 (DMS, p = 0.08).
+
+Paper: `paper/main.pdf` (16 pages). Every number comes from
+`results/v11/confirmation/analysis/`.

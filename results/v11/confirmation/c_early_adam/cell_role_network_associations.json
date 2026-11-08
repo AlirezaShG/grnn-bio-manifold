@@ -1,0 +1,578 @@
+[
+  {
+    "ci_high": -0.04415052148989905,
+    "ci_low": -0.19143623157961426,
+    "condition": "intact_bptt",
+    "mean_correlation_fisher": -0.11997553805359004,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": -0.33237747474425666,
+        "n_unique_cells": 59,
+        "seed": 1001
+      },
+      {
+        "correlation": -0.02326835858936405,
+        "n_unique_cells": 54,
+        "seed": 1002
+      },
+      {
+        "correlation": -0.10772201753971276,
+        "n_unique_cells": 56,
+        "seed": 1003
+      },
+      {
+        "correlation": 0.24172469522365017,
+        "n_unique_cells": 57,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.417025650385916,
+        "n_unique_cells": 59,
+        "seed": 1005
+      },
+      {
+        "correlation": -0.11025460679917382,
+        "n_unique_cells": 61,
+        "seed": 1006
+      },
+      {
+        "correlation": -0.03078122075207678,
+        "n_unique_cells": 57,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.2020335482158476,
+        "n_unique_cells": 63,
+        "seed": 1008
+      },
+      {
+        "correlation": -0.14199400133889375,
+        "n_unique_cells": 56,
+        "seed": 1009
+      },
+      {
+        "correlation": -0.10909407411700761,
+        "n_unique_cells": 61,
+        "seed": 1010
+      },
+      {
+        "correlation": -0.07512409152874092,
+        "n_unique_cells": 63,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.0595753511111631,
+        "n_unique_cells": 60,
+        "seed": 1012
+      },
+      {
+        "correlation": -0.1893108107975799,
+        "n_unique_cells": 61,
+        "seed": 1013
+      },
+      {
+        "correlation": -0.06589990699457583,
+        "n_unique_cells": 61,
+        "seed": 1014
+      },
+      {
+        "correlation": -0.2708643184246082,
+        "n_unique_cells": 61,
+        "seed": 1015
+      },
+      {
+        "correlation": -0.10425389125017781,
+        "n_unique_cells": 63,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.10611956145787636,
+    "ci_low": -0.23970802912304376,
+    "condition": "intact_local",
+    "mean_correlation_fisher": -0.1750783340874827,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": -0.3089950291449945,
+        "n_unique_cells": 52,
+        "seed": 1001
+      },
+      {
+        "correlation": 0.018827561485450003,
+        "n_unique_cells": 53,
+        "seed": 1002
+      },
+      {
+        "correlation": -0.058257908665301054,
+        "n_unique_cells": 53,
+        "seed": 1003
+      },
+      {
+        "correlation": -0.09589863004468788,
+        "n_unique_cells": 59,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.31508589595660463,
+        "n_unique_cells": 51,
+        "seed": 1005
+      },
+      {
+        "correlation": -0.2519301619965771,
+        "n_unique_cells": 55,
+        "seed": 1006
+      },
+      {
+        "correlation": -0.03865555215352539,
+        "n_unique_cells": 54,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.2466267552742037,
+        "n_unique_cells": 59,
+        "seed": 1008
+      },
+      {
+        "correlation": -0.24766490160093693,
+        "n_unique_cells": 56,
+        "seed": 1009
+      },
+      {
+        "correlation": -0.12181684464480846,
+        "n_unique_cells": 52,
+        "seed": 1010
+      },
+      {
+        "correlation": -0.3258113242419068,
+        "n_unique_cells": 55,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.11902581605661987,
+        "n_unique_cells": 54,
+        "seed": 1012
+      },
+      {
+        "correlation": -0.40174744794322137,
+        "n_unique_cells": 52,
+        "seed": 1013
+      },
+      {
+        "correlation": -0.17443750097019461,
+        "n_unique_cells": 55,
+        "seed": 1014
+      },
+      {
+        "correlation": -0.11117957080394715,
+        "n_unique_cells": 59,
+        "seed": 1015
+      },
+      {
+        "correlation": -0.19125651450201225,
+        "n_unique_cells": 55,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.08694035637660522,
+    "ci_low": -0.18261142895340468,
+    "condition": "intact_local_no_beta",
+    "mean_correlation_fisher": -0.1357484784852907,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": -0.21319572148577196,
+        "n_unique_cells": 55,
+        "seed": 1001
+      },
+      {
+        "correlation": 0.0262055921182462,
+        "n_unique_cells": 50,
+        "seed": 1002
+      },
+      {
+        "correlation": -0.03507154422796957,
+        "n_unique_cells": 50,
+        "seed": 1003
+      },
+      {
+        "correlation": -0.02910721608580872,
+        "n_unique_cells": 59,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.19045912325157024,
+        "n_unique_cells": 52,
+        "seed": 1005
+      },
+      {
+        "correlation": -0.2043326209482884,
+        "n_unique_cells": 55,
+        "seed": 1006
+      },
+      {
+        "correlation": -0.2381835974668431,
+        "n_unique_cells": 56,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.19222323808277714,
+        "n_unique_cells": 58,
+        "seed": 1008
+      },
+      {
+        "correlation": -0.18347098224092934,
+        "n_unique_cells": 56,
+        "seed": 1009
+      },
+      {
+        "correlation": -0.04424154594759326,
+        "n_unique_cells": 48,
+        "seed": 1010
+      },
+      {
+        "correlation": -0.10418005636892054,
+        "n_unique_cells": 59,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.03922365403059515,
+        "n_unique_cells": 54,
+        "seed": 1012
+      },
+      {
+        "correlation": -0.31129836896483865,
+        "n_unique_cells": 54,
+        "seed": 1013
+      },
+      {
+        "correlation": -0.1640819022797839,
+        "n_unique_cells": 54,
+        "seed": 1014
+      },
+      {
+        "correlation": -0.09819118758933196,
+        "n_unique_cells": 58,
+        "seed": 1015
+      },
+      {
+        "correlation": -0.2090486404245153,
+        "n_unique_cells": 54,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.12108871939189962,
+    "ci_low": -0.23608397150450577,
+    "condition": "intact_readout_only",
+    "mean_correlation_fisher": -0.17916821203094915,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": -0.39527726053868634,
+        "n_unique_cells": 50,
+        "seed": 1001
+      },
+      {
+        "correlation": 0.0017975771014428334,
+        "n_unique_cells": 51,
+        "seed": 1002
+      },
+      {
+        "correlation": -0.17783678354543966,
+        "n_unique_cells": 52,
+        "seed": 1003
+      },
+      {
+        "correlation": 0.02080688776046176,
+        "n_unique_cells": 58,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.3032871811056332,
+        "n_unique_cells": 56,
+        "seed": 1005
+      },
+      {
+        "correlation": -0.17905158477675384,
+        "n_unique_cells": 54,
+        "seed": 1006
+      },
+      {
+        "correlation": -0.2723335519768599,
+        "n_unique_cells": 55,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.17504225192402836,
+        "n_unique_cells": 58,
+        "seed": 1008
+      },
+      {
+        "correlation": -0.21817465935116198,
+        "n_unique_cells": 56,
+        "seed": 1009
+      },
+      {
+        "correlation": 0.018094469240894723,
+        "n_unique_cells": 48,
+        "seed": 1010
+      },
+      {
+        "correlation": -0.23651478026829248,
+        "n_unique_cells": 56,
+        "seed": 1011
+      },
+      {
+        "correlation": -0.06976125434118584,
+        "n_unique_cells": 56,
+        "seed": 1012
+      },
+      {
+        "correlation": -0.281956218972031,
+        "n_unique_cells": 54,
+        "seed": 1013
+      },
+      {
+        "correlation": -0.15459991270901022,
+        "n_unique_cells": 55,
+        "seed": 1014
+      },
+      {
+        "correlation": -0.15815759205796462,
+        "n_unique_cells": 56,
+        "seed": 1015
+      },
+      {
+        "correlation": -0.24741592595398307,
+        "n_unique_cells": 56,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.04628854342880226,
+    "ci_low": -0.15436112070976798,
+    "condition": "rewired_bptt",
+    "mean_correlation_fisher": -0.09796180758063595,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": -0.23218690168123624,
+        "n_unique_cells": 54,
+        "seed": 1001
+      },
+      {
+        "correlation": -0.07194649772234003,
+        "n_unique_cells": 59,
+        "seed": 1002
+      },
+      {
+        "correlation": -0.1413176562883708,
+        "n_unique_cells": 56,
+        "seed": 1003
+      },
+      {
+        "correlation": -0.018920308100697204,
+        "n_unique_cells": 61,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.388386171815863,
+        "n_unique_cells": 60,
+        "seed": 1005
+      },
+      {
+        "correlation": 0.07258479321225245,
+        "n_unique_cells": 63,
+        "seed": 1006
+      },
+      {
+        "correlation": -0.0697082466773489,
+        "n_unique_cells": 57,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.021068551372087643,
+        "n_unique_cells": 63,
+        "seed": 1008
+      },
+      {
+        "correlation": -0.03695646573204775,
+        "n_unique_cells": 64,
+        "seed": 1009
+      },
+      {
+        "correlation": -0.01722680866213679,
+        "n_unique_cells": 63,
+        "seed": 1010
+      },
+      {
+        "correlation": -0.06702139322594329,
+        "n_unique_cells": 62,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.04808147616979773,
+        "n_unique_cells": 59,
+        "seed": 1012
+      },
+      {
+        "correlation": -0.11057560388712374,
+        "n_unique_cells": 65,
+        "seed": 1013
+      },
+      {
+        "correlation": -0.14751542067230744,
+        "n_unique_cells": 65,
+        "seed": 1014
+      },
+      {
+        "correlation": -0.16534907405741422,
+        "n_unique_cells": 63,
+        "seed": 1015
+      },
+      {
+        "correlation": -0.17311329106184487,
+        "n_unique_cells": 63,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.10842461482548899,
+    "ci_low": -0.198221041506675,
+    "condition": "rewired_local",
+    "mean_correlation_fisher": -0.1539241784751506,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": -0.2357551291106173,
+        "n_unique_cells": 54,
+        "seed": 1001
+      },
+      {
+        "correlation": 0.03183842746363959,
+        "n_unique_cells": 53,
+        "seed": 1002
+      },
+      {
+        "correlation": -0.16550079030178982,
+        "n_unique_cells": 56,
+        "seed": 1003
+      },
+      {
+        "correlation": -0.16823908821640746,
+        "n_unique_cells": 59,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.26242859707767474,
+        "n_unique_cells": 55,
+        "seed": 1005
+      },
+      {
+        "correlation": -0.12151416768928355,
+        "n_unique_cells": 56,
+        "seed": 1006
+      },
+      {
+        "correlation": -0.27295908732089735,
+        "n_unique_cells": 54,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.16826400065191288,
+        "n_unique_cells": 60,
+        "seed": 1008
+      },
+      {
+        "correlation": -0.1913743876422212,
+        "n_unique_cells": 58,
+        "seed": 1009
+      },
+      {
+        "correlation": -0.07379302513314812,
+        "n_unique_cells": 52,
+        "seed": 1010
+      },
+      {
+        "correlation": -0.12813853642630363,
+        "n_unique_cells": 60,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.020487139131800208,
+        "n_unique_cells": 59,
+        "seed": 1012
+      },
+      {
+        "correlation": -0.207356424476855,
+        "n_unique_cells": 50,
+        "seed": 1013
+      },
+      {
+        "correlation": -0.09796058418817503,
+        "n_unique_cells": 60,
+        "seed": 1014
+      },
+      {
+        "correlation": -0.10663853701613454,
+        "n_unique_cells": 62,
+        "seed": 1015
+      },
+      {
+        "correlation": -0.2955666548448237,
+        "n_unique_cells": 54,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  }
+]

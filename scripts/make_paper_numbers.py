@@ -119,6 +119,59 @@ def numbers(root, prefix):
     print(f'{len(uniq)} macros -> {GEN / "numbers.tex"}')
 
 
+TASK_NAME = {'early': 'T1-early', 'late': 'T1-late', 'dms': 'T2-dms'}
+
+
+def _cell(r, key='p_holm'):
+    p = r.get(key)
+    star = ''
+    if p is not None and np.isfinite(p):
+        star = r'$^{***}$' if p < .001 else r'$^{**}$' if p < .01 else r'$^{*}$' if p < .05 else ''
+    return f"{r['diff_pp']:+.1f} [{r['ci95_low']:.1f}, {r['ci95_high']:.1f}]{star}"
+
+
+def tables(root):
+    tests = json.loads((root / 'analysis' / 'confirmatory_tests.json').read_text())
+    A = pd.DataFrame(tests['family_A'])
+    lines = [r'\begin{table}[t]\centering\small',
+             r'\caption{Family A (confirmation cohort, 16 paired networks). Difference in unseen-delay '
+             r'conflict accuracy (pp) with 95\% bootstrap CI; stars mark Holm-adjusted significance over all 18 '
+             r'tests ($^*p<.05$, $^{**}p<.01$, $^{***}p<.001$).}\label{tab:familyA}',
+             r'\begin{tabular}{llccc}\toprule',
+             r'task & optimizer & A1: local $-$ no $\beta$ & A2: local $-$ reservoir & A3: BPTT $-$ local\\ \midrule']
+    for task in TASKS:
+        for opt in OPTS:
+            f = A[(A.task == task) & (A.optimizer == opt)]
+            cells = [_cell(f[f.contrast.str.startswith(k)].iloc[0]) for k in ('A1', 'A2', 'A3')]
+            lines.append(f"{TASK_NAME[task]} & {'Adam' if opt == 'adam' else 'RMS'} & " + ' & '.join(cells) + r'\\')
+    lines += [r'\bottomrule\end{tabular}\end{table}']
+    (GEN / 'familyA_table.tex').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    B = pd.DataFrame(tests['family_B'])
+    terms = [('B factorial: identity', 'identity'), ('B factorial: topology', 'wiring'),
+             ('B homogeneity (bptt): intact - homog', r'heterog., BPTT'),
+             ('B homogeneity (local): intact - homog', r'heterog., local')]
+    lines = [r'\begin{table}[t]\centering\footnotesize',
+             r'\caption{Family B. Identity: intact $-$ within-type shuffle (matched); wiring: type prior $-$ '
+             r'degree-preserving rewiring (factorial main effects, averaged over learner and the other factor); '
+             r'heterogeneity: intact $-$ type-mean cells, for each learner. pp with 95\% CI; stars: Holm within each '
+             r'task/optimizer family of 9. N: practically negligible (90\% CI within $\pm$5\,pp); I: inconclusive; '
+             r'D: different.}\label{tab:familyB}',
+             r'\begin{tabular}{ll' + 'c' * len(terms) + r'}\toprule',
+             r'task & opt. & ' + ' & '.join(t[1] for t in terms) + r'\\ \midrule']
+    code = {'practically_negligible': 'N', 'inconclusive': 'I', 'different': 'D'}
+    for task in TASKS:
+        for opt in OPTS:
+            f = B[(B.task == task) & (B.optimizer == opt)]
+            cells = []
+            for term, _ in terms:
+                r = f[f.contrast == term].iloc[0]
+                cells.append(_cell(r) + ' ' + code.get(r.get('equivalence_5pp'), ''))
+            lines.append(f"{TASK_NAME[task]} & {'Adam' if opt == 'adam' else 'RMS'} & " + ' & '.join(cells) + r'\\')
+    lines += [r'\bottomrule\end{tabular}\end{table}']
+    (GEN / 'familyB_table.tex').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    print('tables written')
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--root', type=Path)
@@ -129,3 +182,4 @@ if __name__ == '__main__':
     lock_table()
     if a.root:
         numbers(a.root, a.prefix)
+        tables(a.root)

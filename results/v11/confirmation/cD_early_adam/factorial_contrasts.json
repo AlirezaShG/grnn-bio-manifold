@@ -1,0 +1,7 @@
+{
+  "available_cells_per_seed": {},
+  "contrasts": [],
+  "metric": "accuracy_incongruent",
+  "required_cells": 8,
+  "status": "not_estimable_incomplete_factorial"
+}

@@ -6,17 +6,40 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{caption}
 \captionsetup{font=small,labelfont=bf}
-\newcommand{\pp}{\,pp}
+\usepackage{xspace}
+\newcommand{\pp}{\,pp\xspace}
 
-\title{TITLE PLACEHOLDER}
-\author{AUTHORS PLACEHOLDER}
+\title{Local learning in networks of patch-clamp-fitted neurons needs each cell's adaptation
+in its eligibility trace}
+\author{Author list to be confirmed by the authors}
 \date{Preprint draft, \today}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-ABSTRACT PLACEHOLDER (written after confirmation results).
+Synapses must assign credit across time using only local information, yet local learning rules
+are usually studied in networks of generic model neurons. We built recurrent networks entirely
+from differentiable firing-rate models fitted to patch-clamp recordings of mouse cortical cells.
+We kept each cell's intrinsic dynamics fixed and trained only the synapses, on three working-memory
+tasks. A cell-local, forward-in-time rule (e-prop with random feedback) was compared with exact
+back-propagation through time and with a frozen recurrent reservoir. All tests were preregistered
+and run on a held-out cohort of cells from different donor animals (16 paired networks per
+condition, 1,680 networks).
+
+Nearly all fitted cells show spike-frequency adaptation. Removing the cell's own spike-history term
+from the eligibility trace lowered accuracy at unseen delays by 7--17 percentage points
+(significant in 5 of 6 task/optimizer settings), to the level of a frozen reservoir. Keeping the
+term preserved the alignment of the local update with the exact gradient (cosine up to 0.94),
+and the gain grew with each cell's adaptation strength. The local rule still trailed exact
+gradients by 11--22 points on tasks that combine memory with a later cue. This gap reflects ignored
+network paths rather than random feedback.
+
+Once operating points were matched, cell identity and type-level wiring had no detectable effect;
+without matching, shuffled networks fired twice as fast. Cellular heterogeneity helped exact
+gradient learning by up to 25 points but did not help the local rule. Biologically plausible
+credit assignment in realistic circuits thus depends on synaptic traces that follow each
+neuron's measured adaptation.
 \end{abstract}
 
 \input{sections/introduction}

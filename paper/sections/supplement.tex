@@ -24,6 +24,21 @@ VIP & 0.30 & 0.05 & 0.40 & 0.05\\ \bottomrule
 \subsection{Selected learning rates}
 \input{generated/lr_table}
 
+\subsection{Supplementary figures}
+\begin{figure}[h]\centering
+\includegraphics[width=\textwidth]{figures/figS1_learning_curves.pdf}
+\caption{\textbf{Validation learning curves} (in-distribution trials; mean over 16 confirmation
+networks) for each learner, task and optimizer. Accuracy saturates early, and validation BCE keeps
+falling for all learners.}\label{fig:s1}
+\end{figure}
+\begin{figure}[h]\centering
+\includegraphics[width=\textwidth]{figures/figS2_id_accuracy.pdf}
+\caption{\textbf{In-distribution accuracy} (training delays) for the learners of
+Fig.~\ref{fig:rules}. Every learner is near ceiling, which is why the preregistered endpoint uses
+unseen delays. Brackets show the same contrasts on this secondary endpoint (Holm within that
+endpoint).}\label{fig:s2}
+\end{figure}
+
 \subsection{Relation to earlier versions of this project}
 Earlier internal versions compared intact and shuffled cells while keeping the intact bank's
 calibration. They split cells by specimen (65 donors were shared between cohorts), compared

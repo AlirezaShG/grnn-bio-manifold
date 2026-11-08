@@ -1,0 +1,26 @@
+\paragraph{Limitations.}
+\begin{itemize}
+\item \emph{The models are rate models.} The GFR models reproduce each cell's firing-rate
+response, not spikes, dendrites or conductance-based synapses. The adaptation we find to matter
+is the fitted rate-history filter. Spike-level adaptation mechanisms are not modelled.
+\item \emph{The cells and the tasks come from different areas.} The cells are mostly from mouse
+visual cortex, and the tasks are abstract working-memory tasks. We make no claim that these
+circuits solve these tasks in vivo.
+\item \emph{The wiring is a prior, not data.} Type-level connection probabilities are modelling
+assumptions (Table~\ref{tab:priors}). Measured probabilities were not used because the numbers
+we could trace were available only as figures.
+\item \emph{The fits have a known split caveat.} Upstream, one stimulus protocol contributes to
+both fitting and validation. We selected cells on the released validation criterion and claim no
+new patch-clamp validation.
+\item \emph{Optimization is a confound we only bound.} Adam with global clipping is not local. We
+therefore repeated every learning-rule comparison with per-synapse RMS normalization, which is
+local, but no optimizer is a model of biological plasticity. The local rule also uses a
+broadcast error and fixed random feedback; we did not test reward-based or neuromodulatory
+variants.
+\item \emph{Scale.} Networks have 100 cells, with 16 paired seeds per condition. Each network uses
+80 of 170 pyramidal cells, so networks share cells: inference is about networks built from this
+cohort, not about new cells.
+\item \emph{The operating point is a modelling choice.} Calibrating every cell to a fixed fraction
+of its own ceiling sets the type-specific rate hierarchy by construction. Family D shows how much
+results depend on this choice.
+\end{itemize}

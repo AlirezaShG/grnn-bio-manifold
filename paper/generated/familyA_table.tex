@@ -1,0 +1,11 @@
+\begin{table}[t]\centering\small
+\caption{Family A (confirmation cohort, 16 paired networks). Difference in unseen-delay conflict accuracy (pp) with 95\% bootstrap CI; stars mark Holm-adjusted significance over all 18 tests ($^*p<.05$, $^{**}p<.01$, $^{***}p<.001$).}\label{tab:familyA}
+\begin{tabular}{llccc}\toprule
+task & optimizer & A1: local $-$ no $\beta$ & A2: local $-$ reservoir & A3: BPTT $-$ local\\ \midrule
+T1-early & Adam & +10.9 [5.2, 16.8]$^{*}$ & +4.7 [-1.0, 11.0] & +4.0 [-1.7, 9.0]\\
+T1-early & RMS & +16.8 [11.1, 22.6]$^{**}$ & +7.9 [2.6, 13.4] & -5.3 [-10.3, -0.4]\\
+T1-late & Adam & +9.2 [5.2, 13.2]$^{*}$ & +6.1 [0.4, 12.0] & +16.2 [9.7, 21.0]$^{**}$\\
+T1-late & RMS & +10.6 [7.2, 14.1]$^{**}$ & +11.9 [7.2, 17.1]$^{**}$ & +11.5 [4.6, 16.7]$^{*}$\\
+T2-dms & Adam & +12.5 [9.0, 16.0]$^{***}$ & +10.6 [5.6, 15.3]$^{*}$ & +14.9 [11.4, 18.0]$^{***}$\\
+T2-dms & RMS & +7.1 [1.9, 11.9] & +10.7 [7.0, 14.5]$^{***}$ & +22.3 [17.5, 27.2]$^{***}$\\
+\bottomrule\end{tabular}\end{table}

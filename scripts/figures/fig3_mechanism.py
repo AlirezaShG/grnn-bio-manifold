@@ -100,7 +100,10 @@ def main():
     for j, t in enumerate(types):
         s = agg[agg.cell_type == t]
         for k, (col, off, face) in enumerate([('cos_beta_random', -.17, TYPE_COLORS[t]), ('cos_nobeta_random', .17, 'white')]):
-            v = s[col].values
+            v = s[col].values.astype(float)
+            v = v[np.isfinite(v)]
+            if not len(v):
+                continue
             ax.errorbar(j + off, v.mean(), yerr=v.std() / np.sqrt(len(v)), fmt='o', ms=3.5, color=TYPE_COLORS[t],
                         mfc=face, lw=.8)
     ax.set_xticks(range(4), types); ax.axhline(0, color='#999999', lw=.6)

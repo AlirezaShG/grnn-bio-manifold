@@ -1,0 +1,194 @@
+[
+  {
+    "ci_high": 0.23899339432987515,
+    "ci_low": 0.09031049256113313,
+    "condition": "intact_local_sym",
+    "mean_correlation_fisher": 0.16703743098354276,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": 0.28373251052503823,
+        "n_unique_cells": 49,
+        "seed": 1001
+      },
+      {
+        "correlation": 0.12475545184500444,
+        "n_unique_cells": 50,
+        "seed": 1002
+      },
+      {
+        "correlation": 0.1448394528690735,
+        "n_unique_cells": 50,
+        "seed": 1003
+      },
+      {
+        "correlation": -0.12545659362573067,
+        "n_unique_cells": 52,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.1475541694736811,
+        "n_unique_cells": 55,
+        "seed": 1005
+      },
+      {
+        "correlation": 0.13435079643709438,
+        "n_unique_cells": 55,
+        "seed": 1006
+      },
+      {
+        "correlation": 0.4226922360469932,
+        "n_unique_cells": 54,
+        "seed": 1007
+      },
+      {
+        "correlation": 0.17198789668388034,
+        "n_unique_cells": 58,
+        "seed": 1008
+      },
+      {
+        "correlation": 0.27364321950672815,
+        "n_unique_cells": 53,
+        "seed": 1009
+      },
+      {
+        "correlation": 0.3844521695315726,
+        "n_unique_cells": 47,
+        "seed": 1010
+      },
+      {
+        "correlation": 0.08594690018700483,
+        "n_unique_cells": 55,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.14701473244558647,
+        "n_unique_cells": 58,
+        "seed": 1012
+      },
+      {
+        "correlation": 0.10067389768141399,
+        "n_unique_cells": 52,
+        "seed": 1013
+      },
+      {
+        "correlation": 0.1131276229277697,
+        "n_unique_cells": 52,
+        "seed": 1014
+      },
+      {
+        "correlation": 0.3235490682253725,
+        "n_unique_cells": 56,
+        "seed": 1015
+      },
+      {
+        "correlation": 0.1773322666378752,
+        "n_unique_cells": 55,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": 0.24144668008195522,
+    "ci_low": 0.0391154745471194,
+    "condition": "intact_no_beta_sym",
+    "mean_correlation_fisher": 0.146477640058665,
+    "n_networks_total": 16,
+    "n_networks_valid": 16,
+    "per_network": [
+      {
+        "correlation": 0.28682915094895184,
+        "n_unique_cells": 48,
+        "seed": 1001
+      },
+      {
+        "correlation": -0.16330601306934153,
+        "n_unique_cells": 53,
+        "seed": 1002
+      },
+      {
+        "correlation": 0.42121488423372555,
+        "n_unique_cells": 51,
+        "seed": 1003
+      },
+      {
+        "correlation": 0.11408977388515144,
+        "n_unique_cells": 56,
+        "seed": 1004
+      },
+      {
+        "correlation": -0.33463831247579867,
+        "n_unique_cells": 53,
+        "seed": 1005
+      },
+      {
+        "correlation": 0.2063983702690138,
+        "n_unique_cells": 54,
+        "seed": 1006
+      },
+      {
+        "correlation": 0.38932416759122684,
+        "n_unique_cells": 51,
+        "seed": 1007
+      },
+      {
+        "correlation": -0.0911288127111231,
+        "n_unique_cells": 59,
+        "seed": 1008
+      },
+      {
+        "correlation": 0.250351733205475,
+        "n_unique_cells": 56,
+        "seed": 1009
+      },
+      {
+        "correlation": 0.34637450793983304,
+        "n_unique_cells": 47,
+        "seed": 1010
+      },
+      {
+        "correlation": 0.05285035247993313,
+        "n_unique_cells": 57,
+        "seed": 1011
+      },
+      {
+        "correlation": 0.3665141227839166,
+        "n_unique_cells": 59,
+        "seed": 1012
+      },
+      {
+        "correlation": 0.18484572693157889,
+        "n_unique_cells": 52,
+        "seed": 1013
+      },
+      {
+        "correlation": 0.0285713842365594,
+        "n_unique_cells": 52,
+        "seed": 1014
+      },
+      {
+        "correlation": 0.0712998491760263,
+        "n_unique_cells": 55,
+        "seed": 1015
+      },
+      {
+        "correlation": 0.14317287831342526,
+        "n_unique_cells": 55,
+        "seed": 1016
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": false,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  }
+]
