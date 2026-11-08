@@ -1,0 +1,170 @@
+144 tuning runs from 24 searches on 26 workers
+[1/144] intact_local seed 12: step 2400, val BCE 0.0007, wall 103s
+[2/144] intact_local seed 11: step 2750, val BCE 0.0045, wall 104s
+[3/144] intact_local_no_beta seed 12: step 2700, val BCE 0.2052, wall 104s
+[4/144] intact_local_no_beta seed 13: step 2000, val BCE 0.5770, wall 104s
+[5/144] intact_local_no_beta seed 11: step 0, val BCE 0.6929, wall 104s
+[6/144] intact_local_no_beta seed 12: step 1000, val BCE 0.3413, wall 105s
+[7/144] intact_local_no_beta seed 12: step 0, val BCE 0.6931, wall 105s
+[8/144] intact_local_no_beta seed 13: step 2950, val BCE 0.1297, wall 106s
+[9/144] intact_local_no_beta seed 11: step 2750, val BCE 0.0379, wall 106s
+[10/144] intact_local_no_beta seed 11: step 2450, val BCE 0.0765, wall 106s
+[11/144] intact_local_no_beta seed 11: step 1850, val BCE 0.3703, wall 106s
+[12/144] intact_local_no_beta seed 12: step 0, val BCE 0.6931, wall 106s
+[13/144] intact_local_no_beta seed 13: step 2400, val BCE 0.1850, wall 107s
+[14/144] intact_local_no_beta seed 13: step 1750, val BCE 0.2027, wall 107s
+[15/144] intact_local seed 11: step 2750, val BCE 0.0198, wall 110s
+[16/144] intact_local seed 12: step 2350, val BCE 0.0382, wall 111s
+[17/144] intact_local seed 13: step 2250, val BCE 0.0675, wall 111s
+[18/144] intact_local seed 13: step 1350, val BCE 0.0406, wall 111s
+[19/144] intact_local seed 12: step 3000, val BCE 0.1688, wall 111s
+[20/144] intact_local seed 12: step 1300, val BCE 0.1230, wall 112s
+[21/144] intact_local seed 11: step 2800, val BCE 0.0143, wall 112s
+[22/144] intact_local seed 12: step 2400, val BCE 0.5670, wall 112s
+[23/144] intact_local seed 13: step 2000, val BCE 0.2244, wall 112s
+[24/144] intact_local seed 11: step 1200, val BCE 0.0061, wall 112s
+[25/144] intact_local seed 13: step 2250, val BCE 0.0148, wall 113s
+[26/144] intact_local seed 11: step 2700, val BCE 0.0070, wall 114s
+[27/144] intact_local_no_beta seed 11: step 2950, val BCE 0.1354, wall 97s
+[28/144] intact_local_no_beta seed 13: step 1650, val BCE 0.0843, wall 98s
+[29/144] intact_local_no_beta seed 12: step 1250, val BCE 0.0625, wall 98s
+[30/144] intact_local_no_beta seed 13: step 950, val BCE 0.1811, wall 97s
+[31/144] intact_local_no_beta seed 11: step 1650, val BCE 0.1409, wall 99s
+[32/144] intact_local_no_beta seed 12: step 1350, val BCE 0.0595, wall 99s
+[33/144] intact_local_no_beta seed 12: step 2350, val BCE 0.3436, wall 95s
+[34/144] intact_local seed 13: step 1450, val BCE 0.0526, wall 102s
+[35/144] intact_local seed 13: step 1500, val BCE 0.0206, wall 103s
+[36/144] intact_local seed 12: step 2450, val BCE 0.0003, wall 103s
+[37/144] intact_local_no_beta seed 12: step 0, val BCE 0.6946, wall 96s
+[38/144] intact_local_no_beta seed 11: step 1900, val BCE 0.4767, wall 96s
+[39/144] intact_local_no_beta seed 11: step 0, val BCE 0.6933, wall 96s
+[40/144] intact_local seed 11: step 2800, val BCE 0.0660, wall 102s
+[41/144] intact_local_no_beta seed 13: step 0, val BCE 0.6941, wall 97s
+[42/144] intact_local seed 11: step 1950, val BCE 0.0189, wall 105s
+[43/144] intact_local_no_beta seed 13: step 2000, val BCE 0.3075, wall 98s
+[44/144] intact_local seed 13: step 2900, val BCE 0.0850, wall 103s
+[45/144] intact_local seed 11: step 1300, val BCE 0.0423, wall 104s
+[46/144] intact_local seed 12: step 1350, val BCE 0.0072, wall 104s
+[47/144] intact_local seed 12: step 2900, val BCE 0.0129, wall 103s
+[48/144] intact_local seed 13: step 2100, val BCE 0.2030, wall 104s
+[49/144] intact_local seed 11: step 2850, val BCE 0.0071, wall 111s
+[50/144] intact_local seed 12: step 1950, val BCE 0.0165, wall 113s
+[51/144] intact_local seed 13: step 2950, val BCE 0.0212, wall 112s
+[52/144] intact_local seed 11: step 2950, val BCE 0.0033, wall 112s
+[53/144] intact_local_no_beta seed 11: step 2450, val BCE 0.0360, wall 104s
+[54/144] intact_local_no_beta seed 13: step 2800, val BCE 0.1074, wall 104s
+[55/144] intact_local_no_beta seed 12: step 2800, val BCE 0.1421, wall 105s
+[56/144] intact_local_no_beta seed 11: step 600, val BCE 0.0427, wall 106s
+[57/144] intact_local_no_beta seed 13: step 3000, val BCE 0.1788, wall 105s
+[58/144] intact_local_no_beta seed 13: step 2350, val BCE 0.3536, wall 102s
+[59/144] intact_local_no_beta seed 12: step 2950, val BCE 0.2205, wall 106s
+[60/144] intact_local_no_beta seed 12: step 1700, val BCE 0.6066, wall 104s
+[61/144] intact_local seed 13: step 2650, val BCE 0.0388, wall 111s
+[62/144] intact_local_no_beta seed 11: step 800, val BCE 0.1285, wall 105s
+[63/144] intact_local seed 12: step 1950, val BCE 0.0277, wall 112s
+[64/144] intact_local_no_beta seed 13: step 0, val BCE 0.6937, wall 104s
+[65/144] intact_local_no_beta seed 12: step 0, val BCE 0.6939, wall 105s
+[66/144] intact_local_no_beta seed 11: step 850, val BCE 0.1849, wall 106s
+[67/144] intact_local seed 13: step 2750, val BCE 0.3612, wall 110s
+[68/144] intact_local seed 12: step 2900, val BCE 0.0600, wall 111s
+[69/144] intact_local seed 13: step 2700, val BCE 0.1449, wall 112s
+[70/144] intact_local seed 12: step 2650, val BCE 0.0324, wall 112s
+[71/144] intact_local seed 11: step 2650, val BCE 0.0144, wall 113s
+[72/144] intact_local seed 11: step 2650, val BCE 0.0054, wall 112s
+[73/144] intact_bptt seed 11: step 2200, val BCE 0.0000, wall 120s
+[74/144] intact_bptt seed 12: step 2200, val BCE 0.0002, wall 121s
+[75/144] intact_bptt seed 13: step 2750, val BCE 0.0007, wall 120s
+[76/144] intact_bptt seed 12: step 3000, val BCE 0.0000, wall 119s
+[77/144] intact_bptt seed 11: step 2100, val BCE 0.0000, wall 120s
+[78/144] intact_bptt seed 13: step 2800, val BCE 0.0030, wall 121s
+[79/144] intact_readout_only seed 11: step 2250, val BCE 0.0421, wall 80s
+[80/144] intact_readout_only seed 12: step 2700, val BCE 0.2171, wall 79s
+[81/144] intact_readout_only seed 12: step 2700, val BCE 0.3551, wall 79s
+[82/144] intact_readout_only seed 13: step 2200, val BCE 0.3546, wall 82s
+[83/144] intact_readout_only seed 13: step 1950, val BCE 0.4518, wall 79s
+[84/144] intact_readout_only seed 11: step 2250, val BCE 0.0360, wall 81s
+[85/144] intact_readout_only seed 12: step 0, val BCE 0.6931, wall 78s
+[86/144] intact_readout_only seed 11: step 2150, val BCE 0.0736, wall 80s
+[87/144] intact_readout_only seed 11: step 2150, val BCE 0.1778, wall 77s
+[88/144] intact_readout_only seed 13: step 0, val BCE 0.6932, wall 78s
+[89/144] intact_readout_only seed 13: step 0, val BCE 0.6932, wall 80s
+[90/144] intact_readout_only seed 12: step 0, val BCE 0.6931, wall 80s
+[91/144] intact_readout_only seed 11: step 2700, val BCE 0.0943, wall 74s
+[92/144] intact_readout_only seed 12: step 2600, val BCE 0.0650, wall 73s
+[93/144] intact_bptt seed 12: step 1700, val BCE 0.0025, wall 110s
+[94/144] intact_bptt seed 11: step 3000, val BCE 0.0010, wall 111s
+[95/144] intact_bptt seed 13: step 1900, val BCE 0.0059, wall 118s
+[96/144] intact_bptt seed 11: step 2900, val BCE 0.0017, wall 118s
+[97/144] intact_bptt seed 12: step 1650, val BCE 0.0064, wall 119s
+[98/144] intact_bptt seed 11: step 2450, val BCE 0.0034, wall 121s
+[99/144] intact_bptt seed 12: step 2250, val BCE 0.0063, wall 120s
+[100/144] intact_bptt seed 13: step 1750, val BCE 0.0068, wall 121s
+[101/144] intact_bptt seed 13: step 1350, val BCE 0.0156, wall 111s
+[102/144] intact_bptt seed 11: step 2550, val BCE 0.0000, wall 113s
+[103/144] intact_bptt seed 12: step 1650, val BCE 0.0036, wall 112s
+[104/144] intact_bptt seed 13: step 1000, val BCE 0.0291, wall 112s
+[105/144] intact_readout_only seed 11: step 1550, val BCE 0.1038, wall 72s
+[106/144] intact_readout_only seed 13: step 2850, val BCE 0.0690, wall 74s
+[107/144] intact_readout_only seed 12: step 550, val BCE 0.1084, wall 73s
+[108/144] intact_readout_only seed 13: step 2250, val BCE 0.1203, wall 74s
+[109/144] intact_readout_only seed 12: step 2650, val BCE 0.2240, wall 72s
+[110/144] intact_readout_only seed 11: step 2500, val BCE 0.3608, wall 75s
+[111/144] intact_readout_only seed 11: step 0, val BCE 0.6933, wall 73s
+[112/144] intact_readout_only seed 13: step 1950, val BCE 0.1831, wall 74s
+[113/144] intact_bptt seed 11: step 2550, val BCE 0.0011, wall 109s
+[114/144] intact_bptt seed 12: step 1750, val BCE 0.0014, wall 110s
+[115/144] intact_readout_only seed 12: step 2200, val BCE 0.6716, wall 75s
+[116/144] intact_readout_only seed 13: step 1950, val BCE 0.5637, wall 74s
+[117/144] intact_bptt seed 11: step 3000, val BCE 0.0002, wall 110s
+[118/144] intact_bptt seed 13: step 2850, val BCE 0.0011, wall 112s
+[119/144] intact_bptt seed 12: step 3000, val BCE 0.0000, wall 111s
+[120/144] intact_bptt seed 13: step 1950, val BCE 0.0029, wall 112s
+[121/144] intact_readout_only seed 11: step 3000, val BCE 0.0232, wall 78s
+[122/144] intact_readout_only seed 12: step 3000, val BCE 0.1087, wall 79s
+[123/144] intact_readout_only seed 13: step 2950, val BCE 0.2324, wall 76s
+[124/144] intact_readout_only seed 11: step 2700, val BCE 0.0254, wall 76s
+[125/144] intact_readout_only seed 12: step 1650, val BCE 0.1940, wall 75s
+[126/144] intact_readout_only seed 13: step 2950, val BCE 0.3126, wall 76s
+[127/144] intact_bptt seed 12: step 2450, val BCE 0.0029, wall 114s
+[128/144] intact_bptt seed 13: step 2750, val BCE 0.0001, wall 114s
+[129/144] intact_bptt seed 11: step 1100, val BCE 0.0006, wall 114s
+[130/144] intact_bptt seed 11: step 2250, val BCE 0.0001, wall 114s
+[131/144] intact_bptt seed 12: step 1900, val BCE 0.0039, wall 113s
+[132/144] intact_bptt seed 13: step 2650, val BCE 0.0007, wall 113s
+[133/144] intact_readout_only seed 11: step 2450, val BCE 0.0636, wall 62s
+[134/144] intact_readout_only seed 12: step 0, val BCE 0.6939, wall 62s
+[135/144] intact_readout_only seed 12: step 0, val BCE 0.6939, wall 60s
+[136/144] intact_readout_only seed 13: step 0, val BCE 0.6937, wall 62s
+[137/144] intact_readout_only seed 11: step 1750, val BCE 0.2005, wall 61s
+[138/144] intact_bptt seed 12: step 1700, val BCE 0.0042, wall 101s
+[139/144] intact_bptt seed 11: step 1800, val BCE 0.0018, wall 103s
+[140/144] intact_readout_only seed 13: step 0, val BCE 0.6937, wall 61s
+[141/144] intact_bptt seed 13: step 1400, val BCE 0.0028, wall 98s
+[142/144] intact_bptt seed 11: step 3000, val BCE 0.0007, wall 96s
+[143/144] intact_bptt seed 12: step 1700, val BCE 0.0355, wall 86s
+[144/144] intact_bptt seed 13: step 1600, val BCE 0.0008, wall 85s
+t2_dms_adam_bptt {'bptt': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_dms_adam_local {'local': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_dms_adam_local_no_beta {'local_no_beta': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_dms_adam_readout_only {'readout_only': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+t2_dms_rms_bptt {'bptt': {'lr_rec': 0.003, 'lr_out': 10.0}}
+t2_dms_rms_local {'local': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_dms_rms_local_no_beta {'local_no_beta': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_dms_rms_readout_only {'readout_only': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+t2_early_adam_bptt {'bptt': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_early_adam_local {'local': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_early_adam_local_no_beta {'local_no_beta': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_early_adam_readout_only {'readout_only': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+t2_early_rms_bptt {'bptt': {'lr_rec': 0.001, 'lr_out': 10.0}}
+t2_early_rms_local {'local': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_early_rms_local_no_beta {'local_no_beta': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+t2_early_rms_readout_only {'readout_only': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+t2_late_adam_bptt {'bptt': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_late_adam_local {'local': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_late_adam_local_no_beta {'local_no_beta': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_late_adam_readout_only {'readout_only': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+t2_late_rms_bptt {'bptt': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_late_rms_local {'local': {'lr_rec': 0.001, 'lr_out': 3.0}}
+t2_late_rms_local_no_beta {'local_no_beta': {'lr_rec': 0.003, 'lr_out': 3.0}}
+t2_late_rms_readout_only {'readout_only': {'lr_rec': 0.0003, 'lr_out': 3.0}}
+finished in 9.7 min

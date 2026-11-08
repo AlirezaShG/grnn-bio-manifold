@@ -1,0 +1,26 @@
+[
+  {
+    "candidate": 0,
+    "learner": "local_no_beta",
+    "lr_out": 3.0,
+    "lr_rec": 0.001,
+    "mean_best_step": 2700.0,
+    "mean_validation_accuracy": 0.984375,
+    "mean_validation_bce": 0.13711089359743775,
+    "n_seeds": 3,
+    "test_evaluated": false,
+    "updates_per_run": 3000
+  },
+  {
+    "candidate": 1,
+    "learner": "local_no_beta",
+    "lr_out": 10.0,
+    "lr_rec": 0.001,
+    "mean_best_step": 1833.3333333333333,
+    "mean_validation_accuracy": 0.9791666666666666,
+    "mean_validation_bce": 0.19399105167636144,
+    "n_seeds": 3,
+    "test_evaluated": false,
+    "updates_per_run": 3000
+  }
+]

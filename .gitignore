@@ -1,0 +1,18 @@
+# Per-run raw outputs are published as compressed release assets, not in git.
+results/**/runs/
+*.npz
+*.npz.tmp
+*.tmp
+__pycache__/
+*.pyc
+.pytest_cache/
+# LaTeX build files
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/latexmk.out
+paper/*.synctex.gz

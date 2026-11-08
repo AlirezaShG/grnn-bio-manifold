@@ -1,0 +1,95 @@
+[
+  {
+    "ci_high": 0.109375,
+    "ci_low": -0.1640625,
+    "condition": "intact_local",
+    "confidence": 0.95,
+    "difference_sd": 0.15355753112297466,
+    "differences": [
+      -0.1640625,
+      0.109375,
+      -0.1484375
+    ],
+    "effect_dz": -0.4409313749588091,
+    "family_size": 3,
+    "interval_method": "network-bootstrap-percentile",
+    "mean_a": 0.6119791666666666,
+    "mean_b": 0.6796875,
+    "mean_difference_a_minus_b": -0.06770833333333333,
+    "metric": "accuracy_incongruent",
+    "n_pairs": 3,
+    "n_sign_assignments": 8,
+    "p_holm": 0.75,
+    "p_value": 0.5,
+    "pair_ids": [
+      303,
+      404,
+      505
+    ],
+    "reference": "intact_bptt",
+    "small_sample": true,
+    "test_method": "exact_paired_sign_flip_two_sided"
+  },
+  {
+    "ci_high": -0.1171875,
+    "ci_low": -0.265625,
+    "condition": "intact_no_beta",
+    "confidence": 0.95,
+    "difference_sd": 0.0758791785642368,
+    "differences": [
+      -0.265625,
+      -0.21875,
+      -0.1171875
+    ],
+    "effect_dz": -2.642633158760134,
+    "family_size": 3,
+    "interval_method": "network-bootstrap-percentile",
+    "mean_a": 0.4791666666666667,
+    "mean_b": 0.6796875,
+    "mean_difference_a_minus_b": -0.20052083333333334,
+    "metric": "accuracy_incongruent",
+    "n_pairs": 3,
+    "n_sign_assignments": 8,
+    "p_holm": 0.75,
+    "p_value": 0.25,
+    "pair_ids": [
+      303,
+      404,
+      505
+    ],
+    "reference": "intact_bptt",
+    "small_sample": true,
+    "test_method": "exact_paired_sign_flip_two_sided"
+  },
+  {
+    "ci_high": -0.109375,
+    "ci_low": -0.2421875,
+    "condition": "readout_only",
+    "confidence": 0.95,
+    "difference_sd": 0.07452650011069888,
+    "differences": [
+      -0.2421875,
+      -0.1171875,
+      -0.109375
+    ],
+    "effect_dz": -2.096569673443837,
+    "family_size": 3,
+    "interval_method": "network-bootstrap-percentile",
+    "mean_a": 0.5234375,
+    "mean_b": 0.6796875,
+    "mean_difference_a_minus_b": -0.15625,
+    "metric": "accuracy_incongruent",
+    "n_pairs": 3,
+    "n_sign_assignments": 8,
+    "p_holm": 0.75,
+    "p_value": 0.25,
+    "pair_ids": [
+      303,
+      404,
+      505
+    ],
+    "reference": "intact_bptt",
+    "small_sample": true,
+    "test_method": "exact_paired_sign_flip_two_sided"
+  }
+]

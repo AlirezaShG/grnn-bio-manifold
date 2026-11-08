@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx,booktabs,multirow,xcolor}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\newcommand{\pp}{\,pp}
+
+\title{TITLE PLACEHOLDER}
+\author{AUTHORS PLACEHOLDER}
+\date{Preprint draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+ABSTRACT PLACEHOLDER (written after confirmation results).
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/methods}
+
+\section*{Code and data availability}
+All code, configurations, the locked protocol and every run's raw outputs (per-trial
+predictions, learning curves, checkpoints) are in the project repository. The fitted
+neuron models and cell metadata are those released by \citet{yeung2025gfr}
+(AllenInstitute/GRNN, commit \texttt{835a535}) under their original licence.
+
+\bibliographystyle{abbrvnat}
+\bibliography{refs}
+
+\clearpage
+\appendix
+\input{sections/supplement}
+\end{document}

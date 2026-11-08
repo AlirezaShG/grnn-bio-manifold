@@ -1,0 +1,2 @@
+# Store every file byte-for-byte: docs/LOCK_v11.json hashes must verify after a clone.
+* -text

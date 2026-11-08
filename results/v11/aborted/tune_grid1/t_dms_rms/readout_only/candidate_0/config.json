@@ -1,0 +1,146 @@
+{
+  "analysis_trials": 128,
+  "baseline_fraction": 0.05,
+  "batch_size": 32,
+  "cell_cohort": "development",
+  "cell_counts": [
+    80,
+    10,
+    5,
+    5
+  ],
+  "checkpoint_steps": [
+    0,
+    3000
+  ],
+  "cohort_unit": "donor",
+  "conditions": [
+    {
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "identity": "authentic",
+      "learner": "readout_only",
+      "name": "intact_readout_only",
+      "topology": "type_prior",
+      "training_noise_std": 0.0
+    }
+  ],
+  "evaluation_noise_std": 0.0,
+  "holdout_fraction": 0.5,
+  "inhibitory_gain": 1.5,
+  "input_gain": 1.0,
+  "input_mode": "distributed",
+  "input_scale_fraction": 0.25,
+  "intervention_doses": [
+    0.5,
+    1.0
+  ],
+  "learning_rates": {
+    "readout_only": {
+      "lr_out": 0.01,
+      "lr_rec": 0.0003
+    }
+  },
+  "lr_out": 0.03,
+  "lr_rec": 0.001,
+  "max_grad_norm": null,
+  "max_weight": 2.0,
+  "min_validation_evr": 0.5,
+  "name": "t_dms_rms_tune_readout_only_0",
+  "ood_delays": [
+    20,
+    30
+  ],
+  "ood_distractor_std": 0.75,
+  "ood_noise_std": 0.5,
+  "optimizer": "rmsprop",
+  "recurrent_gain": 0.6,
+  "reference_rate_hz": 100.0,
+  "run_fixed_points": false,
+  "run_interventions": false,
+  "run_psychometrics": false,
+  "save_trajectories": false,
+  "seeds": [
+    11,
+    12,
+    13
+  ],
+  "split_seed": 1701,
+  "stage": "development",
+  "task": {
+    "bin_size_ms": 20,
+    "coherence_levels": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "context_timing": "late",
+    "delay_bins": [
+      5,
+      10,
+      15
+    ],
+    "distractor_bins": 2,
+    "distractor_std": 0.0,
+    "noise_std": 0.25,
+    "t_context": 3,
+    "t_decision": 3,
+    "t_fixation": 5,
+    "t_stimulus": 10,
+    "task_type": "dms"
+  },
+  "test_trials": 512,
+  "training_steps": 3000,
+  "tuning_candidates": [
+    {
+      "lr_out": 0.01,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 0.01,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 0.01,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 0.01,
+      "lr_rec": 0.01
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.01
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.01
+    }
+  ],
+  "validation_interval": 50,
+  "validation_trials": 256
+}

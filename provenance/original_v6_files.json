@@ -1,0 +1,162 @@
+[
+  {
+    "path": "README.md",
+    "size": 4300,
+    "sha256": "a38ae350682be546b7787fa5931399164824cddf1ac44116910abcd10e2a7013"
+  },
+  {
+    "path": "allen_grnn/__init__.py",
+    "size": 67,
+    "sha256": "ff6ddf55452bb30546841726e6f5bb39cf622b26b99486a0ff42654b9059f076"
+  },
+  {
+    "path": "allen_grnn/model.py",
+    "size": 2323,
+    "sha256": "bdb887b6bc6ef0881ba7aae6d1087e88c2f85f7c9bbab4753d5c6519f99c763d"
+  },
+  {
+    "path": "allen_grnn/network.py",
+    "size": 1816,
+    "sha256": "863b2d2911763e5f37d68f30d35312e8370e22104d887ec985d583e89fa5bd4e"
+  },
+  {
+    "path": "allen_grnn/utils.py",
+    "size": 5200,
+    "sha256": "91b7ffe2815288725ca193bf1494a7c65a32b2ef652ef43f895912518ba3e8f6"
+  },
+  {
+    "path": "data/metadata.csv",
+    "size": 684204,
+    "sha256": "ce0a046996b1abc6338c194899405c592bbb01cdfde638cec150446c647997dc"
+  },
+  {
+    "path": "main.py",
+    "size": 36892,
+    "sha256": "c04fef5e95f961e899f576a38ba8c0dedfd34da2e8ca398c7055ff9e3246a9f7"
+  },
+  {
+    "path": "model/gfr_dataset.json",
+    "size": 1070953,
+    "sha256": "0539cbe9dc4202f33448c76a43ce88839300360c85fa4289c85be3da755a6a0e"
+  },
+  {
+    "path": "requirements.txt",
+    "size": 59,
+    "sha256": "ff93002c8bf6508273bda7a292709404f26450f79f075ffa2bb1fb5a8403ba42"
+  },
+  {
+    "path": "results/delay_sweep_table.csv",
+    "size": 353,
+    "sha256": "e6dfe65b9ee9956a70f5a3d20a2e30df2d6e5d562dc8f9bead7864ef1743da79"
+  },
+  {
+    "path": "results/factorial_metrics_v5.csv",
+    "size": 1881,
+    "sha256": "10f5890b65343d2fcaf701ba54c9e147c484b2025b9ee27585fc2ee28ba8fb9d"
+  },
+  {
+    "path": "results/gfr_manifold_and_learning_results.png",
+    "size": 778161,
+    "sha256": "48380ec4716bcc5e525f83f884f8351672b832bbd1567a47f5a2ec5ecc10b565"
+  },
+  {
+    "path": "results/gfr_v3_publication_suite.png",
+    "size": 710404,
+    "sha256": "d40792c9631cfe025b957b90ba1ca5f7719da02836e77a39eee08d064bba1ba4"
+  },
+  {
+    "path": "results/gfr_v5_factorial_publication_suite.png",
+    "size": 778161,
+    "sha256": "48380ec4716bcc5e525f83f884f8351672b832bbd1567a47f5a2ec5ecc10b565"
+  },
+  {
+    "path": "results/gfr_v5_single_cell_and_optogenetics_suite.png",
+    "size": 397780,
+    "sha256": "c36e70f49dade3b0f159d12bf4761c6d1e83cacfb7a0e5c51899d9253f425a3c"
+  },
+  {
+    "path": "results/manifold_checkpoint_evolution_v5.csv",
+    "size": 798,
+    "sha256": "2be235afcb0374f5ef49858ef6be8459e3c10b463f900a81eef11dff350987ea"
+  },
+  {
+    "path": "results/metrics_table.csv",
+    "size": 1881,
+    "sha256": "10f5890b65343d2fcaf701ba54c9e147c484b2025b9ee27585fc2ee28ba8fb9d"
+  },
+  {
+    "path": "results/multi_seed_metrics_v3.csv",
+    "size": 959,
+    "sha256": "903fee7b8d3bb79b11389c54873032242b3388e666b172feaae11e990b2be956"
+  },
+  {
+    "path": "results/noise_robustness_table_v3.csv",
+    "size": 384,
+    "sha256": "ddd73eaea97ae0b05c9db7c6ec2e74a8e9cce38e76902cb6e8bda8a2a6960f78"
+  },
+  {
+    "path": "results/ood_delay_generalization_v5.csv",
+    "size": 521,
+    "sha256": "7151475c0dcac6eec812867e50b363dffb25edd812106a6c506d50bad8ca4f1d"
+  },
+  {
+    "path": "results/optogenetics_table_v3.csv",
+    "size": 390,
+    "sha256": "964fb9e545e00f4fa2fbfc69a877a5fe0a9004abbf184ad8bb63b7fa5c26e4d5"
+  },
+  {
+    "path": "results/optogenetics_table_v5.csv",
+    "size": 390,
+    "sha256": "964fb9e545e00f4fa2fbfc69a877a5fe0a9004abbf184ad8bb63b7fa5c26e4d5"
+  },
+  {
+    "path": "results/psychometric_table_v3.csv",
+    "size": 574,
+    "sha256": "3426a729ad97433d28ff1b01707adac2cb04951ced5c1850001e7fc074189f83"
+  },
+  {
+    "path": "results/sampled_allen_cell_ids.csv",
+    "size": 7538,
+    "sha256": "743904a2e678f427cc8d6516f2e053649cb0008b847a8e09ea965470efc36fd3"
+  },
+  {
+    "path": "results/single_cell_biophysics_to_circuit_role_v5.csv",
+    "size": 80785,
+    "sha256": "67775be1d9f3d67b2b346f379454725f4e7302364acd28e9237e72fb25d72c2d"
+  },
+  {
+    "path": "src/__init__.py",
+    "size": 60,
+    "sha256": "d21451d943c14a456b6e5363fafdfdf335f6c3c8a34461efba2b94726428e68e"
+  },
+  {
+    "path": "src/circuit.py",
+    "size": 15304,
+    "sha256": "d8a4d6e785c27552e62c68e2ba0f6c9b17023885ef461d835b1c3da9e0a4a522"
+  },
+  {
+    "path": "src/config.py",
+    "size": 1374,
+    "sha256": "21362481f6cd5a8a61bf1877115de70544b553e6feafd72f7e699acc190c6384"
+  },
+  {
+    "path": "src/learners.py",
+    "size": 22985,
+    "sha256": "ef9d6676057036d9c484c2add7f411e855ed278e89cfd7d2bed2406fdf125685"
+  },
+  {
+    "path": "src/manifold.py",
+    "size": 9351,
+    "sha256": "6084f844b7c4ac5443de9469a3076c128fa0f2cacdad0c8aefac45827e39a50b"
+  },
+  {
+    "path": "src/optogenetics.py",
+    "size": 6293,
+    "sha256": "7f7bb0466bb547ed7af62717ac2818b2799ba61c32b38429b4e6c7ce3c1378a9"
+  },
+  {
+    "path": "src/task.py",
+    "size": 3113,
+    "sha256": "d7aa56ea7f1ab9b724458476ebffcc83ad04d8c8950a45ab20e9a21876bd58f4"
+  }
+]

@@ -1,0 +1,11 @@
+\begin{table}[h]\centering\small
+\caption{Learning rates selected on the development cohort by validation BCE (recurrent / readout). The frozen reservoir has no recurrent rate.}\label{tab:lr}
+\begin{tabular}{llcccc}\toprule
+task & optimizer & BPTT & local & local (no $\beta$) & reservoir\\ \midrule
+early & adam & 0.001 / 1 & 0.003 / 3 & 0.001 / 3 & -- / 3\\
+early & rms & 0.001 / 10 & 0.003 / 0.3 & 0.0003 / 0.3 & -- / 0.3\\
+late & adam & 0.003 / 1 & 0.001 / 3 & 0.001 / 1 & -- / 3\\
+late & rms & 0.003 / 3 & 0.001 / 1 & 0.003 / 0.3 & -- / 0.3\\
+dms & adam & 0.003 / 1 & 0.003 / 1 & 0.001 / 1 & -- / 3\\
+dms & rms & 0.003 / 0.1 & 0.001 / 1 & 0.003 / 0.3 & -- / 0.3\\
+\bottomrule\end{tabular}\end{table}

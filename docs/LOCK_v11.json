@@ -1,0 +1,22 @@
+{
+  "locked_at_utc": "2026-11-08T20:23:06.054737+00:00",
+  "protocol_sha256": "34453091eb6167c1fcb563b9edb4ee730a31ed3b0445a9ea19e6171f42b33667",
+  "source_hash": "6f3ff264daccfdeee2dae6656539f3bf5641bea91ef3868764700b66e7767085",
+  "analysis_sha256": "705004bdb741278852253c48243748dd03447bc184fa2862291f5403f5c8924a",
+  "confirmation_configs_sha256": "ecadfeb93d31af97f7390359925c76a1157197ef361c67541e6c00e159c6337c",
+  "confirmation_configs": [
+    "c_dms_adam.json",
+    "c_dms_rms.json",
+    "c_early_adam.json",
+    "c_early_rms.json",
+    "c_late_adam.json",
+    "c_late_rms.json",
+    "cC_dms_adam.json",
+    "cC_early_adam.json",
+    "cC_late_adam.json",
+    "cD_dms_adam.json",
+    "cD_early_adam.json",
+    "cD_late_adam.json"
+  ],
+  "note": "No confirmation-cohort run existed when this lock was written."
+}

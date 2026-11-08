@@ -1,0 +1,153 @@
+{
+  "analysis_trials": 512,
+  "baseline_fraction": 0.05,
+  "batch_size": 32,
+  "cell_cohort": "confirmation",
+  "cell_counts": [
+    80,
+    10,
+    5,
+    5
+  ],
+  "checkpoint_steps": [
+    0,
+    250,
+    750,
+    1500
+  ],
+  "conditions": [
+    {
+      "feedback_mode": "random",
+      "identity": "authentic",
+      "learner": "bptt",
+      "name": "authentic__type_prior__bptt",
+      "topology": "type_prior",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "authentic",
+      "learner": "local",
+      "name": "authentic__type_prior__local",
+      "topology": "type_prior",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "authentic",
+      "learner": "bptt",
+      "name": "authentic__degree_rewired__bptt",
+      "topology": "degree_rewired",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "authentic",
+      "learner": "local",
+      "name": "authentic__degree_rewired__local",
+      "topology": "degree_rewired",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "within_type_shuffle",
+      "learner": "bptt",
+      "name": "within_type_shuffle__type_prior__bptt",
+      "topology": "type_prior",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "within_type_shuffle",
+      "learner": "local",
+      "name": "within_type_shuffle__type_prior__local",
+      "topology": "type_prior",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "within_type_shuffle",
+      "learner": "bptt",
+      "name": "within_type_shuffle__degree_rewired__bptt",
+      "topology": "degree_rewired",
+      "training_noise_std": 0.0
+    },
+    {
+      "feedback_mode": "random",
+      "identity": "within_type_shuffle",
+      "learner": "local",
+      "name": "within_type_shuffle__degree_rewired__local",
+      "topology": "degree_rewired",
+      "training_noise_std": 0.0
+    }
+  ],
+  "evaluation_noise_std": 0.0,
+  "inhibitory_gain": 1.5,
+  "input_gain": 1.0,
+  "input_mode": "distributed",
+  "input_scale_fraction": 0.25,
+  "intervention_doses": [
+    0.5,
+    1.0
+  ],
+  "learning_rates": {},
+  "lr_out": 0.03,
+  "lr_rec": 0.003,
+  "max_grad_norm": 1.0,
+  "max_weight": 2.0,
+  "min_validation_evr": 0.5,
+  "name": "reserved_cohort_factorial",
+  "ood_delays": [
+    20,
+    30
+  ],
+  "ood_distractor_std": 0.75,
+  "ood_noise_std": 0.5,
+  "optimizer": "adam",
+  "recurrent_gain": 0.6,
+  "reference_rate_hz": 100.0,
+  "run_fixed_points": false,
+  "run_interventions": true,
+  "run_psychometrics": true,
+  "save_trajectories": true,
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012
+  ],
+  "stage": "confirmation",
+  "task": {
+    "bin_size_ms": 20,
+    "coherence_levels": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "context_timing": "early",
+    "delay_bins": [
+      5,
+      10,
+      15
+    ],
+    "distractor_bins": 2,
+    "distractor_std": 0.0,
+    "noise_std": 0.25,
+    "t_context": 3,
+    "t_decision": 3,
+    "t_fixation": 5,
+    "t_stimulus": 10
+  },
+  "test_trials": 2048,
+  "training_steps": 1500,
+  "validation_interval": 50,
+  "validation_trials": 1024
+}

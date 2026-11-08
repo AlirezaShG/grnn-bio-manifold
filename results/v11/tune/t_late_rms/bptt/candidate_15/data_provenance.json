@@ -1,0 +1,36 @@
+{
+  "cohort_counts": {
+    "PV": 53,
+    "Pyr": 169,
+    "SST": 44,
+    "VIP": 32
+  },
+  "cohort_selection": "species,cre/morphology,original validation EVR; no test EVR cutoff",
+  "cohort_unit": "donor",
+  "confirmation_counts": {
+    "PV": 54,
+    "Pyr": 170,
+    "SST": 42,
+    "VIP": 33
+  },
+  "dataset_sha256": "0539cbe9dc4202f33448c76a43ce88839300360c85fa4289c85be3da755a6a0e",
+  "development_confirmation_cell_overlap": 0,
+  "development_confirmation_donor_overlap": 0,
+  "development_counts": {
+    "PV": 53,
+    "Pyr": 169,
+    "SST": 44,
+    "VIP": 32
+  },
+  "holdout_fraction": 0.5,
+  "inherited_fit_split_caveat": "Upstream Noise1 contributes to both fitting and validation; no independent patch-clamp revalidation is claimed.",
+  "metadata_sha256": "ce0a046996b1abc6338c194899405c592bbb01cdfde638cec150446c647997dc",
+  "pool_counts": {
+    "PV": 107,
+    "Pyr": 339,
+    "SST": 86,
+    "VIP": 65
+  },
+  "split_seed": 1701,
+  "upstream_commit": "835a535f6831b88339c6a5c17180fdbc504f7448"
+}

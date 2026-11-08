@@ -1,0 +1,32 @@
+\section{Supplementary information}
+
+\subsection{Locked protocol}\label{sec:protocol}
+The confirmatory protocol (\texttt{docs/PREREGISTRATION\_v11.md}) fixed the cohorts, network,
+tasks, training budget, learning-rate selection, conditions, endpoints, test families and
+equivalence margin before any confirmation-cohort run. Its SHA-256, the source-code hash and the
+analysis-script hash are recorded in \texttt{docs/LOCK\_v11.json} (Table~\ref{tab:lock}).
+
+\input{generated/lock_table}
+
+\subsection{Connection-probability prior}
+\begin{table}[h]\centering\small
+\caption{Type-level connection probabilities $P(\text{target}\leftarrow\text{source})$ used to
+draw the recurrent mask. They are modelling assumptions inspired by
+\citet{pfeffer2013,pi2013}, not measurements for the sampled cells.}\label{tab:priors}
+\begin{tabular}{lcccc}\toprule
+target $\backslash$ source & Pyr & PV & SST & VIP\\ \midrule
+Pyr & 0.20 & 0.50 & 0.45 & 0.05\\
+PV  & 0.45 & 0.35 & 0.30 & 0.05\\
+SST & 0.35 & 0.05 & 0.05 & 0.70\\
+VIP & 0.30 & 0.05 & 0.40 & 0.05\\ \bottomrule
+\end{tabular}\end{table}
+
+\subsection{Selected learning rates}
+\input{generated/lr_table}
+
+\subsection{Relation to earlier versions of this project}
+Earlier internal versions compared intact and shuffled cells while keeping the intact bank's
+calibration. They split cells by specimen (65 donors were shared between cohorts), compared
+learners after a fixed short budget at which none had converged, and used one task. Those
+results are not used here. All numbers in this paper come from the runs described in
+Methods.

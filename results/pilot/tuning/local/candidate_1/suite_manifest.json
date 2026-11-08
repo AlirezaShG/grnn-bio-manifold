@@ -1,0 +1,101 @@
+{
+  "config": {
+    "analysis_trials": 128,
+    "baseline_fraction": 0.05,
+    "batch_size": 32,
+    "cell_cohort": "development",
+    "cell_counts": [
+      24,
+      4,
+      2,
+      2
+    ],
+    "checkpoint_steps": [
+      0,
+      100,
+      300
+    ],
+    "conditions": [
+      {
+        "feedback_mode": "random",
+        "identity": "authentic",
+        "learner": "local",
+        "name": "intact_local",
+        "topology": "type_prior",
+        "training_noise_std": 0.0
+      }
+    ],
+    "evaluation_noise_std": 0.0,
+    "inhibitory_gain": 1.5,
+    "input_gain": 1.0,
+    "input_mode": "distributed",
+    "input_scale_fraction": 0.25,
+    "intervention_doses": [
+      0.5,
+      1.0
+    ],
+    "learning_rates": {
+      "local": {
+        "lr_out": 0.03,
+        "lr_rec": 0.001
+      }
+    },
+    "lr_out": 0.03,
+    "lr_rec": 0.003,
+    "max_grad_norm": 1.0,
+    "max_weight": 2.0,
+    "min_validation_evr": 0.5,
+    "name": "development_pilot_tune_local_1",
+    "ood_delays": [
+      20,
+      30
+    ],
+    "ood_distractor_std": 0.75,
+    "ood_noise_std": 0.5,
+    "optimizer": "adam",
+    "recurrent_gain": 0.6,
+    "reference_rate_hz": 100.0,
+    "run_fixed_points": false,
+    "run_interventions": true,
+    "run_psychometrics": true,
+    "save_trajectories": true,
+    "seeds": [
+      42,
+      101,
+      202
+    ],
+    "stage": "development",
+    "task": {
+      "bin_size_ms": 20,
+      "coherence_levels": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "context_timing": "early",
+      "delay_bins": [
+        5,
+        10,
+        15
+      ],
+      "distractor_bins": 2,
+      "distractor_std": 0.0,
+      "noise_std": 0.25,
+      "t_context": 3,
+      "t_decision": 3,
+      "t_fixation": 5,
+      "t_stimulus": 10
+    },
+    "test_trials": 512,
+    "training_steps": 300,
+    "validation_interval": 25,
+    "validation_trials": 256
+  },
+  "input_hashes": {
+    "data/metadata.csv": "ce0a046996b1abc6338c194899405c592bbb01cdfde638cec150446c647997dc",
+    "model/gfr_dataset.json": "0539cbe9dc4202f33448c76a43ce88839300360c85fa4289c85be3da755a6a0e"
+  },
+  "source_hash": "5c447c992856f100270de8a0c19cb7e3b24d581122fd999978670874d3a1ab99",
+  "suite_hash": "7b9048ac917055b29fc745662acaefdc8333774b5b81af8f90c5d0de250def74",
+  "test_enabled": false
+}

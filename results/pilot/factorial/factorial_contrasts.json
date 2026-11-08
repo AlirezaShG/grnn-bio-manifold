@@ -1,0 +1,264 @@
+{
+  "contrasts": [
+    {
+      "ci_high": 0.09375,
+      "ci_low": -0.1015625,
+      "confidence": 0.95,
+      "difference_sd": 0.10372423947572577,
+      "differences": [
+        0.09375,
+        0.056640625,
+        -0.1015625
+      ],
+      "effect_dz": 0.15691647149146554,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": 0.016276041666666668,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": 0.016276041666666668,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 1,
+      "p_holm": 1.0,
+      "p_value": 1.0,
+      "per_network_contrast": [
+        0.09375,
+        0.056640625,
+        -0.1015625
+      ],
+      "small_sample": true,
+      "term": "identity",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    },
+    {
+      "ci_high": -0.015625,
+      "ci_low": -0.052734375,
+      "confidence": 0.95,
+      "difference_sd": 0.01856325186117611,
+      "differences": [
+        -0.015625,
+        -0.052734375,
+        -0.03515625
+      ],
+      "effect_dz": -1.8587911531545203,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": -0.034505208333333336,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": -0.034505208333333336,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 1,
+      "p_holm": 1.0,
+      "p_value": 0.25,
+      "per_network_contrast": [
+        -0.015625,
+        -0.052734375,
+        -0.03515625
+      ],
+      "small_sample": true,
+      "term": "topology",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    },
+    {
+      "ci_high": -0.0546875,
+      "ci_low": -0.146484375,
+      "confidence": 0.95,
+      "difference_sd": 0.046479998043233155,
+      "differences": [
+        -0.11328125,
+        -0.146484375,
+        -0.0546875
+      ],
+      "effect_dz": -2.2551143017656243,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": -0.10481770833333333,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": -0.10481770833333333,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 1,
+      "p_holm": 1.0,
+      "p_value": 0.25,
+      "per_network_contrast": [
+        -0.11328125,
+        -0.146484375,
+        -0.0546875
+      ],
+      "small_sample": true,
+      "term": "learner",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    },
+    {
+      "ci_high": 0.13671875,
+      "ci_low": 0.0546875,
+      "confidence": 0.95,
+      "difference_sd": 0.04355658511374409,
+      "differences": [
+        0.0703125,
+        0.13671875,
+        0.0546875
+      ],
+      "effect_dz": 2.002902273112436,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": 0.08723958333333333,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": 0.08723958333333333,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 2,
+      "p_holm": 1.0,
+      "p_value": 0.25,
+      "per_network_contrast": [
+        0.0703125,
+        0.13671875,
+        0.0546875
+      ],
+      "small_sample": true,
+      "term": "identity x topology",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    },
+    {
+      "ci_high": 0.140625,
+      "ci_low": -0.296875,
+      "confidence": 0.95,
+      "difference_sd": 0.22015222080533467,
+      "differences": [
+        0.140625,
+        -0.03515625,
+        -0.296875
+      ],
+      "effect_dz": -0.28980894719090333,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": -0.06380208333333333,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": -0.06380208333333333,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 2,
+      "p_holm": 1.0,
+      "p_value": 0.75,
+      "per_network_contrast": [
+        0.140625,
+        -0.03515625,
+        -0.296875
+      ],
+      "small_sample": true,
+      "term": "identity x learner",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    },
+    {
+      "ci_high": 0.08984375,
+      "ci_low": -0.078125,
+      "confidence": 0.95,
+      "difference_sd": 0.0843545017538829,
+      "differences": [
+        -0.078125,
+        0.08984375,
+        -0.0078125
+      ],
+      "effect_dz": 0.01543584878412725,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": 0.0013020833333333333,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": 0.0013020833333333333,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 2,
+      "p_holm": 1.0,
+      "p_value": 1.0,
+      "per_network_contrast": [
+        -0.078125,
+        0.08984375,
+        -0.0078125
+      ],
+      "small_sample": true,
+      "term": "topology x learner",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    },
+    {
+      "ci_high": 0.265625,
+      "ci_low": -0.0859375,
+      "confidence": 0.95,
+      "difference_sd": 0.17752319757452356,
+      "differences": [
+        0.265625,
+        -0.0859375,
+        0.046875
+      ],
+      "effect_dz": 0.4254138859887873,
+      "family_size": 7,
+      "interval_method": "network-bootstrap-percentile",
+      "mean_a": 0.07552083333333333,
+      "mean_b": 0.0,
+      "mean_difference_a_minus_b": 0.07552083333333333,
+      "metric": "accuracy_incongruent",
+      "n_pairs": 3,
+      "n_sign_assignments": 8,
+      "network_seeds": [
+        42,
+        101,
+        202
+      ],
+      "order": 3,
+      "p_holm": 1.0,
+      "p_value": 0.75,
+      "per_network_contrast": [
+        0.265625,
+        -0.0859375,
+        0.046875
+      ],
+      "small_sample": true,
+      "term": "identity x topology x learner",
+      "test_method": "exact_paired_sign_flip_two_sided"
+    }
+  ],
+  "metric": "accuracy_incongruent",
+  "positive_coding": {
+    "identity": "authentic",
+    "learner": "local",
+    "topology": "type_prior"
+  },
+  "status": "complete",
+  "unit_of_inference": "network_run"
+}

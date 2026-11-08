@@ -1,0 +1,90 @@
+{
+  "repository": "https://github.com/AllenInstitute/GRNN",
+  "commit": "835a535f6831b88339c6a5c17180fdbc504f7448",
+  "retrieved_on": "2026-11-07",
+  "upstream_dataset_git_blob_sha": "f453374386a48f2ac55d06a170e9b5a73e4b55a5",
+  "upstream_dataset_rows": 7229,
+  "upstream_metadata_git_blob_sha": "bccb1d926d2f6113fc464a9acd33b345c5dea80d",
+  "local_subset_config": [
+    20,
+    20
+  ],
+  "local_subset_rows": 1124,
+  "parsed_subset_identical": true,
+  "different_cell_ids": [],
+  "metadata_column_mismatches": [],
+  "upstream_software_license": "Allen Institute Software License (BSD-like with noncommercial restriction)",
+  "upstream_paper": {
+    "title": "A dataset of differentiable biologically derived single-neuron models",
+    "doi": "10.1016/j.crmeth.2026.101638",
+    "published_on": "2026-10-14",
+    "journal": "Cell Reports Methods"
+  },
+  "files": {
+    "model/gfr_dataset.json": {
+      "sha256": "0539cbe9dc4202f33448c76a43ce88839300360c85fa4289c85be3da755a6a0e",
+      "byte_size": 1070953
+    },
+    "data/metadata.csv": {
+      "sha256": "ce0a046996b1abc6338c194899405c592bbb01cdfde638cec150446c647997dc",
+      "byte_size": 684204
+    },
+    "upstream/model.py": {
+      "sha256": "7948a66385a8291177e8d25d78effc456decee8a355382f837b5d44c3cca68dd",
+      "git_blob_sha": "df9c1fc39debfe5e5fabf4fd99f263a69c58d0a3",
+      "byte_size": 9645
+    },
+    "upstream/network.py": {
+      "sha256": "3334ff95c2c9762839ea1b43de976c295933e9b9071689de965e81174dea83c7",
+      "git_blob_sha": "5df5cda256aa0746b6574cd9baf248fd25dad3a2",
+      "byte_size": 3771
+    },
+    "upstream/data.py": {
+      "sha256": "d8e597ad6207e3d07f9cc776cb948e4627dc676e5acc2ad82a54613939c6a10b",
+      "git_blob_sha": "9ad05384f666458b2d4c0cb499c405cdc37b4be5",
+      "byte_size": 7213
+    },
+    "upstream/model_pipeline.py": {
+      "sha256": "0a4ebdf9154a4fdb213fb816667bae011e2badb891fddf2d08cdd80c0ea9329c",
+      "git_blob_sha": "410a01e0bcd8979ea57c3a76e5ef9d0cbf0e53a0",
+      "byte_size": 8142
+    },
+    "upstream/utils.py": {
+      "sha256": "ed9973644cdc94cab0dabc478ec57cc3ca3dc1652b2b6ef8b795bb18dbd5865d",
+      "git_blob_sha": "7399e330a08c999a25aba54c005c750b404d9bf5",
+      "byte_size": 9174
+    },
+    "upstream/train.py": {
+      "sha256": "6c501f0b56277a10f72772aa775ce9a42736647eea9d05578e7a6cf5d8783f11",
+      "git_blob_sha": "3d7797efb8a1e487b1c8b416a6734000dfac25bd",
+      "byte_size": 4282
+    },
+    "upstream/evaluate.py": {
+      "sha256": "3e7f7f2e27b60a59b181c2085bec453e69861bd197261020ce6804a4ba983a69",
+      "git_blob_sha": "3cfd89600a3623037e3c18cf1073c2ce233459ce",
+      "byte_size": 1687
+    },
+    "upstream/LICENSE.txt": {
+      "sha256": "1bfd640a0c2a1be6a70550801a45ae949d18f082c3f153e6a97d3535c694f27a",
+      "git_blob_sha": "bd2c5222d3316a62c976a1de800f4a1cecc2944d",
+      "byte_size": 1956
+    },
+    "upstream/network_pipeline.py": {
+      "sha256": "be9e37db1a8e946fb5931f54c7b92ef48f8d47bc8250675e7553a14b4a8867f1",
+      "git_blob_sha": "042cc91307f2347648814603b4d916b05c9cf46c",
+      "byte_size": 4707
+    },
+    "upstream/README.md": {
+      "sha256": "7fce85954609b660a37cca33a0f961f0f88ddfed7c4413504ef0d51dcc429f80",
+      "git_blob_sha": "fc08f7a13a7e158823e72cbdfbd6e52a3cd71349",
+      "byte_size": 16355
+    },
+    "upstream/metadata.json": {
+      "sha256": "eb09ebc85c2f203e157b0fbbd53c1951569243d2a2161e49df92e5973be4e5d4",
+      "git_blob_sha": "8b0053500f62822c3909257313b709ef43effe74",
+      "byte_size": 2400
+    }
+  },
+  "metadata_exact_parsed_value_mismatch_count": 0,
+  "upstream_data_metadata_license": "metadata.json declares CC-BY-4.0 but contains stale anonymous placeholder citation/URL; software LICENSE.txt has noncommercial restriction. Preserve both provenance records; do not silently relicense the entire package."
+}

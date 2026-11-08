@@ -1,0 +1,7 @@
+{
+  "criterion": "mean best validation BCE, 3 dev seeds",
+  "stages": "stage 1: 4x4 grid; stage 2: lr_out in {3,10} at each learner stage-1 lr_rec",
+  "edge_notes": [
+    "early/rms/bptt: selected lr_out at the largest value tried (10.0)"
+  ]
+}

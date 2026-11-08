@@ -1,0 +1,64 @@
+{
+  "name": "t2_dms_adam_bptt",
+  "stage": "development",
+  "cell_cohort": "development",
+  "cohort_unit": "donor",
+  "holdout_fraction": 0.5,
+  "split_seed": 1701,
+  "seeds": [
+    11,
+    12,
+    13
+  ],
+  "cell_counts": [
+    80,
+    10,
+    5,
+    5
+  ],
+  "task": {
+    "task_type": "dms",
+    "context_timing": "late"
+  },
+  "conditions": [
+    {
+      "name": "intact_bptt",
+      "learner": "bptt",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    }
+  ],
+  "training_steps": 3000,
+  "batch_size": 32,
+  "validation_interval": 50,
+  "validation_trials": 256,
+  "test_trials": 512,
+  "analysis_trials": 128,
+  "checkpoint_steps": [
+    0,
+    3000
+  ],
+  "lr_rec": 0.001,
+  "lr_out": 0.03,
+  "learning_rates": {},
+  "max_weight": 2.0,
+  "save_trajectories": false,
+  "run_interventions": false,
+  "run_psychometrics": false,
+  "run_fixed_points": false,
+  "optimizer": "adam",
+  "max_grad_norm": 1.0,
+  "tuning_candidates": [
+    {
+      "lr_rec": 0.003,
+      "lr_out": 3.0
+    },
+    {
+      "lr_rec": 0.003,
+      "lr_out": 10.0
+    }
+  ]
+}

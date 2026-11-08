@@ -1,0 +1,4 @@
+condition,seed,identity,topology,learner,best_step,best_validation_bce,validation_accuracy,trained_steps,training_trials,simulated_trial_bins,training_seconds,test_enabled,recurrent_weight_change_l2,wall_seconds
+intact_bptt,11,authentic,type_prior,bptt,100,0.03273083819929644,1.0,3000,96000,3456000,97.05066650006302,False,8.916581902911386,122.22498160000032
+intact_bptt,12,authentic,type_prior,bptt,200,0.1715181738006804,0.98046875,3000,96000,3456000,93.4208784000366,False,9.619277554882585,119.19104599999991
+intact_bptt,13,authentic,type_prior,bptt,150,0.10687328504970076,0.95703125,3000,96000,3456000,93.98834850001367,False,10.060841092251929,118.93534670000008

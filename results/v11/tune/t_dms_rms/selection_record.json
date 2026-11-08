@@ -1,0 +1,91 @@
+{
+  "candidates": [
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 0.3,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 1.0,
+      "lr_rec": 0.0003
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 0.3,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 1.0,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 0.3,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 1.0,
+      "lr_rec": 0.003
+    },
+    {
+      "lr_out": 0.03,
+      "lr_rec": 0.01
+    },
+    {
+      "lr_out": 0.1,
+      "lr_rec": 0.01
+    },
+    {
+      "lr_out": 0.3,
+      "lr_rec": 0.01
+    },
+    {
+      "lr_out": 1.0,
+      "lr_rec": 0.01
+    }
+  ],
+  "candidates_per_learner": 16,
+  "criterion": "mean per-seed best validation BCE",
+  "scope": "Noisy and perturbation conditions require their own matched-noise tuning study.",
+  "selected_learning_rates": {
+    "bptt": {
+      "lr_out": 0.1,
+      "lr_rec": 0.003
+    },
+    "local": {
+      "lr_out": 1.0,
+      "lr_rec": 0.001
+    },
+    "local_no_beta": {
+      "lr_out": 0.3,
+      "lr_rec": 0.003
+    },
+    "readout_only": {
+      "lr_out": 0.3,
+      "lr_rec": 0.0003
+    }
+  },
+  "source_config_hash": "79ad5f8f97f12d944e45fd01936257770b480b3f3062440ba19fb8979b2e5b9a",
+  "test_evaluated": false
+}

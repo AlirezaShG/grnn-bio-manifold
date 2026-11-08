@@ -1,0 +1,23 @@
+{
+  "candidates": [
+    {
+      "lr_out": 3.0,
+      "lr_rec": 0.001
+    },
+    {
+      "lr_out": 10.0,
+      "lr_rec": 0.001
+    }
+  ],
+  "candidates_per_learner": 2,
+  "criterion": "mean per-seed best validation BCE",
+  "scope": "Noisy and perturbation conditions require their own matched-noise tuning study.",
+  "selected_learning_rates": {
+    "bptt": {
+      "lr_out": 3.0,
+      "lr_rec": 0.001
+    }
+  },
+  "source_config_hash": "2c2465ff6aa88d955b30fde72c8292dbd1d01304720aa55f3ed921d053774ea0",
+  "test_evaluated": false
+}

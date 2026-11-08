@@ -1,0 +1,89 @@
+[
+  {
+    "ci_high": 0.00390625,
+    "ci_low": -0.20703125,
+    "condition": "intact_local",
+    "confidence": 0.95,
+    "difference_sd": 0.14915533665653738,
+    "differences": [
+      -0.20703125,
+      0.00390625
+    ],
+    "effect_dz": -0.6809176411426012,
+    "family_size": 3,
+    "interval_method": "network-bootstrap-percentile",
+    "mean_a": 0.76171875,
+    "mean_b": 0.86328125,
+    "mean_difference_a_minus_b": -0.1015625,
+    "metric": "accuracy_incongruent",
+    "n_pairs": 2,
+    "n_sign_assignments": 4,
+    "p_holm": 1.0,
+    "p_value": 1.0,
+    "pair_ids": [
+      1,
+      2
+    ],
+    "reference": "intact_bptt",
+    "small_sample": true,
+    "test_method": "exact_paired_sign_flip_two_sided"
+  },
+  {
+    "ci_high": -0.1015625,
+    "ci_low": -0.53515625,
+    "condition": "intact_local_no_beta",
+    "confidence": 0.95,
+    "difference_sd": 0.30659708090510457,
+    "differences": [
+      -0.53515625,
+      -0.1015625
+    ],
+    "effect_dz": -1.038364012012678,
+    "family_size": 3,
+    "interval_method": "network-bootstrap-percentile",
+    "mean_a": 0.544921875,
+    "mean_b": 0.86328125,
+    "mean_difference_a_minus_b": -0.318359375,
+    "metric": "accuracy_incongruent",
+    "n_pairs": 2,
+    "n_sign_assignments": 4,
+    "p_holm": 1.0,
+    "p_value": 0.5,
+    "pair_ids": [
+      1,
+      2
+    ],
+    "reference": "intact_bptt",
+    "small_sample": true,
+    "test_method": "exact_paired_sign_flip_two_sided"
+  },
+  {
+    "ci_high": -0.125,
+    "ci_low": -0.35546875,
+    "condition": "intact_readout_only",
+    "confidence": 0.95,
+    "difference_sd": 0.16296601597658714,
+    "differences": [
+      -0.35546875,
+      -0.125
+    ],
+    "effect_dz": -1.4741378658634803,
+    "family_size": 3,
+    "interval_method": "network-bootstrap-percentile",
+    "mean_a": 0.623046875,
+    "mean_b": 0.86328125,
+    "mean_difference_a_minus_b": -0.240234375,
+    "metric": "accuracy_incongruent",
+    "n_pairs": 2,
+    "n_sign_assignments": 4,
+    "p_holm": 1.0,
+    "p_value": 0.5,
+    "pair_ids": [
+      1,
+      2
+    ],
+    "reference": "intact_bptt",
+    "small_sample": true,
+    "test_method": "exact_paired_sign_flip_two_sided"
+  }
+]

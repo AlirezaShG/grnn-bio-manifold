@@ -1,0 +1,21 @@
+{
+  "environment": {
+    "blas_thread_limits": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "scipy": "1.17.0",
+    "utc_time": "2026-11-07T10:25:44.426919+00:00"
+  },
+  "n_runs": 3,
+  "publication_claim": "none; interpret completed experiments with the research protocol",
+  "source_hash": "5c447c992856f100270de8a0c19cb7e3b24d581122fd999978670874d3a1ab99",
+  "stage": "development",
+  "statistical_unit": "network_run_conditional_on_fitted_cell_resource",
+  "test_evaluated": false
+}

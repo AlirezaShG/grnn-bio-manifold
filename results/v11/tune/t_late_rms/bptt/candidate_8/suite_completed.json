@@ -1,0 +1,21 @@
+{
+  "environment": {
+    "blas_thread_limits": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "python": "3.10.19 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 16:41:31) [MSC v.1929 64 bit (AMD64)]",
+    "scipy": "1.15.3",
+    "utc_time": "2026-11-08T19:23:47.563615+00:00"
+  },
+  "n_runs": 3,
+  "publication_claim": "none; interpret completed experiments with the research protocol",
+  "source_hash": "1634f7b4035b22ac9c01fa0ca5c346478a95c08947e155f7f28015b6855fffe6",
+  "stage": "development",
+  "statistical_unit": "network_run_conditional_on_fitted_cell_resource",
+  "test_evaluated": false
+}

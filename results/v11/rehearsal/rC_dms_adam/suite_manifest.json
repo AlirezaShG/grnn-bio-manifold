@@ -1,0 +1,150 @@
+{
+  "config": {
+    "analysis_trials": 128,
+    "baseline_fraction": 0.05,
+    "batch_size": 32,
+    "cell_cohort": "development",
+    "cell_counts": [
+      80,
+      10,
+      5,
+      5
+    ],
+    "checkpoint_steps": [
+      0,
+      375,
+      750,
+      1500,
+      3000
+    ],
+    "cohort_unit": "donor",
+    "conditions": [
+      {
+        "calibration": "reference",
+        "feedback_mode": "random",
+        "identity": "within_type_shuffle",
+        "learner": "local",
+        "name": "shuffle_ref_local",
+        "topology": "type_prior",
+        "training_noise_std": 0.0
+      },
+      {
+        "calibration": "matched",
+        "feedback_mode": "random",
+        "identity": "fast_decay",
+        "learner": "local",
+        "name": "fastdecay_local",
+        "topology": "type_prior",
+        "training_noise_std": 0.0
+      },
+      {
+        "calibration": "matched",
+        "feedback_mode": "random",
+        "identity": "cross_type_permutation",
+        "learner": "local",
+        "name": "crosstype_local",
+        "topology": "type_prior",
+        "training_noise_std": 0.0
+      },
+      {
+        "calibration": "matched",
+        "feedback_mode": "symmetric",
+        "identity": "authentic",
+        "learner": "local",
+        "name": "intact_local_sym",
+        "topology": "type_prior",
+        "training_noise_std": 0.0
+      },
+      {
+        "calibration": "matched",
+        "feedback_mode": "symmetric",
+        "identity": "authentic",
+        "learner": "local_no_beta",
+        "name": "intact_no_beta_sym",
+        "topology": "type_prior",
+        "training_noise_std": 0.0
+      }
+    ],
+    "evaluation_noise_std": 0.0,
+    "holdout_fraction": 0.5,
+    "inhibitory_gain": 1.5,
+    "input_gain": 1.0,
+    "input_mode": "distributed",
+    "input_scale_fraction": 0.25,
+    "intervention_doses": [
+      0.5,
+      1.0
+    ],
+    "learning_rates": {
+      "local": {
+        "lr_out": 1.0,
+        "lr_rec": 0.003
+      },
+      "local_no_beta": {
+        "lr_out": 1.0,
+        "lr_rec": 0.001
+      }
+    },
+    "lr_out": 0.03,
+    "lr_rec": 0.001,
+    "max_grad_norm": 1.0,
+    "max_weight": 2.0,
+    "min_validation_evr": 0.5,
+    "name": "rC_dms_adam",
+    "ood_delays": [
+      20,
+      30
+    ],
+    "ood_distractor_std": 0.75,
+    "ood_noise_std": 0.5,
+    "optimizer": "adam",
+    "recurrent_gain": 0.6,
+    "reference_rate_hz": 100.0,
+    "run_fixed_points": false,
+    "run_interventions": true,
+    "run_psychometrics": true,
+    "save_trajectories": false,
+    "seeds": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "split_seed": 1701,
+    "stage": "development",
+    "task": {
+      "bin_size_ms": 20,
+      "coherence_levels": [
+        0.25,
+        0.5,
+        1.0
+      ],
+      "context_timing": "late",
+      "delay_bins": [
+        5,
+        10,
+        15
+      ],
+      "distractor_bins": 2,
+      "distractor_std": 0.0,
+      "noise_std": 0.25,
+      "t_context": 3,
+      "t_decision": 3,
+      "t_fixation": 5,
+      "t_stimulus": 10,
+      "task_type": "dms"
+    },
+    "test_trials": 512,
+    "training_steps": 3000,
+    "tuning_candidates": [],
+    "validation_interval": 50,
+    "validation_trials": 256
+  },
+  "input_hashes": {
+    "data/metadata.csv": "ce0a046996b1abc6338c194899405c592bbb01cdfde638cec150446c647997dc",
+    "model/gfr_dataset.json": "0539cbe9dc4202f33448c76a43ce88839300360c85fa4289c85be3da755a6a0e"
+  },
+  "source_hash": "1634f7b4035b22ac9c01fa0ca5c346478a95c08947e155f7f28015b6855fffe6",
+  "suite_hash": "865234af27311ee63c962ea998338658a07cf606a08d2f81fb302a7b42d29775",
+  "test_enabled": true
+}

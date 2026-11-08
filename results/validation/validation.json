@@ -1,0 +1,355 @@
+{
+  "elapsed_seconds": 4.720546688000013,
+  "environment": {
+    "blas_thread_limits": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "scipy": "1.17.0",
+    "utc_time": "2026-11-07T10:28:49.624602+00:00"
+  },
+  "errors": 0,
+  "failures": 0,
+  "finite_difference_actual_allen": {
+    "atol": 1e-07,
+    "checked_recurrent_edges": 33,
+    "checks": [
+      {
+        "analytical": 0.0006399181118208553,
+        "numerical": 0.0006399181073923899,
+        "parameter": "rec",
+        "post": 0,
+        "pre": 17
+      },
+      {
+        "analytical": 0.0,
+        "numerical": 0.0,
+        "parameter": "rec",
+        "post": 1,
+        "pre": 9
+      },
+      {
+        "analytical": -8.755564639103717e-05,
+        "numerical": -8.755564051554642e-05,
+        "parameter": "rec",
+        "post": 1,
+        "pre": 14
+      },
+      {
+        "analytical": -3.866247030998101e-07,
+        "numerical": -3.8662406609546446e-07,
+        "parameter": "rec",
+        "post": 2,
+        "pre": 11
+      },
+      {
+        "analytical": 9.706127627120032e-07,
+        "numerical": 9.70612479278543e-07,
+        "parameter": "rec",
+        "post": 2,
+        "pre": 12
+      },
+      {
+        "analytical": 2.5268826615829313e-05,
+        "numerical": 2.5268825920576884e-05,
+        "parameter": "rec",
+        "post": 4,
+        "pre": 15
+      },
+      {
+        "analytical": -2.249411918109127e-05,
+        "numerical": -2.2494123230742954e-05,
+        "parameter": "rec",
+        "post": 4,
+        "pre": 17
+      },
+      {
+        "analytical": -0.0006701080425413825,
+        "numerical": -0.0006701080357274235,
+        "parameter": "rec",
+        "post": 5,
+        "pre": 8
+      },
+      {
+        "analytical": -1.7905461841975442e-05,
+        "numerical": -1.7905465998779846e-05,
+        "parameter": "rec",
+        "post": 5,
+        "pre": 14
+      },
+      {
+        "analytical": 0.00040241925203143137,
+        "numerical": 0.00040241925347572755,
+        "parameter": "rec",
+        "post": 5,
+        "pre": 16
+      },
+      {
+        "analytical": 0.00018602188641727611,
+        "numerical": 0.00018602188123217897,
+        "parameter": "rec",
+        "post": 6,
+        "pre": 16
+      },
+      {
+        "analytical": -0.00013457130872220418,
+        "numerical": -0.00013457131520233645,
+        "parameter": "rec",
+        "post": 8,
+        "pre": 4
+      },
+      {
+        "analytical": -0.00010956437794208751,
+        "numerical": -0.00010956437979103838,
+        "parameter": "rec",
+        "post": 8,
+        "pre": 10
+      },
+      {
+        "analytical": 0.0002545151723668221,
+        "numerical": 0.00025451517560171055,
+        "parameter": "rec",
+        "post": 8,
+        "pre": 14
+      },
+      {
+        "analytical": 0.0,
+        "numerical": 0.0,
+        "parameter": "rec",
+        "post": 9,
+        "pre": 10
+      },
+      {
+        "analytical": 0.0,
+        "numerical": 0.0,
+        "parameter": "rec",
+        "post": 9,
+        "pre": 13
+      },
+      {
+        "analytical": -0.0004408822883025409,
+        "numerical": -0.0004408822862345118,
+        "parameter": "rec",
+        "post": 10,
+        "pre": 17
+      },
+      {
+        "analytical": -2.4750949159491077e-06,
+        "numerical": -2.475092353293462e-06,
+        "parameter": "rec",
+        "post": 12,
+        "pre": 0
+      },
+      {
+        "analytical": 1.210598030068165e-05,
+        "numerical": 1.2105982882815168e-05,
+        "parameter": "rec",
+        "post": 12,
+        "pre": 5
+      },
+      {
+        "analytical": -2.8675234467775464e-06,
+        "numerical": -2.8675228858077158e-06,
+        "parameter": "rec",
+        "post": 12,
+        "pre": 6
+      },
+      {
+        "analytical": -2.700083309890581e-06,
+        "numerical": -2.7000846003488728e-06,
+        "parameter": "rec",
+        "post": 13,
+        "pre": 2
+      },
+      {
+        "analytical": 0.0,
+        "numerical": 0.0,
+        "parameter": "rec",
+        "post": 13,
+        "pre": 9
+      },
+      {
+        "analytical": 5.553945078753154e-05,
+        "numerical": 5.5539450816155515e-05,
+        "parameter": "rec",
+        "post": 14,
+        "pre": 4
+      },
+      {
+        "analytical": -0.00021361238352892668,
+        "numerical": -0.0002136123833373915,
+        "parameter": "rec",
+        "post": 14,
+        "pre": 15
+      },
+      {
+        "analytical": -7.76368563630008e-06,
+        "numerical": -7.76368414001638e-06,
+        "parameter": "rec",
+        "post": 15,
+        "pre": 0
+      },
+      {
+        "analytical": 3.622478272678622e-08,
+        "numerical": 3.622657729351886e-08,
+        "parameter": "rec",
+        "post": 15,
+        "pre": 6
+      },
+      {
+        "analytical": 0.0,
+        "numerical": 0.0,
+        "parameter": "rec",
+        "post": 15,
+        "pre": 9
+      },
+      {
+        "analytical": 7.55646755065581e-06,
+        "numerical": 7.556466563585217e-06,
+        "parameter": "rec",
+        "post": 15,
+        "pre": 16
+      },
+      {
+        "analytical": 0.00021328649378446005,
+        "numerical": 0.00021328649402185815,
+        "parameter": "rec",
+        "post": 16,
+        "pre": 17
+      },
+      {
+        "analytical": -0.00012032038520151066,
+        "numerical": -0.00012032037588483034,
+        "parameter": "rec",
+        "post": 16,
+        "pre": 19
+      },
+      {
+        "analytical": 6.143316643520751e-07,
+        "numerical": 6.143308084460841e-07,
+        "parameter": "rec",
+        "post": 18,
+        "pre": 7
+      },
+      {
+        "analytical": -2.6322132550147802e-05,
+        "numerical": -2.6322133361844632e-05,
+        "parameter": "rec",
+        "post": 18,
+        "pre": 17
+      },
+      {
+        "analytical": 8.820817046161206e-08,
+        "numerical": 8.820721930646867e-08,
+        "parameter": "rec",
+        "post": 19,
+        "pre": 3
+      },
+      {
+        "analytical": -0.0007350399689163472,
+        "index": 0,
+        "numerical": -0.0007350399733319079,
+        "parameter": "out"
+      },
+      {
+        "analytical": -0.007869229531220058,
+        "index": 1,
+        "numerical": -0.007869229534662736,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.0,
+        "index": 2,
+        "numerical": 0.0,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.0,
+        "index": 3,
+        "numerical": 0.0,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.0,
+        "index": 4,
+        "numerical": 0.0,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.022184106424329116,
+        "index": 5,
+        "numerical": 0.02218410642407242,
+        "parameter": "out"
+      },
+      {
+        "analytical": -0.005043275721168146,
+        "index": 6,
+        "numerical": -0.005043275719263107,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.0,
+        "index": 7,
+        "numerical": 0.0,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.006301876042669708,
+        "index": 8,
+        "numerical": 0.006301876043224296,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.0,
+        "index": 9,
+        "numerical": 0.0,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.00711648342943199,
+        "index": 10,
+        "numerical": 0.007116483430325004,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.0,
+        "index": 11,
+        "numerical": 0.0,
+        "parameter": "out"
+      },
+      {
+        "analytical": 0.00026364806757138426,
+        "numerical": 0.0002636480700424215,
+        "parameter": "bias"
+      }
+    ],
+    "epsilon": 1e-05,
+    "max_absolute_error": 9.316680321105539e-12,
+    "nonzero_recurrent_checks": 26,
+    "relative_l2_error": 7.494744195710059e-10,
+    "rtol": 0.0001,
+    "status": "pass"
+  },
+  "input_integrity": {
+    "data/metadata.csv": {
+      "matches_pinned_verified_input": true,
+      "sha256": "ce0a046996b1abc6338c194899405c592bbb01cdfde638cec150446c647997dc"
+    },
+    "model/gfr_dataset.json": {
+      "matches_pinned_verified_input": true,
+      "sha256": "0539cbe9dc4202f33448c76a43ce88839300360c85fa4289c85be3da755a6a0e"
+    }
+  },
+  "raw_patch_clamp_revalidation": "not performed; raw experimental sweeps are not bundled",
+  "scope": "unit/integration/equation checks; this is not a biological performance or publication claim",
+  "skipped": 0,
+  "source_hash": "5c447c992856f100270de8a0c19cb7e3b24d581122fd999978670874d3a1ab99",
+  "status": "pass",
+  "test_log": "test_duplicate_cell_per_network_is_rejected (test_design.FactorialContrastTests.test_duplicate_cell_per_network_is_rejected) ... ok\ntest_empty_design_is_explicitly_not_estimable (test_design.FactorialContrastTests.test_empty_design_is_explicitly_not_estimable) ... ok\ntest_hand_calculated_main_did_and_ddd_effects (test_design.FactorialContrastTests.test_hand_calculated_main_did_and_ddd_effects) ... ok\ntest_incomplete_seed_is_not_silently_dropped (test_design.FactorialContrastTests.test_incomplete_seed_is_not_silently_dropped) ... ok\ntest_invalid_pairing_seed_ids_are_rejected (test_design.FactorialContrastTests.test_invalid_pairing_seed_ids_are_rejected) ... ok\ntest_mixed_endpoints_are_rejected_even_for_disjoint_seed_ids (test_design.FactorialContrastTests.test_mixed_endpoints_are_rejected_even_for_disjoint_seed_ids) ... ok\ntest_noisy_and_nonfactorial_controls_do_not_contaminate_primary_family (test_design.FactorialContrastTests.test_noisy_and_nonfactorial_controls_do_not_contaminate_primary_family) ... ok\ntest_nonfinite_outcome_is_rejected (test_design.FactorialContrastTests.test_nonfinite_outcome_is_rejected) ... ok\ntest_reordering_rows_and_seed_specific_intercepts_preserve_effects (test_design.FactorialContrastTests.test_reordering_rows_and_seed_specific_intercepts_preserve_effects) ... ok\ntest_single_pair_reports_effect_without_inferential_p_value (test_design.FactorialContrastTests.test_single_pair_reports_effect_without_inferential_p_value) ... ok\ntest_ambiguous_feedback_representatives_are_rejected (test_design.TuningContractTests.test_ambiguous_feedback_representatives_are_rejected) ... ok\ntest_confirmation_tuning_is_rejected_without_any_run (test_design.TuningContractTests.test_confirmation_tuning_is_rejected_without_any_run) ... ok\ntest_equal_distinct_candidate_budgets_with_validation_only_selection (test_design.TuningContractTests.test_equal_distinct_candidate_budgets_with_validation_only_selection) ... ok\ntest_missing_or_nonfinite_candidate_scores_are_rejected (test_design.TuningContractTests.test_missing_or_nonfinite_candidate_scores_are_rejected) ... ok\ntest_noisy_conditions_are_not_silently_tuned_as_noiseless (test_design.TuningContractTests.test_noisy_conditions_are_not_silently_tuned_as_noiseless) ... ok\ntest_ties_use_first_declared_candidate_without_testing (test_design.TuningContractTests.test_ties_use_first_declared_candidate_without_testing) ... ok\ntest_analysis_handles_short_delays_and_paired_configured_noise (test_experiment.ExperimentIntegrationTests.test_analysis_handles_short_delays_and_paired_configured_noise) ... ok\ntest_complete_tiny_run_writes_five_splits_and_consistent_checkpoints (test_experiment.ExperimentIntegrationTests.test_complete_tiny_run_writes_five_splits_and_consistent_checkpoints) ... ok\ntest_completed_resume_returns_without_retraining_and_rejects_config_changes (test_experiment.ExperimentIntegrationTests.test_completed_resume_returns_without_retraining_and_rejects_config_changes) ... ok\ntest_configuration_rejects_unreported_node_noise_and_ood_overlap (test_experiment.ExperimentIntegrationTests.test_configuration_rejects_unreported_node_noise_and_ood_overlap) ... ok\ntest_data_bytes_are_part_of_resume_identity (test_experiment.ExperimentIntegrationTests.test_data_bytes_are_part_of_resume_identity) ... ok\ntest_interrupted_resume_is_numerically_identical_for_bptt_and_noisy_learning (test_experiment.ExperimentIntegrationTests.test_interrupted_resume_is_numerically_identical_for_bptt_and_noisy_learning) ... ok\ntest_paired_conditions_reuse_identical_test_trials (test_experiment.ExperimentIntegrationTests.test_paired_conditions_reuse_identical_test_trials) ... ok\ntest_suite_aggregates_network_runs_and_marks_incomplete_factorial (test_experiment.ExperimentIntegrationTests.test_suite_aggregates_network_runs_and_marks_incomplete_factorial) ... ok\ntest_test_false_cannot_enter_heldout_or_mechanistic_branches (test_experiment.ExperimentIntegrationTests.test_test_false_cannot_enter_heldout_or_mechanistic_branches) ... ok\ntest_tuning_command_passes_test_false_and_selects_validation_only (test_experiment.ExperimentIntegrationTests.test_tuning_command_passes_test_false_and_selects_validation_only) ... ok\ntest_validation_frequency_and_learning_rule_do_not_change_training_data (test_experiment.ExperimentIntegrationTests.test_validation_frequency_and_learning_rule_do_not_change_training_data) ... ok\ntest_authentic_eight_channel_forward_and_bptt (test_learning.AuthenticCellIntegrationTests.test_authentic_eight_channel_forward_and_bptt) ... ok\ntest_all_deterministic_rules_share_loss_and_readout_derivative (test_learning.LearningMathematicsTests.test_all_deterministic_rules_share_loss_and_readout_derivative) ... ok\ntest_estimators_do_not_mutate_circuit_or_physiology (test_learning.LearningMathematicsTests.test_estimators_do_not_mutate_circuit_or_physiology) ... ok\ntest_exact_bptt_matches_all_supported_finite_differences (test_learning.LearningMathematicsTests.test_exact_bptt_matches_all_supported_finite_differences) ... ok\ntest_flat_recurrent_check_is_inconclusive (test_learning.LearningMathematicsTests.test_flat_recurrent_check_is_inconclusive) ... ok\ntest_forward_kernel_matches_public_circuit_with_noise (test_learning.LearningMathematicsTests.test_forward_kernel_matches_public_circuit_with_noise) ... ok\ntest_invalid_decisions_and_labels_fail (test_learning.LearningMathematicsTests.test_invalid_decisions_and_labels_fail) ... ok\ntest_local_eligibility_matches_clamped_cell_finite_difference (test_learning.LearningMathematicsTests.test_local_eligibility_matches_clamped_cell_finite_difference)\nNumerically differentiate an independently defined clamped-cell loss. ... ok\ntest_no_beta_ablation_retains_all_channels (test_learning.LearningMathematicsTests.test_no_beta_ablation_retains_all_channels) ... ok\ntest_node_perturbation_score_matches_noisy_path_gradient_in_expectation (test_learning.LearningMathematicsTests.test_node_perturbation_score_matches_noisy_path_gradient_in_expectation)\nMonte Carlo score/pathwise identity, including sigma^2 and Dale signs. ... ok\ntest_node_reproducibility_and_cost_count (test_learning.LearningMathematicsTests.test_node_reproducibility_and_cost_count) ... ok\ntest_optimizer_constraints_frozen_parameters_and_resume (test_learning.LearningMathematicsTests.test_optimizer_constraints_frozen_parameters_and_resume) ... ok\ntest_padding_after_response_adds_no_node_score_noise (test_learning.LearningMathematicsTests.test_padding_after_response_adds_no_node_score_noise) ... ok\ntest_reservoir_recurrence_stays_frozen_even_with_weight_decay (test_learning.LearningMathematicsTests.test_reservoir_recurrence_stays_frozen_even_with_weight_decay) ... ok\ntest_small_exact_gradient_step_decreases_same_objective (test_learning.LearningMathematicsTests.test_small_exact_gradient_step_decreases_same_objective) ... ok\ntest_calibration_is_label_free_and_preserves_parameters (test_model_data_circuit.ActivationAndCalibrationTests.test_calibration_is_label_free_and_preserves_parameters) ... ok\ntest_calibration_rejects_nonfinite_fractions_and_noninteger_grids (test_model_data_circuit.ActivationAndCalibrationTests.test_calibration_rejects_nonfinite_fractions_and_noninteger_grids) ... ok\ntest_constant_activation_has_zero_derivative (test_model_data_circuit.ActivationAndCalibrationTests.test_constant_activation_has_zero_derivative) ... ok\ntest_empty_cell_filter_or_polynomial_axes_are_rejected (test_model_data_circuit.ActivationAndCalibrationTests.test_empty_cell_filter_or_polynomial_axes_are_rejected) ... ok\ntest_higher_degree_polynomial_and_derivative (test_model_data_circuit.ActivationAndCalibrationTests.test_higher_degree_polynomial_and_derivative) ... ok\ntest_immutable_parameters_own_their_data (test_model_data_circuit.ActivationAndCalibrationTests.test_immutable_parameters_own_their_data) ... ok\ntest_nonphysical_parameters_are_rejected (test_model_data_circuit.ActivationAndCalibrationTests.test_nonphysical_parameters_are_rejected) ... ok\ntest_relu_inactive_branch_and_exact_kink (test_model_data_circuit.ActivationAndCalibrationTests.test_relu_inactive_branch_and_exact_kink) ... ok\ntest_timestep_requires_positive_integer_type (test_model_data_circuit.ActivationAndCalibrationTests.test_timestep_requires_positive_integer_type) ... ok\ntest_all_controls_share_input_readout_feedback_currents_and_physical_rate_scale (test_model_data_circuit.CircuitControlTests.test_all_controls_share_input_readout_feedback_currents_and_physical_rate_scale) ... ok\ntest_checkpoint_rejects_changed_readout_support_slot_labels_and_signs (test_model_data_circuit.CircuitControlTests.test_checkpoint_rejects_changed_readout_support_slot_labels_and_signs) ... ok\ntest_checkpoint_roundtrip_and_construction_mismatch_rejection (test_model_data_circuit.CircuitControlTests.test_checkpoint_roundtrip_and_construction_mismatch_rejection) ... ok\ntest_constraints_detect_feedback_mask_sign_and_readout_mutations (test_model_data_circuit.CircuitControlTests.test_constraints_detect_feedback_mask_sign_and_readout_mutations) ... ok\ntest_directed_rewiring_preserves_both_degrees_without_touching_source (test_model_data_circuit.CircuitControlTests.test_directed_rewiring_preserves_both_degrees_without_touching_source) ... ok\ntest_non100_network_has_no_hidden_fixed_population_slices (test_model_data_circuit.CircuitControlTests.test_non100_network_has_no_hidden_fixed_population_slices) ... ok\ntest_nonfinite_connection_gains_and_probability_priors_are_rejected (test_model_data_circuit.CircuitControlTests.test_nonfinite_connection_gains_and_probability_priors_are_rejected) ... ok\ntest_rate_clamp_enters_subsequent_history_and_readout (test_model_data_circuit.CircuitControlTests.test_rate_clamp_enters_subsequent_history_and_readout) ... ok\ntest_rejected_checkpoint_does_not_partially_change_any_state (test_model_data_circuit.CircuitControlTests.test_rejected_checkpoint_does_not_partially_change_any_state) ... ok\ntest_topology_control_preserves_per_column_magnitude_multiset_and_sign (test_model_data_circuit.CircuitControlTests.test_topology_control_preserves_per_column_magnitude_multiset_and_sign) ... ok\ntest_zero_initial_state_and_first_current_no_recurrent_prewarm (test_model_data_circuit.CircuitControlTests.test_zero_initial_state_and_first_current_no_recurrent_prewarm) ... ok\ntest_optional_fixed_point_branch_runs_after_training_and_writes_json (test_model_data_circuit.FixedPointExperimentIntegrationTests.test_optional_fixed_point_branch_runs_after_training_and_writes_json) ... ok\ntest_full_jacobian_matches_finite_differences_including_network_paths (test_model_data_circuit.FullStateDynamicsTests.test_full_jacobian_matches_finite_differences_including_network_paths) ... ok\ntest_jacobian_resource_guard_and_state_validation (test_model_data_circuit.FullStateDynamicsTests.test_jacobian_resource_guard_and_state_validation) ... ok\ntest_known_stationary_state_and_spectral_radius (test_model_data_circuit.FullStateDynamicsTests.test_known_stationary_state_and_spectral_radius) ... ok\ntest_numerical_solver_failure_is_reported_without_false_success (test_model_data_circuit.FullStateDynamicsTests.test_numerical_solver_failure_is_reported_without_false_success) ... ok\ntest_root_solver_finds_known_fixed_point_and_returns_json_safe_artifact (test_model_data_circuit.FullStateDynamicsTests.test_root_solver_finds_known_fixed_point_and_returns_json_safe_artifact) ... ok\ntest_root_solver_uses_analytic_residual_jacobian_with_constant_input (test_model_data_circuit.FullStateDynamicsTests.test_root_solver_uses_analytic_residual_jacobian_with_constant_input) ... ok\ntest_solver_termination_alone_never_certifies_transient_success (test_model_data_circuit.FullStateDynamicsTests.test_solver_termination_alone_never_certifies_transient_success) ... ok\ntest_transient_or_relu_kink_is_not_called_stable_fixed_point (test_model_data_circuit.FullStateDynamicsTests.test_transient_or_relu_kink_is_not_called_stable_fixed_point) ... ok\ntest_streams_are_stable_namespace_separated_and_order_independent (test_model_data_circuit.NamedRandomnessTests.test_streams_are_stable_namespace_separated_and_order_independent) ... ok\ntest_authentic_bank_is_exact_and_no_control_mutates_source (test_model_data_circuit.SelectionAndIdentityTests.test_authentic_bank_is_exact_and_no_control_mutates_source) ... ok\ntest_cell_admission_does_not_use_test_evr (test_model_data_circuit.SelectionAndIdentityTests.test_cell_admission_does_not_use_test_evr) ... ok\ntest_cross_type_permutation_preserves_intact_tuples_bijectively (test_model_data_circuit.SelectionAndIdentityTests.test_cross_type_permutation_preserves_intact_tuples_bijectively) ... ok\ntest_fast_decay_preserves_both_static_filter_ratios (test_model_data_circuit.SelectionAndIdentityTests.test_fast_decay_preserves_both_static_filter_ratios) ... ok\ntest_homogeneous_condition_is_exact_documented_within_class_mean (test_model_data_circuit.SelectionAndIdentityTests.test_homogeneous_condition_is_exact_documented_within_class_mean) ... ok\ntest_independent_shuffle_preserves_within_class_marginals_and_activation_tuples (test_model_data_circuit.SelectionAndIdentityTests.test_independent_shuffle_preserves_within_class_marginals_and_activation_tuples) ... ok\ntest_sampling_has_unique_cells_and_explicit_insufficient_pool_error (test_model_data_circuit.SelectionAndIdentityTests.test_sampling_has_unique_cells_and_explicit_insufficient_pool_error) ... ok\ntest_specimen_cohorts_are_stratified_disjoint_and_exhaustive (test_model_data_circuit.SelectionAndIdentityTests.test_specimen_cohorts_are_stratified_disjoint_and_exhaustive) ... ok\ntest_wrong_discretization_and_duplicate_ids_fail (test_model_data_circuit.SelectionAndIdentityTests.test_wrong_discretization_and_duplicate_ids_fail) ... ok\ntest_all_1124_imported_tuples_are_unchanged (test_model_data_circuit.UpstreamEquationTests.test_all_1124_imported_tuples_are_unchanged) ... ok\ntest_fitted_decay_basis (test_model_data_circuit.UpstreamEquationTests.test_fitted_decay_basis) ... ok\ntest_full_bank_matches_independent_spikes_per_ms_reference (test_model_data_circuit.UpstreamEquationTests.test_full_bank_matches_independent_spikes_per_ms_reference) ... ok\ntest_initial_response_uses_zero_state_and_zero_history (test_model_data_circuit.UpstreamEquationTests.test_initial_response_uses_zero_state_and_zero_history) ... ok\ntest_no_second_timestep_scaling (test_model_data_circuit.UpstreamEquationTests.test_no_second_timestep_scaling) ... ok\ntest_expansion_is_retained_and_zero_displacement_is_undefined (test_task_analysis.HeldoutAnalysisTests.test_expansion_is_retained_and_zero_displacement_is_undefined) ... ok\ntest_fitted_pca_and_scaling_do_not_change_on_evaluation (test_task_analysis.HeldoutAnalysisTests.test_fitted_pca_and_scaling_do_not_change_on_evaluation) ... ok\ntest_independent_choice_signal_decodes_and_reversal_stays_negative (test_task_analysis.HeldoutAnalysisTests.test_independent_choice_signal_decodes_and_reversal_stays_negative) ... ok\ntest_null_holdout_does_not_inherit_high_dimensional_fit_separation (test_task_analysis.HeldoutAnalysisTests.test_null_holdout_does_not_inherit_high_dimensional_fit_separation) ... ok\ntest_phase_average_ignores_padding_and_other_epochs (test_task_analysis.HeldoutAnalysisTests.test_phase_average_ignores_padding_and_other_epochs) ... ok\ntest_reusing_identical_batch_for_fitting_and_testing_is_rejected (test_task_analysis.HeldoutAnalysisTests.test_reusing_identical_batch_for_fitting_and_testing_is_rejected) ... ok\ntest_temporal_generalization_uses_heldout_labels_only_for_scoring (test_task_analysis.HeldoutAnalysisTests.test_temporal_generalization_uses_heldout_labels_only_for_scoring) ... ok\ntest_current_pulse_reports_hidden_state_and_does_not_claim_attractor (test_task_analysis.InterventionValidityTests.test_current_pulse_reports_hidden_state_and_does_not_claim_attractor) ... ok\ntest_phase_specific_clamp_leaves_other_times_and_cells_intact (test_task_analysis.InterventionValidityTests.test_phase_specific_clamp_leaves_other_times_and_cells_intact) ... ok\ntest_zero_dose_and_matched_controls_share_noise (test_task_analysis.InterventionValidityTests.test_zero_dose_and_matched_controls_share_noise) ... ok\ntest_exact_six_pair_resolution (test_task_analysis.StatisticsValidityTests.test_exact_six_pair_resolution) ... ok\ntest_holm_known_values_and_missing_family_member (test_task_analysis.StatisticsValidityTests.test_holm_known_values_and_missing_family_member) ... ok\ntest_identical_pairs_have_null_p_and_zero_ci (test_task_analysis.StatisticsValidityTests.test_identical_pairs_have_null_p_and_zero_ci) ... ok\ntest_nested_cell_association_uses_networks_and_unique_cell_ids (test_task_analysis.StatisticsValidityTests.test_nested_cell_association_uses_networks_and_unique_cell_ids) ... ok\ntest_no_claim_of_inference_from_one_seed (test_task_analysis.StatisticsValidityTests.test_no_claim_of_inference_from_one_seed) ... ok\ntest_pairing_by_id_and_incomplete_pairs_rejected (test_task_analysis.StatisticsValidityTests.test_pairing_by_id_and_incomplete_pairs_rejected) ... ok\ntest_distractor_does_not_change_target_or_timing (test_task_analysis.TaskValidityTests.test_distractor_does_not_change_target_or_timing) ... ok\ntest_factorial_balance_and_unbiased_partial_block (test_task_analysis.TaskValidityTests.test_factorial_balance_and_unbiased_partial_block) ... ok\ntest_invalid_task_definitions_fail (test_task_analysis.TaskValidityTests.test_invalid_task_definitions_fail) ... ok\ntest_late_context_requires_stream_storage (test_task_analysis.TaskValidityTests.test_late_context_requires_stream_storage) ... ok\ntest_named_rng_external_reproducibility (test_task_analysis.TaskValidityTests.test_named_rng_external_reproducibility) ... ok\ntest_readout_uses_per_trial_go_not_batch_last_window (test_task_analysis.TaskValidityTests.test_readout_uses_per_trial_go_not_batch_last_window) ... ok\ntest_variable_delay_masks_go_and_padding (test_task_analysis.TaskValidityTests.test_variable_delay_masks_go_and_padding) ... ok\ntest_zero_coherence_is_not_forced_positive_accuracy (test_task_analysis.TaskValidityTests.test_zero_coherence_is_not_forced_positive_accuracy) ... ok\n\n----------------------------------------------------------------------\nRan 110 tests in 4.539s\n\nOK\n",
+  "tests_run": 110
+}

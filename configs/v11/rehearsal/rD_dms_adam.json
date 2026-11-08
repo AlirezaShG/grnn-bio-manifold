@@ -1,0 +1,118 @@
+{
+  "name": "rD_dms_adam",
+  "stage": "development",
+  "cell_cohort": "development",
+  "cohort_unit": "donor",
+  "holdout_fraction": 0.5,
+  "split_seed": 1701,
+  "seeds": [
+    21,
+    22,
+    23,
+    24
+  ],
+  "cell_counts": [
+    80,
+    10,
+    5,
+    5
+  ],
+  "task": {
+    "task_type": "dms",
+    "context_timing": "late"
+  },
+  "conditions": [
+    {
+      "name": "op02_bptt",
+      "learner": "bptt",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0,
+      "baseline_fraction": 0.02
+    },
+    {
+      "name": "op02_local",
+      "learner": "local",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0,
+      "baseline_fraction": 0.02
+    },
+    {
+      "name": "op10_bptt",
+      "learner": "bptt",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0,
+      "baseline_fraction": 0.1
+    },
+    {
+      "name": "op10_local",
+      "learner": "local",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0,
+      "baseline_fraction": 0.1
+    },
+    {
+      "name": "op20_bptt",
+      "learner": "bptt",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0,
+      "baseline_fraction": 0.2
+    },
+    {
+      "name": "op20_local",
+      "learner": "local",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0,
+      "baseline_fraction": 0.2
+    }
+  ],
+  "training_steps": 3000,
+  "batch_size": 32,
+  "validation_interval": 50,
+  "validation_trials": 256,
+  "test_trials": 512,
+  "analysis_trials": 128,
+  "checkpoint_steps": [
+    0,
+    375,
+    750,
+    1500,
+    3000
+  ],
+  "lr_rec": 0.001,
+  "lr_out": 0.03,
+  "learning_rates": {
+    "bptt": {
+      "lr_rec": 0.003,
+      "lr_out": 1.0
+    },
+    "local": {
+      "lr_rec": 0.003,
+      "lr_out": 1.0
+    }
+  },
+  "max_weight": 2.0,
+  "save_trajectories": false,
+  "run_interventions": true,
+  "run_psychometrics": true,
+  "run_fixed_points": false,
+  "optimizer": "adam",
+  "max_grad_norm": 1.0
+}

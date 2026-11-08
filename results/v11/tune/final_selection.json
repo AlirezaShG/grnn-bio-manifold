@@ -1,0 +1,110 @@
+{
+  "dms_adam": {
+    "bptt": {
+      "lr_rec": 0.003,
+      "lr_out": 1.0
+    },
+    "local": {
+      "lr_rec": 0.003,
+      "lr_out": 1.0
+    },
+    "local_no_beta": {
+      "lr_rec": 0.001,
+      "lr_out": 1.0
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 3.0
+    }
+  },
+  "dms_rms": {
+    "bptt": {
+      "lr_rec": 0.003,
+      "lr_out": 0.1
+    },
+    "local": {
+      "lr_rec": 0.001,
+      "lr_out": 1.0
+    },
+    "local_no_beta": {
+      "lr_rec": 0.003,
+      "lr_out": 0.3
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 0.3
+    }
+  },
+  "early_adam": {
+    "bptt": {
+      "lr_rec": 0.001,
+      "lr_out": 1.0
+    },
+    "local": {
+      "lr_rec": 0.003,
+      "lr_out": 3.0
+    },
+    "local_no_beta": {
+      "lr_rec": 0.001,
+      "lr_out": 3.0
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 3.0
+    }
+  },
+  "early_rms": {
+    "bptt": {
+      "lr_rec": 0.001,
+      "lr_out": 10.0
+    },
+    "local": {
+      "lr_rec": 0.003,
+      "lr_out": 0.3
+    },
+    "local_no_beta": {
+      "lr_rec": 0.0003,
+      "lr_out": 0.3
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 0.3
+    }
+  },
+  "late_adam": {
+    "bptt": {
+      "lr_rec": 0.003,
+      "lr_out": 1.0
+    },
+    "local": {
+      "lr_rec": 0.001,
+      "lr_out": 3.0
+    },
+    "local_no_beta": {
+      "lr_rec": 0.001,
+      "lr_out": 1.0
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 3.0
+    }
+  },
+  "late_rms": {
+    "bptt": {
+      "lr_rec": 0.003,
+      "lr_out": 3.0
+    },
+    "local": {
+      "lr_rec": 0.001,
+      "lr_out": 1.0
+    },
+    "local_no_beta": {
+      "lr_rec": 0.003,
+      "lr_out": 0.3
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 0.3
+    }
+  }
+}

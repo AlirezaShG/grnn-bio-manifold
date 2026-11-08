@@ -1,0 +1,12 @@
+{
+  "available_cells_per_seed": {
+    "21": 2,
+    "22": 2,
+    "23": 2,
+    "24": 2
+  },
+  "contrasts": [],
+  "metric": "accuracy_incongruent",
+  "required_cells": 8,
+  "status": "not_estimable_incomplete_factorial"
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "ci_high": -0.14955216574111965,
+    "ci_low": -0.33077838459588493,
+    "condition": "intact_bptt",
+    "mean_correlation_fisher": -0.24227745170258796,
+    "n_networks_total": 2,
+    "n_networks_valid": 2,
+    "per_network": [
+      {
+        "correlation": -0.3307783845958849,
+        "n_unique_cells": 65,
+        "seed": 1
+      },
+      {
+        "correlation": -0.14955216574111965,
+        "n_unique_cells": 70,
+        "seed": 2
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": true,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.04736572815152922,
+    "ci_low": -0.20428018982240184,
+    "condition": "intact_local",
+    "mean_correlation_fisher": -0.12661495947805096,
+    "n_networks_total": 2,
+    "n_networks_valid": 2,
+    "per_network": [
+      {
+        "correlation": -0.20428018982240187,
+        "n_unique_cells": 56,
+        "seed": 1
+      },
+      {
+        "correlation": -0.04736572815152922,
+        "n_unique_cells": 63,
+        "seed": 2
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": true,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.0696229853456135,
+    "ci_low": -0.07458412582632784,
+    "condition": "intact_local_no_beta",
+    "mean_correlation_fisher": -0.07210400157707142,
+    "n_networks_total": 2,
+    "n_networks_valid": 2,
+    "per_network": [
+      {
+        "correlation": -0.07458412582632784,
+        "n_unique_cells": 56,
+        "seed": 1
+      },
+      {
+        "correlation": -0.06962298534561348,
+        "n_unique_cells": 64,
+        "seed": 2
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": true,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  },
+  {
+    "ci_high": -0.08324701655626816,
+    "ci_low": -0.3395691094695569,
+    "condition": "intact_readout_only",
+    "mean_correlation_fisher": -0.2151096251080014,
+    "n_networks_total": 2,
+    "n_networks_valid": 2,
+    "per_network": [
+      {
+        "correlation": -0.3395691094695569,
+        "n_unique_cells": 55,
+        "seed": 1
+      },
+      {
+        "correlation": -0.08324701655626816,
+        "n_unique_cells": 60,
+        "seed": 2
+      }
+    ],
+    "pooled_cell_p_value": null,
+    "small_sample": true,
+    "status": "exploratory, not causal",
+    "unit_of_inference": "network_run_conditional_on_cell_dataset",
+    "x": "dc_input_coefficient",
+    "y": "absolute held-out delay selectivity"
+  }
+]

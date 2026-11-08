@@ -1,0 +1,45 @@
+\section{Introduction}
+
+Learning a task that spans hundreds of milliseconds requires assigning credit to synapses whose
+influence on behaviour is delayed and passes through recurrent dynamics. The exact solution,
+back-propagation through time \citep[BPTT;][]{werbos1990bptt}, needs information that a synapse
+does not have: the future error and its path through every other neuron. Local alternatives keep,
+at each synapse, an \emph{eligibility trace} of how the synapse could have changed its
+postsynaptic cell. They combine it with a broadcast error or reward signal, in line with
+three-factor plasticity \citep{gerstner2018}. Examples are RFLO \citep{murray2019rflo} and e-prop
+\citep{bellec2020eprop} \citep[see also][]{williams1989rtrl,marschall2020}. These rules are exact
+for a cell's own dynamics, and they approximate the rest of the network, for example with random
+feedback \citep{lillicrap2016fa}.
+
+What the trace must contain depends on the cell's own dynamics, and real cortical neurons are not
+the leaky units used in most such work. Their responses depend on several timescales, and most
+show spike-frequency adaptation \citep{benda2003}. For spiking neurons with a single adaptive
+threshold, adaptation is known to support memory over behavioural timescales
+\citep{bellec2018lsnn,salaj2021sfa}, and e-prop includes the adaptation variable in its
+eligibility trace \citep{bellec2020eprop}. Whether this matters for neurons whose intrinsic
+dynamics were \emph{fitted to recordings}, with many heterogeneous filters per cell, has been hard
+to test: data-fitted single-cell models were usually not differentiable \citep{teeter2018glif}, and
+large data-constrained network models have been trained with BPTT
+\citep{billeh2020,chen2022v1}. A recent bank of differentiable generalized firing-rate (GFR)
+models, fitted to more than a thousand patch-clamp recordings \citep{yeung2025gfr}, now makes the
+test possible.
+
+We built recurrent networks entirely from these fitted cells, keeping each cell's intrinsic
+parameters frozen and making only the synaptic weights plastic. We asked three questions:
+(i) how close a cell-local, forward-in-time rule comes to the exact gradient on working-memory
+tasks, compared with a frozen recurrent reservoir; (ii) whether the rule must include each cell's
+fitted spike-history filter in its eligibility trace; and (iii) whether the specific identity of
+the cells (the natural pairing of each cell's parameters and their heterogeneity) or the type-based
+wiring matters for learning, once confounds are removed.
+
+The third question carries a trap that we found in our own earlier analyses. Shuffling parameters
+across cells moves each cell away from the operating point it was calibrated to. In our networks
+this roughly doubled firing rates and multiplied saturation, so an apparent cost of
+``destroying biological identity'' was in fact a change of operating point. We therefore
+recalibrate every manipulated bank with the same label-free procedure before comparing. We also
+split cells by donor animal, compare learners at learning rates tuned on a separate development
+cohort, treat the network as the unit of inference \citep{aarts2014}, fit every population-analysis
+axis on trials independent of those it is evaluated on \citep{kriegeskorte2009}, and test all
+hypotheses in a protocol locked before the held-out confirmation cohort was touched.
+
+SUMMARY OF FINDINGS PLACEHOLDER.

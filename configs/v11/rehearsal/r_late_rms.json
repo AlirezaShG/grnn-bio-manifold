@@ -1,0 +1,174 @@
+{
+  "name": "r_late_rms",
+  "stage": "development",
+  "cell_cohort": "development",
+  "cohort_unit": "donor",
+  "holdout_fraction": 0.5,
+  "split_seed": 1701,
+  "seeds": [
+    21,
+    22,
+    23,
+    24
+  ],
+  "cell_counts": [
+    80,
+    10,
+    5,
+    5
+  ],
+  "task": {
+    "task_type": "context",
+    "context_timing": "late"
+  },
+  "conditions": [
+    {
+      "name": "intact_bptt",
+      "learner": "bptt",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "intact_local",
+      "learner": "local",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "intact_local_no_beta",
+      "learner": "local_no_beta",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "intact_readout_only",
+      "learner": "readout_only",
+      "identity": "authentic",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "shuffle_bptt",
+      "learner": "bptt",
+      "identity": "within_type_shuffle",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "shuffle_local",
+      "learner": "local",
+      "identity": "within_type_shuffle",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "rewired_bptt",
+      "learner": "bptt",
+      "identity": "authentic",
+      "topology": "degree_rewired",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "rewired_local",
+      "learner": "local",
+      "identity": "authentic",
+      "topology": "degree_rewired",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "shuffle_rewired_bptt",
+      "learner": "bptt",
+      "identity": "within_type_shuffle",
+      "topology": "degree_rewired",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "shuffle_rewired_local",
+      "learner": "local",
+      "identity": "within_type_shuffle",
+      "topology": "degree_rewired",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "homog_bptt",
+      "learner": "bptt",
+      "identity": "type_homogeneous",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    },
+    {
+      "name": "homog_local",
+      "learner": "local",
+      "identity": "type_homogeneous",
+      "topology": "type_prior",
+      "calibration": "matched",
+      "feedback_mode": "random",
+      "training_noise_std": 0.0
+    }
+  ],
+  "training_steps": 3000,
+  "batch_size": 32,
+  "validation_interval": 50,
+  "validation_trials": 256,
+  "test_trials": 512,
+  "analysis_trials": 128,
+  "checkpoint_steps": [
+    0,
+    375,
+    750,
+    1500,
+    3000
+  ],
+  "lr_rec": 0.001,
+  "lr_out": 0.03,
+  "learning_rates": {
+    "bptt": {
+      "lr_rec": 0.003,
+      "lr_out": 3.0
+    },
+    "local": {
+      "lr_rec": 0.001,
+      "lr_out": 1.0
+    },
+    "local_no_beta": {
+      "lr_rec": 0.003,
+      "lr_out": 0.3
+    },
+    "readout_only": {
+      "lr_rec": 0.0003,
+      "lr_out": 0.3
+    }
+  },
+  "max_weight": 2.0,
+  "save_trajectories": false,
+  "run_interventions": true,
+  "run_psychometrics": true,
+  "run_fixed_points": false,
+  "optimizer": "rmsprop",
+  "max_grad_norm": null
+}
