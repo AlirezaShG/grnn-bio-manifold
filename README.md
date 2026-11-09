@@ -34,9 +34,12 @@ draft are in `results/v11/confirmation/` and `paper/`.
 | `scripts/figures/` | every paper figure |
 | `paper/` | LaTeX source and `main.pdf` |
 
-Per-run raw outputs (learning curves, per-trial predictions, population analyses) are
-attached to the GitHub release as compressed archives. Model checkpoints are not uploaded;
-every run is deterministic given its seed and can be regenerated.
+The release `v11-results` holds a lean archive of all 1,680 confirmation runs, in 8 MB parts
+(see `MANIFEST_confirmation_lean.json` for how to reassemble and check them). It contains every
+per-run summary file and the validation curves. The full archives (per-step histories, per-trial
+predictions, the rehearsal and the tuning runs; about 1.3 GB) and the model checkpoints were not
+uploaded because the upload link was too slow. They stay on the original machine, and every run is
+deterministic given its seed.
 
 ## Reproduce
 
