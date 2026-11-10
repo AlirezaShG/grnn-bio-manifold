@@ -1,0 +1,13 @@
+change/bptt/1 step 50 loss 0.7118 val 0.5391 rate 2.3 (181s)
+change/bptt/1 step 100 loss 0.7388 val 0.5391 rate 2.4 (360s)
+change/bptt/1 step 150 loss 0.7065 val 0.6094 rate 2.4 (537s)
+change/bptt/1 step 200 loss 0.5399 val 0.6562 rate 2.4 (717s)
+change/bptt/1 step 250 loss 0.7123 val 0.7031 rate 2.4 (889s)
+change/bptt/1 step 300 loss 0.5715 val 0.7188 rate 2.4 (1062s)
+change/bptt/1 step 350 loss 0.6150 val 0.6250 rate 2.4 (1235s)
+change/bptt/1 step 400 loss 0.6664 val 0.6875 rate 2.4 (1380s)
+change/bptt/1 step 450 loss 0.6181 val 0.7969 rate 2.3 (1510s)
+change/bptt/1 step 500 loss 0.4632 val 0.7188 rate 2.3 (1639s)
+change/bptt/1 step 550 loss 0.5848 val 0.7266 rate 2.4 (1760s)
+change/bptt/1 step 600 loss 0.5991 val 0.6953 rate 2.4 (1866s)
+done {'best_val': 0.796875, 'best_step': 450, 'initial_val': 0.5, 'train_seconds': 1866.2878048419952}

@@ -1,0 +1,117 @@
+\section{Methods}\label{sec:methods}
+
+\subsection{Circuit}
+Each network contains 1{,}000 cells: 800 pyramidal (Pyr), 100 PV, 60 SST and 40 VIP. The cells
+are differentiable generalized firing-rate (GFR) models fitted to Allen Cell Types patch-clamp
+recordings \citep{yeung2025gfr}, sampled with replacement within type from a donor-disjoint
+cohort. Development used 298 fitted cells and confirmation used a disjoint set of 299 cells; no
+donor contributes to both. Each cell has $K=8$ input and spike-history filters (time constants
+$\approx$0--2\,s) and a fitted static nonlinearity, simulated at the fitted $\Delta t=20$\,ms:
+\begin{equation}
+h^{(k)}_{i,t}=(1-d_k)h^{(k)}_{i,t-1}+a_{ik}I_{i,t}+\beta_{ik}r_{i,t-1},\qquad
+r_{i,t}=\gamma_i\,\mathrm{ReLU}\big[\tanh\big(\textstyle\sum_d c_{id}^2 x_{i,t}^d\big)\big],
+\end{equation}
+with $x_{i,t}=(\bar h_{i,t}-b_i)/\sigma_i$. Intrinsic parameters are never trained. A label-free
+current sweep sets each cell's isolated baseline to 2\% of its fitted ceiling. The input current is
+\begin{equation}
+I_{i,t}=I^0_i+S_i\Big(\textstyle\sum_\ell W^{\rm LGN}_{i\ell}(g_{\ell,t}-\bar g^{\rm gray}_\ell)
++\sum_j s_j|W_{ij}|\,r_{j,t-1}/R_0+\xi_{i,t}\Big),
+\end{equation}
+with Dale signs $s_j$, $R_0=100$\,Hz and Gaussian background noise $\xi$ ($\sigma=0.15$).
+
+\paragraph{Connectivity.} Peak connection probabilities between L2/3 excitatory, PV, SST and
+VIP cells were taken from the Allen V1DD electron-microscopy estimates used by
+\citet{ito2026} (their \texttt{pmax\_matrix\_v1dd.csv}). Excitatory-to-excitatory probability was
+modulated by orientation difference with their like-to-like rule ($\beta=0.5$). Magnitudes are
+log-normal ($\sigma_{\log}=0.8$) and scaled by the median 90th-percentile PSP of each pre/post type
+pair from the Allen synaptic-physiology survey \citep{campagnola2022}. They are normalized by
+in-degree, with inhibitory sources ×2.
+
+\paragraph{Visual input.} Stimuli are rendered on a 48$\times$64 grid (2$^\circ$/pixel). The LGN
+front end has ON and OFF centre-surround units (difference of Gaussians, 2$^\circ$/6$^\circ$) on a
+stride-2 grid, each with a sustained (40\,ms low-pass) and a transient (20$-$80\,ms band-pass)
+channel, rectified around a baseline (3{,}072 units). LGN$\to$V1 weights are fixed. Each Pyr cell
+pools ON and OFF subfields of a Gabor template at its preferred orientation and receptive-field
+position. Each subfield draws on sustained or transient channels at random, which yields direction
+preference \citep{lien2018}. Interneurons receive broader, weaker and mostly untuned input.
+
+\subsection{Objectives}
+\emph{Data matching} (following \citealp{ito2026}): one batch has four gray-screen trials and two
+trials per direction of an 8-direction drifting grating (0.04\,cpd, 2\,Hz, 80\% contrast), each
+500\,ms after 200\,ms of warm-up. For each cell type, the loss is the squared 1-D Wasserstein
+distance between model and in-vivo distributions of log spontaneous rate, log preferred-direction
+rate, OSI and DSI. OSI and DSI use the form of \citet{ito2026} and are computed only for cells
+responding at $\ge$0.5\,Hz. In-vivo targets are the curated Visual Coding Neuropixels units of
+\citet{ito2026} \citep{siegle2021}: L2/3 excitatory (503 units) and L2/3 PV (133) cells, and SST (70)
+and VIP (16) cells pooled over layers.
+
+\emph{Change detection} follows the structure of the Allen Visual Behavior task: gray, image A for
+240\,ms, 500\,ms gray, image B for 240\,ms. The network reports whether B differs from A from the
+mean readout of Pyr cells 100--500\,ms after B onset. Images come from a fixed set of eight natural
+movie frames, chosen to be maximally distinct, as mice in that task see eight images. A weak
+homeostatic term keeps each cell's mean rate near its calibrated baseline. No image used for
+evaluation is ever used for training.
+
+\subsection{Learning rules}
+Only the recurrent magnitudes $|W_{ij}|$ (fixed mask and sign) and the readout learn. All rules
+use Exponentiated Adam \citep{ito2026,cornford2024egd}: $|W|\leftarrow|W|\exp(-\eta\,\hat m/(\sqrt{\hat
+v}+\epsilon))$. This update is multiplicative and sign-preserving.
+
+\emph{BPTT} uses the exact gradient through every filter, spike-history loop and recurrent path.
+
+\emph{Local} (e-prop; \citealp{bellec2020eprop}) uses
+$\hat g_{ij}=\sum_t L_{i,t}\,\partial r_{i,t}/\partial|W_{ij}|$, where the derivative follows only
+cell $i$'s own filters and spike-history loop and treats other cells' activity as given input. We
+compute it with automatic differentiation by detaching presynaptic activity in the synaptic input
+path. Forward values are unchanged; with no recurrent paths the estimate equals BPTT exactly
+(unit test). The learning signal $L_{i,t}$ is the cell's direct error for the data objective. For
+change detection it is the readout error broadcast through a fixed random feedback vector.
+
+\emph{Local (no $\beta$)} additionally detaches the spike-history path.
+
+\emph{Readout} keeps the recurrent weights fixed.
+
+\emph{Untrained} is the same circuit before learning.
+
+Every rule used the same learning rates, chosen on the development cohort by validation loss:
+$\eta_{\rm rec}=0.015$ for data matching (best for every rule in $\{0.002,0.005,0.015\}$; BPTT was
+already unstable late in training at this value, so larger values were not tried) and
+$\eta_{\rm rec}=0.005$, $\eta_{\rm out}=0.3$ for change detection (the readout rate was best for every
+rule in $\{0.1,0.3,1\}$; the recurrent rate was not tuned). Training ran for 1{,}500 (data) or 800
+(change) updates, and the checkpoint with the best validation value was evaluated.
+
+\subsection{Evaluation and comparison with mouse V1}
+After training, every network saw:
+- the 118 Brain Observatory natural scenes, 240\,ms each, back to back in a new random order on
+  each of 10 repeats, as in the recordings \citep{siegle2021,devries2020};
+- 2-s drifting gratings in 8 directions;
+- 2-s gray screen.
+
+\paragraph{Mouse data.} We used VISp units passing Allen quality criteria (ISI violations
+$<0.5$, amplitude cut-off $<0.1$, presence ratio $>0.9$) from the Visual Coding Neuropixels
+sessions with the most V1 units. For each unit we took spike counts 0--250\,ms after each of the 50
+presentations of each scene. Units were pooled into a pseudo-population; regular- and fast-spiking
+units were separated at a 0.4\,ms trough-to-peak waveform duration.
+
+\paragraph{Geometry.}
+- \emph{RDM}: 1 minus the Pearson correlation between z-scored population vectors
+  \citep{kriegeskorte2008rsa}.
+- \emph{RSA}: Spearman correlation between the upper triangles of the model and mouse RDMs. We also
+  report a disattenuated version that divides by the square root of the product of the two RDMs'
+  Spearman--Brown-corrected split-half (repeat) reliabilities.
+- \emph{CKA}: linear CKA \citep{kornblith2019cka} on z-scored image$\times$unit matrices.
+- \emph{Dimensionality}: participation ratio of the image-response covariance with 200 units
+  subsampled.
+- \emph{Lifetime sparseness} \citep{vinje2000}.
+- \emph{Image decoding}: nearest-centroid, leave-one-repeat-out, 200 units and 10 repeats for both
+  model and mouse.
+- \emph{Tuning distributions}: similarity to the in-vivo distributions per cell type (1 minus the
+  Kolmogorov--Smirnov statistic).
+- \emph{Geometry along training}: to separate learning-rule effects from task performance, we
+  recomputed RSA and CKA at every saved checkpoint and related them to that checkpoint's
+  validation value.
+
+\paragraph{Statistics.} The unit of analysis is the network seed (10 per condition, paired across
+rules). We used exact two-sided sign-flip tests and percentile bootstrap CIs, with Holm correction
+within each objective's primary family. The protocol was locked before the confirmation runs
+(\texttt{docs/PREREGISTRATION\_v12.md}, \texttt{docs/LOCK\_v12.json}).

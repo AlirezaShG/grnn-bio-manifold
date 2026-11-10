@@ -1,0 +1,8 @@
+change/local_nobeta/2 step 50 loss 0.7224 val 0.5234 rate 2.4 (128s)
+change/local_nobeta/2 step 100 loss 0.7346 val 0.5547 rate 2.5 (255s)
+change/local_nobeta/2 step 150 loss 0.7151 val 0.5156 rate 2.5 (381s)
+change/local_nobeta/2 step 200 loss 0.7114 val 0.4297 rate 2.7 (508s)
+change/local_nobeta/2 step 250 loss 0.7256 val 0.5234 rate 2.6 (636s)
+change/local_nobeta/2 step 300 loss 0.7062 val 0.5391 rate 2.6 (760s)
+change/local_nobeta/2 step 350 loss 0.7055 val 0.5234 rate 2.6 (872s)
+change/local_nobeta/2 step 400 loss 0.7089 val 0.5781 rate 2.6 (987s)

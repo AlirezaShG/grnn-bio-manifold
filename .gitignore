@@ -16,3 +16,13 @@ paper/*.log
 paper/*.out
 paper/latexmk.out
 paper/*.synctex.gz
+
+# v12 derived mouse data (small; raw NWB files are downloaded from the Allen S3 bucket)
+!invivo/processed/*.npz
+paper_v12/*.aux
+paper_v12/*.bbl
+paper_v12/*.blg
+paper_v12/*.log
+paper_v12/*.out
+paper_v12/bib.out
+paper_v12/pdflatex.out

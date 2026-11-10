@@ -1,0 +1,17 @@
+{
+  "locked_at_utc": "2026-11-09T22:06:48.773305+00:00",
+  "sha256": {
+    "docs/PREREGISTRATION_v12.md": "0d4f56a6434ab73fdeef4e4585fbbf36cab8042ee0f117307d600f5344028dde",
+    "configs/v12/confirmation_settings.json": "b58540e686e8cbad0291870e17792363c8c1f572eb99675a8faff29466d48f93",
+    "scripts/v12_train.py": "8692be2105d6521d274b5e6ff4a5adf85bd46d6607165a830933104c64ed5ce9",
+    "scripts/v12_queue.py": "3ca7bbf7602803570be09eb2acd817bfc4d5dd434902f0c5955422939cbc3b8d",
+    "scripts/v12_analyze.py": "8c938ae4f3ee27ce8116231e2de5db397c8e6db95a65feba8517d123e4e16338",
+    "grnn_v1/__init__.py": "722cca0ad849152d22b147064b43070e4aefd9783956ef186a997817ed615f9e",
+    "grnn_v1/compare.py": "b64205e1f2fa910f527b7e1a503d7d65fae310ae189c34a418c6a695269e3626",
+    "grnn_v1/core.py": "cddf61a34e63d3d553de902b2c25959930b786d1d93430580908efeabe6e34f4",
+    "grnn_v1/evaluate.py": "cb11fb6b78280074da73292fdb954da06f06364f9b651b041d7d431664d15850",
+    "grnn_v1/learn.py": "87928b08d94e92df9c7434574fe284d01ef1c6c11a3cbfacf27b36987d2724a1",
+    "grnn_v1/stats.py": "33df348819adbaaceba4b4dba7a36d41dde4b35ba35bc79db38109ee55a5e15d"
+  },
+  "note": "Written before any completed v12 confirmation run. A first launch at 01:31 local started without this lock because the lock command failed; it was stopped within one minute, before any run finished, and its partial outputs were deleted."
+}

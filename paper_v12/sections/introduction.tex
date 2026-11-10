@@ -1,0 +1,44 @@
+\section{Introduction}
+
+Cortical synapses must change in ways that improve behaviour, using only information available
+locally. Learning rules that respect this constraint, such as three-factor rules with eligibility
+traces and broadcast error signals \citep{gerstner2018,murray2019rflo,bellec2020eprop}, can solve
+tasks that otherwise need back-propagation through time (BPTT). They differ from exact gradients in
+how credit is assigned \citep{lillicrap2020,richards2019}. If brains learn with such rules, the
+difference should leave traces in what a circuit ends up representing. Representations of
+networks trained with different rules can indeed be told apart from their observables
+\citep{nayebi2020}. Whether these signatures appear in biologically constrained circuits, and
+whether they move a model towards or away from real cortex, is unknown.
+
+Mouse primary visual cortex (V1) offers the data needed to ask this. There are fitted
+single-neuron models for hundreds of recorded cells \citep{yeung2025gfr}, cell-type-specific
+connectivity from electron microscopy and synaptic physiology \citep{campagnola2022}, and
+large-scale Neuropixels recordings of responses to the same natural images and gratings
+\citep{siegle2021,devries2020}. Building on these, \citet{ito2026} trained a large V1 model with BPTT
+to match in-vivo activity statistics. That work leaves open the question we address: does the
+learning algorithm itself shape the population geometry, and is a cell-local rule closer to or
+further from mouse V1 than the exact gradient?
+
+Our earlier version of this question used abstract working-memory tasks. Its conclusions were
+dominated by the task and by the cells' slow intrinsic filters, and its inputs had no counterpart
+in any recording. Here we rebuilt the setup around the data. A V1 microcircuit of 1,000
+patch-clamp-fitted cells with measured connectivity receives the same visual stimuli as the
+recorded mice, through a fixed LGN front end. The same circuit is trained with exact BPTT or with a
+cell-local e-prop rule, with or without the cell's own spike-history term. Both use the same
+optimizer, learning rates and budget, under two different objectives: matching in-vivo response
+statistics, and a Visual-Behavior-style change-detection task. We then compare population
+responses to 118 natural scenes that were never used in training with those of mouse V1 units. We
+use representational similarity, CKA, dimensionality, sparseness and decoding, correct for the
+reliability of both model and data, and relate geometry to task performance along training. The
+protocol was locked before the held-out cohort of fitted cells was used.
+
+The main results are:
+\begin{itemize}
+\item The reliability-corrected similarity to mouse V1 was the same for every rule and for untrained
+networks. The shared geometry is set by the circuit's constraints, not by its learning rule.
+\item With in-vivo statistics as the objective, the local rule fitted them more closely than BPTT,
+but only by moving into a regime with very large weights. There natural-image dimensionality,
+decodability and sparseness departed from the mouse. At matched loss, the two rules' geometry was
+the same.
+\item A behavioral objective changed the natural-scene geometry little under any rule.
+\end{itemize}

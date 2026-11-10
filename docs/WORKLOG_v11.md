@@ -90,3 +90,33 @@ Primary endpoint: unseen-delay conflict accuracy.
 
 Paper: `paper/main.pdf` (16 pages). Every number comes from
 `results/v11/confirmation/analysis/`.
+
+# v12 (2026-11-10, night): representational geometry vs mouse V1
+
+The user judged that v11's results were driven by its abstract task. v12 keeps the question,
+"local (e-prop) vs global (BPTT) learning: representational geometry and its match to mouse V1",
+and rebuilds the setup. Inputs consulted: user spec PDF (Downloads/Telegram Desktop) and
+Ito et al. 2026 (Allen biorealistic V1; github AllenInstitute/biorealistic-v1-model).
+
+- Code: `grnn_v1/` (PyTorch; env `braincog_env`, Python 3.8, torch 2.4.1+cu118):
+  - `core.py`: stimuli, LGN, GFR circuit (N = 1000; V1DD p_max, like-to-like E→E, log-normal
+    PSP-scaled weights; baseline 2%);
+  - `learn.py`: data and change objectives, e-prop via a detach trick, Exponentiated Adam;
+  - `evaluate.py`;
+  - `compare.py`: RSA, CKA, PR, sparseness, decoding, tuning similarity;
+  - `stats.py`: a Python 3.8 copy of `grnn_bio/statistics`.
+- Scripts: `scripts/v12_train.py`, `v12_queue.py`, `v12_analyze.py`. GPU/CPU: per-step cost is
+  launch-bound, so jobs run on 6 GPU slots plus CPU single-thread workers, with every job of a
+  seed on one device type.
+- In-vivo data:
+  - `C:/pianshi/invivo`: Ito curated OSI/DSI/rates table (3,156 units), V1DD and PSP tables,
+    118 natural-scene TIFFs, natural movie 1 (a .npy despite its .h5 name);
+  - session NWBs on `E:/pianshi_invivo/nwb` (6 V1-rich BO1.1 sessions), processed by
+    `invivo/process_nwb.py` into `invivo/processed/ns_*.npz`.
+- Dev findings so far:
+  - natural-scene RSA (about 0.24 disattenuated) is nearly the same for every rule and for the
+    untrained net, i.e. set by the front end;
+  - local learning lowers image decodability to a mouse-like level, while BPTT does not;
+  - at lr_rec 5e-3, BPTT optimises the data objective more slowly, so LRs are being tuned.
+- The change task was too hard with arbitrary frames, so it now uses 8 fixed images, as in
+  Visual Behavior.

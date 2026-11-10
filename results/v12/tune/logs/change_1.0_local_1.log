@@ -1,0 +1,13 @@
+change/local/1 step 50 loss 0.7697 val 0.5625 rate 2.3 (175s)
+change/local/1 step 100 loss 0.6871 val 0.5156 rate 2.4 (351s)
+change/local/1 step 150 loss 0.7455 val 0.6172 rate 2.4 (529s)
+change/local/1 step 200 loss 0.7465 val 0.6484 rate 2.5 (703s)
+change/local/1 step 250 loss 0.7100 val 0.6719 rate 2.6 (873s)
+change/local/1 step 300 loss 0.5984 val 0.5625 rate 2.7 (1042s)
+change/local/1 step 350 loss 0.7831 val 0.7734 rate 2.7 (1213s)
+change/local/1 step 400 loss 0.4376 val 0.6875 rate 2.8 (1363s)
+change/local/1 step 450 loss 0.6624 val 0.7344 rate 2.7 (1489s)
+change/local/1 step 500 loss 0.4066 val 0.6719 rate 2.7 (1617s)
+change/local/1 step 550 loss 0.5321 val 0.7656 rate 2.8 (1739s)
+change/local/1 step 600 loss 1.0561 val 0.7422 rate 2.8 (1843s)
+done {'best_val': 0.7734375, 'best_step': 350, 'initial_val': 0.5, 'train_seconds': 1843.6047077178955}

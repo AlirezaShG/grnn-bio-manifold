@@ -1,0 +1,13 @@
+change/readout/1 step 50 loss 0.7163 val 0.5703 rate 2.3 (159s)
+change/readout/1 step 100 loss 0.8588 val 0.5625 rate 2.4 (319s)
+change/readout/1 step 150 loss 0.6900 val 0.6172 rate 2.4 (482s)
+change/readout/1 step 200 loss 0.6648 val 0.5547 rate 2.4 (641s)
+change/readout/1 step 250 loss 0.6775 val 0.6016 rate 2.3 (795s)
+change/readout/1 step 300 loss 0.9479 val 0.6016 rate 2.4 (949s)
+change/readout/1 step 350 loss 0.5960 val 0.6016 rate 2.4 (1103s)
+change/readout/1 step 400 loss 0.8019 val 0.6094 rate 2.4 (1257s)
+change/readout/1 step 450 loss 0.9807 val 0.6016 rate 2.3 (1382s)
+change/readout/1 step 500 loss 0.6457 val 0.6562 rate 2.3 (1494s)
+change/readout/1 step 550 loss 0.6749 val 0.6719 rate 2.4 (1610s)
+change/readout/1 step 600 loss 0.7247 val 0.5781 rate 2.4 (1721s)
+done {'best_val': 0.671875, 'best_step': 550, 'initial_val': 0.5, 'train_seconds': 1720.8486461639404}

@@ -1,0 +1,56 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx,booktabs,xcolor,xspace}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+
+\title{Local versus global learning in a data-constrained mouse V1 circuit: population geometry
+and its match to Neuropixels recordings}
+\author{Author list to be confirmed by the authors}
+\date{Preprint draft, \today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Does the way synapses learn leave a measurable signature in what cortical populations represent?
+We built a recurrent model of a mouse V1 microcircuit from 1{,}000 differentiable firing-rate models
+fitted to patch-clamp recordings, wired with measured cell-type connection probabilities and driven
+by the same visual stimuli as Allen Neuropixels recordings. Identical circuits were trained either
+with a cell-local, forward-in-time rule (e-prop, with or without the cell's spike-history term) or
+with exact back-propagation through time, under the same optimizer, on two objectives: matching
+in-vivo response statistics, and a change-detection task. Their responses to 118 natural scenes
+never used in training were compared with 627 mouse V1 units, under a protocol locked before the
+held-out cohort of fitted cells was used (10 paired networks per condition).
+
+Reliability-corrected representational similarity with mouse V1 ($\approx$0.38) was the same for
+every learning rule and for untrained networks, under both objectives. When matching in-vivo
+statistics, the local rule fitted them more closely than BPTT (loss 0.31 vs 1.04), but by scaling
+recurrent weights about 90-fold. This collapsed natural-image dimensionality (participation ratio 12
+vs 31; mouse 32) and decodability (20\% vs 79\%; mouse 84\%), consistently across all networks. At
+matched loss, however, the two rules produced the same geometry. A behavioral objective changed
+natural-scene geometry little under any rule.
+
+In this circuit, the population geometry shared with mouse V1 is fixed by its biological
+constraints. The learning rule matters mainly through which solutions it can reach, so learning
+rules should be compared at matched performance and with untrained baselines.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/methods}
+
+\section*{Code and data availability}
+All code, configurations, the locked protocol (\texttt{docs/PREREGISTRATION\_v12.md},
+\texttt{docs/LOCK\_v12.json}) and per-network results are in the project repository. The fitted
+neuron models come from \citet{yeung2025gfr}. Connectivity tables and curated Neuropixels statistics
+come from \citet{ito2026}. Neuropixels recordings and natural-scene images are from the Allen
+Brain Observatory \citep{siegle2021}.
+
+\bibliographystyle{abbrvnat}
+\bibliography{refs,refs_extra}
+\end{document}

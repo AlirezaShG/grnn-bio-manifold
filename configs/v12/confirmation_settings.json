@@ -1,0 +1,14 @@
+{
+  "data": {
+    "bptt": ["--steps", "1500", "--lr_rec", "0.015", "--lr_out", "0.01"],
+    "local": ["--steps", "1500", "--lr_rec", "0.015", "--lr_out", "0.01"],
+    "local_nobeta": ["--steps", "1500", "--lr_rec", "0.015", "--lr_out", "0.01"]
+  },
+  "change": {
+    "bptt": ["--steps", "800", "--lr_rec", "0.005", "--lr_out", "0.3"],
+    "local": ["--steps", "800", "--lr_rec", "0.005", "--lr_out", "0.3"],
+    "local_nobeta": ["--steps", "800", "--lr_rec", "0.005", "--lr_out", "0.3"],
+    "readout": ["--steps", "800", "--lr_rec", "0.005", "--lr_out", "0.3"],
+    "local_sym": ["--steps", "800", "--lr_rec", "0.005", "--lr_out", "0.3"]
+  }
+}

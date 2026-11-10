@@ -1,0 +1,20 @@
+\paragraph{Limitations.}
+\begin{itemize}
+\item \emph{Front end and fixed inputs.} The LGN model and the LGN$\to$V1 weights are simplified
+and fixed. Plastic thalamocortical weights would give learning more leverage over geometry.
+\item \emph{Rates, not spikes; 20-ms bins.} Fano factors and spike-timing statistics cannot be
+compared with the recordings.
+\item \emph{Scale and cells.} The circuit has 1{,}000 cells sampled with replacement from about 300
+fits, and represents one L2/3-like column without laminar structure.
+\item \emph{Learning rates.} Rates were shared across rules and chosen on a small development grid.
+BPTT was unstable at the chosen data-matching rate late in training. The change-detection
+recurrent rate was not tuned. Matched-performance comparisons address but do not remove this
+dependence.
+\item \emph{Mouse data.} We used six sessions (627 V1 units) recorded during passive viewing. Units
+were pooled across animals into a pseudo-population, and putative cell classes were assigned by
+waveform only.
+\item \emph{Multiplicity.} The secondary contrasts were consistent across all 10 networks but do not
+survive Holm correction over the full secondary family.
+\item \emph{Disattenuation.} When a model's RDM reliability is low (0.14 for local data-matching
+networks), the corrected RSA is noisy.
+\end{itemize}

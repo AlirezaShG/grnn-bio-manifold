@@ -1,0 +1,7 @@
+{
+  "best_val": 0.671875,
+  "best_step": 300,
+  "initial_val": 0.5,
+  "train_seconds": 2770.498779773712,
+  "val_acc_best": 0.5
+}

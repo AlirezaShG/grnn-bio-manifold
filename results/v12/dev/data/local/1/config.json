@@ -1,0 +1,15 @@
+{
+  "objective": "data",
+  "rule": "local",
+  "seed": 1,
+  "cohort": "development",
+  "steps": 1500,
+  "lr_rec": 0.005,
+  "lr_out": 0.01,
+  "lgn_gain": 0.2,
+  "rec_gain": 1.0,
+  "inh_gain": 2.0,
+  "val_every": 50,
+  "out": "results\\v12\\dev",
+  "no_eval": false
+}

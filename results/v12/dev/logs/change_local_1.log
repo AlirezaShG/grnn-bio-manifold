@@ -1,0 +1,8 @@
+change/local/1 step 50 loss 0.7352 val 0.5078 rate 2.2 (132s)
+change/local/1 step 100 loss 0.7266 val 0.5469 rate 2.3 (264s)
+change/local/1 step 150 loss 0.7246 val 0.4766 rate 2.4 (393s)
+change/local/1 step 200 loss 0.7164 val 0.4609 rate 2.5 (523s)
+change/local/1 step 250 loss 0.7000 val 0.6328 rate 2.6 (655s)
+change/local/1 step 300 loss 0.7230 val 0.5391 rate 2.6 (780s)
+change/local/1 step 350 loss 0.7171 val 0.5859 rate 2.7 (895s)
+change/local/1 step 400 loss 0.7028 val 0.6094 rate 2.7 (1013s)

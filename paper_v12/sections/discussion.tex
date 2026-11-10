@@ -1,0 +1,42 @@
+\section{Discussion}
+
+We asked whether training a biologically constrained V1 circuit with a cell-local rule rather than
+the exact gradient leaves a measurable trace in its population geometry, and which brings it closer
+to mouse V1. Four conclusions follow from the confirmatory data.
+
+\paragraph{The shared image geometry is set before learning.} The reliability-corrected agreement
+with mouse V1 on 118 natural scenes was the same for untrained networks and for every learning rule,
+under both objectives. In this circuit, what natural images look like to the population is
+determined by the front end, the fitted cells and the measured wiring. That is consistent with
+models in which V1 selectivity is largely feedforward \citep{lien2018}. It also cautions against
+reading RSA agreement as evidence for any particular learning rule. An untrained, well-constrained
+circuit already achieves it, so an untrained baseline and reliability correction are essential.
+
+\paragraph{Rules differ in where they can take the circuit.} With matching in-vivo statistics as
+the goal, the local rule optimized the trained statistics further than BPTT. It did so by
+multiplying recurrent weights roughly 90-fold and driving interneurons hard. This solution
+generalized poorly to natural images: dimensionality, decodability and sparseness moved away from
+mouse values. BPTT stopped earlier and retained mouse-like dimensionality and decodability.
+Crucially, at matched loss the two rules produced the same geometry. The difference is therefore
+not an intrinsic signature of local credit assignment but a consequence of which regions of
+weight space each rule can reach. Local rules ignore network feedback in their gradient estimates
+and can keep pushing in a direction that the exact gradient would correct. This argues for adding
+mechanisms that bound such drift, such as weight or rate homeostasis, when local rules are used to
+fit data, and for comparing learning rules at matched performance.
+
+\paragraph{On a behavioral task the representation barely moves.} Training change detection on
+eight images changed natural-scene geometry little under any rule. The local rule solved the task
+better than BPTT at the shared learning rates, and with symmetric feedback it raised
+dimensionality towards the mouse value. These effects are small compared with the
+mouse--model gap.
+
+\paragraph{The spike-history term.} Unlike in our earlier abstract tasks, removing $\beta$ from the
+eligibility trace did not change any geometry measure here. Its importance appears to depend on
+whether the task requires credit assignment through the cells' adaptation dynamics.
+
+\paragraph{Relation to the specification's hypotheses.} We did not find that local learning yields
+representations ``significantly more'' similar to mouse V1 than BPTT. On the preregistered endpoint
+the rules were indistinguishable, and on several secondary measures BPTT was closer to the mouse
+under data matching.
+
+\input{sections/limitations}

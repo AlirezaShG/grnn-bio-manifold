@@ -1,0 +1,16 @@
+{
+  "objective": "data",
+  "rule": "bptt",
+  "seed": 1009,
+  "cohort": "confirmation",
+  "steps": 1500,
+  "lr_rec": 0.015,
+  "lr_out": 0.01,
+  "lgn_gain": 0.2,
+  "rec_gain": 1.0,
+  "inh_gain": 2.0,
+  "val_every": 50,
+  "out": "results\\v12\\conf",
+  "no_eval": false,
+  "device": "cpu"
+}

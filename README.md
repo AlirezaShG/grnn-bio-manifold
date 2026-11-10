@@ -13,7 +13,9 @@ compares:
 These are compared on three working-memory tasks. It also tests whether cell identity,
 heterogeneity, wiring and operating point matter.
 
-**Status:** the confirmatory protocol was locked (`docs/PREREGISTRATION_v11.md`,
+**v12 (latest):** local vs global learning in a data-constrained V1 circuit compared with mouse Neuropixels, preprint `paper_v12/main.pdf`, summary `docs/SUMMARY_V12_FA.md`, code `grnn_v1/`.
+
+**v11 status:** the confirmatory protocol was locked (`docs/PREREGISTRATION_v11.md`,
 `docs/LOCK_v11.json`) before the held-out donor cohort was used. Results and the preprint
 draft are in `results/v11/confirmation/` and `paper/`.
 

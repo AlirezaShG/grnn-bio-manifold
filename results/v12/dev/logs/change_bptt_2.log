@@ -1,0 +1,8 @@
+change/bptt/2 step 50 loss 0.7323 val 0.5781 rate 2.4 (133s)
+change/bptt/2 step 100 loss 0.7452 val 0.5547 rate 2.4 (266s)
+change/bptt/2 step 150 loss 0.7332 val 0.5859 rate 2.4 (395s)
+change/bptt/2 step 200 loss 0.7194 val 0.5469 rate 2.4 (526s)
+change/bptt/2 step 250 loss 0.7346 val 0.5781 rate 2.4 (658s)
+change/bptt/2 step 300 loss 0.7267 val 0.4062 rate 2.4 (782s)
+change/bptt/2 step 350 loss 0.7388 val 0.4922 rate 2.5 (899s)
+change/bptt/2 step 400 loss 0.7294 val 0.5000 rate 2.4 (1017s)
